@@ -1,0 +1,31 @@
+{
+    "css.validate": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.codeActionsOnSave": ["source.addMissingImports", "source.fixAll"],
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.foldingImportsByDefault": true,
+    "editor.tabSize": 4,
+    "files.exclude": {
+        "**/.vscode": false,
+        "**/dist": true,
+        "**/node_modules": true,
+        "**/pnpm-lock.yaml": true,
+        "**/dev-dist": true,
+        "**/.next": true,
+        "**/.github": false
+    },
+    "files.watcherExclude": {
+        "**/dist": true
+    },
+    "git.enableCommitSigning": true,
+    "javascript.format.enable": false,
+    "typescript.disableAutomaticTypeAcquisition": true,
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "cSpell.words": [],
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}

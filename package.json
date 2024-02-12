@@ -1,0 +1,63 @@
+{
+    "name": "next-typescript-template",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "lint:fix": "next lint --fix",
+        "prettier": "prettier . --check",
+        "prettier:fix": "prettier . --write",
+        "format": "pnpm lint:fix && pnpm prettier:fix",
+        "cypress": "cypress open",
+        "component-test": "cypress run --component",
+        "e2e-test": "cypress run --e2e",
+        "type-check": "tsc --project tsconfig.json --pretty --noEmit",
+        "prepare": "husky install",
+        "commit": "git-cz"
+    },
+    "dependencies": {
+        "framer-motion": "^10.18.0",
+        "next": "14.0.3",
+        "react": "18.2.0",
+        "react-dom": "18.2.0"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^18.6.0",
+        "@commitlint/config-conventional": "^18.6.0",
+        "@types/node": "20.10.3",
+        "@types/react": "18.2.42",
+        "@types/react-dom": "18.2.17",
+        "@typescript-eslint/eslint-plugin": "^6.21.0",
+        "@typescript-eslint/parser": "^6.21.0",
+        "autoprefixer": "10.4.16",
+        "commitizen": "^4.3.0",
+        "cypress": "^13.6.4",
+        "cz-conventional-changelog": "^3.3.0",
+        "eslint": "8.55.0",
+        "eslint-config-next": "14.0.3",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-import": "^2.29.1",
+        "eslint-plugin-prettier": "^5.1.3",
+        "eslint-plugin-react": "^7.33.2",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "husky": "^8.0.3",
+        "postcss": "8.4.32",
+        "prettier": "^3.2.5",
+        "prettier-plugin-tailwindcss": "^0.5.11",
+        "tailwindcss": "3.3.6",
+        "typescript": "5.3.3"
+    },
+    "eslintConfig": {
+        "eslintConfig": {
+            "extends": "./.eslintrc.json"
+        }
+    },
+    "config": {
+        "commitizen": {
+            "path": "cz-conventional-changelog"
+        }
+    }
+}
