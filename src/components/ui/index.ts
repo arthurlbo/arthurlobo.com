@@ -1,2 +1,2 @@
-export * from "./nav-link";
+export * from "./copy";
 export * from "./social-button";

@@ -12,9 +12,9 @@ export const NavLink = ({ label, href }: NavLinkProps) => {
             className="
                 after:ease-out-cubic
                 relative
-                text-sm
-                font-medium
-                text-secondary
+                text-base
+                font-semibold
+                text-primary
                 transition-all
                 duration-300
                 ease-in-out
@@ -31,11 +31,15 @@ export const NavLink = ({ label, href }: NavLinkProps) => {
                 after:duration-300
                 after:will-change-transform
                 after:content-['']
-                hover:text-secondary/80
+                hover:text-primary/80
                 after:hover:origin-left
                 after:hover:scale-x-100
                 after:focus:origin-left
                 after:focus:scale-x-100
+                xl:text-sm
+                xl:font-medium
+                xl:text-secondary
+                xl:hover:text-secondary/80
             "
         >
             {label}
