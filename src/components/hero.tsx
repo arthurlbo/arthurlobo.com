@@ -29,9 +29,7 @@ export const Hero = () => {
                                 className="absolute bottom-0.5 md:bottom-px right-0 w-[245px] massive:w-[300px]"
                             />
                         </span>{" "}
-                        with delivering{" "}
-                        <span className="relative after:content-[''] after:absolute after:md:-bottom-9 after:-bottom-5 after:left-0 after:w-full after:h-[18px] after:md:h-7 after:bg-[url(../assets/doodle.svg)] after:bg-cover">exceptional</span>{" "}
-                        web experiences
+                        with delivering exceptional web experiences
                     </h1>
                 </div>
                 <Link
