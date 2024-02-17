@@ -19,6 +19,7 @@
         "commit": "git-cz"
     },
     "dependencies": {
+        "@splinetool/react-spline": "^2.2.6",
         "@tabler/icons-react": "^2.47.0",
         "class-variance-authority": "^0.7.0",
         "clsx": "^2.1.0",

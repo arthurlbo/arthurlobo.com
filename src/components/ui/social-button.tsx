@@ -1,8 +1,8 @@
 import Link from "next/link";
-
-import { IconType } from "@/lib/iconType";
-import { cn } from "@/utils/cn";
 import { VariantProps, cva } from "class-variance-authority";
+
+import { cn } from "@/utils/cn";
+import { IconType } from "@/lib/iconType";
 
 export interface SocialButtonProps
     extends React.ButtonHTMLAttributes<HTMLButtonElement>,

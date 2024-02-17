@@ -30,11 +30,19 @@ const config = {
                         backgroundPosition: "-200% 0",
                     },
                 },
+                move: {
+                    "0%": { transform: "translate(0, 0)" },
+                    "25%": { transform: "translate(-200px, 20px)" },
+                    "50%": { transform: "translate(-210px, 50px)" },
+                    "75%": { transform: "translate(-50px, 80px)" },
+                    "100%": { transform: "translate(0, 0)" },
+                },
             },
             animation: {
                 "accordion-down": "accordion-down 0.2s ease-out",
                 "accordion-up": "accordion-up 0.2s ease-out",
                 shimmer: "shimmer 2s linear infinite",
+                move: "move 5s ease-in-out",
             },
             colors: {
                 background: "#08070B",
