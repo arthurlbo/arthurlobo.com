@@ -7,7 +7,7 @@ import { Copy, SocialButton } from "../../ui";
 export const Mobile = () => {
     return (
         <Menu>
-            <div className="flex flex-1 flex-col items-center justify-center gap-8">
+            <div className="flex flex-1 flex-col items-center justify-center gap-8 pb-8">
                 {navLinks.map((link, key) => (
                     <NavLink key={key} {...link} />
                 ))}
