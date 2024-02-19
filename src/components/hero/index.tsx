@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import { IconChevronDown } from "@tabler/icons-react";
 
-import { SplineCard } from "./ui";
+import { SplineCard } from "../ui";
 
 import FigmaBorder from "@/assets/figma-border.svg";
 import FigmaIndicator from "@/assets/figma-indicator.svg";

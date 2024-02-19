@@ -1,3 +1,3 @@
 export * from "./copy";
 export * from "./social-button";
-export * from "./spline-card";
+export * from "../hero/spline-card";
