@@ -37,15 +37,25 @@ const config = {
                     "75%": { transform: "translate(-50px, 80px)" },
                     "100%": { transform: "translate(0, 0)" },
                 },
+                "infinity-card": {
+                    from: { transform: "translateX(0)" },
+                    to: { transform: "translateX(-1000%)" },
+                },
+                "infinity-card-lg": {
+                    from: { transform: "translateX(0)" },
+                    to: { transform: "translateX(-200%)" },
+                },
             },
             animation: {
                 "accordion-down": "accordion-down 0.2s ease-out",
                 "accordion-up": "accordion-up 0.2s ease-out",
                 shimmer: "shimmer 2s linear infinite",
                 move: "move 5s ease-in-out",
+                "infinity-card": "infinity-card 80s forwards linear infinite",
+                "infinity-card-lg": "infinity-card-lg 80s forwards linear infinite",
             },
             colors: {
-                background: "#08070B",
+                background: "#000000",
                 hover: "#212024",
                 primary: "#F2F2F2",
                 secondary: "#8F9BA8",

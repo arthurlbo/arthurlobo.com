@@ -1,0 +1,55 @@
+import { IconBolt } from "@tabler/icons-react";
+
+const techs = [
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "React Native",
+    "Next.js",
+    "Vite",
+    "Expo",
+    "Tailwind CSS",
+    "Chakra UI",
+    "Shadcn UI",
+    "Figma",
+    "GraphQL",
+    "PWA",
+    "Dexie JS",
+    "IndexedDB",
+    "React Query",
+    "React Hook Form",
+    "Zod",
+    "Framer Motion",
+    "I18next",
+    "Jest",
+    "Cypress",
+    "Storybook",
+    "Sentry",
+    "Node.js",
+    "Express",
+    "Prisma",
+    "Fastify",
+    "PostgreSQL",
+    "MySQL",
+    "JWT",
+    "Git",
+    "GitHub Actions",
+];
+
+// TODO - Improve the animation in different screen sizes.
+export const MovingTechs = () => {
+    const extendedTechs = techs.concat(techs);
+
+    return (
+        <section className="flex h-20 w-full max-w-[100vw] items-center justify-center overflow-x-hidden border-y border-y-hover">
+            <ul className="flex h-full w-full animate-infinity-card items-center justify-between gap-6 hover:[animation-play-state:paused] lg:animate-infinity-card-lg">
+                {extendedTechs.map((tech, index) => (
+                    <li key={index} className="flex flex-none items-center gap-6">
+                        <IconBolt className="h-4 w-4 flex-none fill-secondary text-secondary" />
+                        <span className="flex-none text-base font-semibold text-secondary">{tech}</span>
+                    </li>
+                ))}
+            </ul>
+        </section>
+    );
+};
