@@ -19,6 +19,7 @@
         "commit": "git-cz"
     },
     "dependencies": {
+        "@radix-ui/react-tooltip": "^1.0.7",
         "@splinetool/react-spline": "^2.2.6",
         "@tabler/icons-react": "^2.47.0",
         "class-variance-authority": "^0.7.0",
