@@ -35,12 +35,12 @@ const topics: TopicsProps[] = [
 
 export const About = () => {
     return (
-        <section className="flex w-full max-w-[100vw] flex-col items-start gap-12 overflow-hidden border-b border-b-hover px-5 py-5 md:items-center lg:gap-32 lg:py-32 xl:px-28">
+        <section className="mx-5 flex flex-col items-start gap-12 overflow-hidden border-b border-b-hover py-5 md:items-center lg:gap-32 lg:py-32 xl:mx-28">
             <div className="flex w-full flex-col items-start justify-between gap-12 md:items-center lg:flex-row lg:gap-0">
                 <div className="flex w-full flex-col items-start justify-center gap-12 md:items-center lg:max-w-[540px] lg:items-start xl:max-w-[593px] xl:gap-16">
-                    <div className="flex w-full flex-col items-start md:items-center gap-7 lg:items-start">
+                    <div className="flex w-full flex-col items-start gap-7 md:items-center lg:items-start">
                         <Title label="About Me" icon={IconDiscountCheck} title="Arthur Carneiro Lobo" />
-                        <p className="font-regular text-start md:text-center text-xl text-secondary lg:text-start">
+                        <p className="font-regular text-start text-xl text-secondary md:text-center lg:text-start">
                             I am <span className="text-primary">20 years</span> old and currently based in{" "}
                             <span className="text-primary">Brazil.</span> I began programming out of curiosity when I
                             was 17, and it was <span className="text-primary">love at first sight.</span> Since then, I
