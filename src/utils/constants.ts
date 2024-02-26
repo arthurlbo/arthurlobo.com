@@ -3,6 +3,38 @@ import { NavLinkProps } from "@/components/header/nav-link";
 
 import { IconBrandGithub, IconBrandGmail, IconBrandInstagram, IconBrandLinkedin } from "@tabler/icons-react";
 
+export type TechnologiesMap =
+    | "chrakraui"
+    | "cypress"
+    | "expo"
+    | "express"
+    | "fastify"
+    | "figma"
+    | "git"
+    | "githubActions"
+    | "i18next"
+    | "jest"
+    | "jwt"
+    | "mailtrap"
+    | "next"
+    | "node"
+    | "prisma"
+    | "pwa"
+    | "radix"
+    | "reactHookForm"
+    | "reactNative"
+    | "reactQuery"
+    | "react"
+    | "redux"
+    | "sentry"
+    | "shadcn"
+    | "sqlite"
+    | "storybook"
+    | "tailwind"
+    | "typescript"
+    | "vite"
+    | "zod";
+
 export const socialLinks: SocialButtonProps[] = [
     {
         icon: IconBrandInstagram,
