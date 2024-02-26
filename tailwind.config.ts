@@ -60,7 +60,6 @@ const config = {
                 primary: "#F2F2F2",
                 secondary: "#8F9BA8",
                 accent: "#7200CF",
-                complementary: "#FF8E6F",
             },
             fontFamily: {
                 sans: "var(--font-plus_jakarta_sans)",
