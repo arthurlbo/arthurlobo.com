@@ -1,7 +1,7 @@
 import { navLinks, socialLinks } from "@/utils/constants";
 
 import { NavLink } from "./nav-link";
-import { SocialButton } from "../ui";
+import { SocialButton } from "@/components/ui";
 
 export const Desktop = () => {
     return (

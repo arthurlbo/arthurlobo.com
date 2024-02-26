@@ -1,7 +1,7 @@
 import { IconCode, IconDiscountCheck, IconFlare, IconSchool } from "@tabler/icons-react";
 
-import { CtaButton, Title } from "../ui";
 import { Topics, TopicsProps } from "./topics";
+import { CtaButton, Title } from "@/components/ui";
 
 const topics: TopicsProps[] = [
     {

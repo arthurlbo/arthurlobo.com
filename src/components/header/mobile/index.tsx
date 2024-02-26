@@ -2,7 +2,7 @@ import { navLinks, socialLinks } from "@/utils/constants";
 
 import { Menu } from "./menu";
 import { NavLink } from "../nav-link";
-import { Copy, SocialButton } from "../../ui";
+import { Copy, SocialButton } from "@/components/ui";
 
 export const Mobile = () => {
     return (
