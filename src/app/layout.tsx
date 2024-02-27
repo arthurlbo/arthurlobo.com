@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <html lang="en">
             <body
-                className={`${plusJakartaSans.variable} relative flex min-h-screen w-full max-w-screen flex-col items-center justify-center overflow-x-hidden bg-background font-sans`}
+                className={`${plusJakartaSans.variable} max-w-screen relative flex min-h-screen w-full flex-col items-center justify-center overflow-x-hidden bg-background font-sans`}
             >
                 <Header />
                 {children}

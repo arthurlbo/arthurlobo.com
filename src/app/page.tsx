@@ -1,13 +1,17 @@
-import { About, Career, Hero, MovingTechs, Projects } from "@/components";
+import { About, Career, Hero, MovingTechs, Projects, Divider } from "@/components";
 
 export default function Home() {
     return (
         <>
             <Hero />
             <MovingTechs />
-            <About />
-            <Career />
-            <Projects />
+            <div className="flex w-full flex-col items-start gap-5 p-5 xl:gap-28 xl:p-28">
+                <About />
+                <Divider />
+                <Career />
+                <Divider />
+                <Projects />
+            </div>
         </>
     );
 }

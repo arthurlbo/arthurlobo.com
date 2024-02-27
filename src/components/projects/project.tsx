@@ -14,7 +14,7 @@ export interface ProjectProps {
 
 export const Project = ({ description, image, link, repository, technologies, title }: ProjectProps) => {
     return (
-        <div className="flex w-full flex-col items-start gap-24 border-b border-b-hover pb-24">
+        <div className="flex w-full flex-col items-start gap-24 border-b border-b-hover pb-24 last:border-b-0 last:pb-0">
             <div className="flex w-full items-center justify-between">
                 <div className="flex w-full flex-col items-start gap-12">
                     <h1 className="text-3xl font-semibold text-primary">{title}</h1>

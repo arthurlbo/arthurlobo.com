@@ -77,7 +77,7 @@ const experiences: ExperienceCardProps[] = [
 
 export const Career = () => {
     return (
-        <section className="mx-5 flex flex-col items-start gap-12 overflow-visible border-b border-b-hover py-5 lg:gap-24 lg:py-32 xl:mx-28">
+        <section className="flex w-full flex-col items-start gap-12 overflow-visible lg:gap-24">
             <Title icon={IconBriefcase2} label="Career" title="My work history" align="center" />
             <TracingBeam>
                 <div className="flex h-full w-full flex-col items-start gap-12 pl-12">

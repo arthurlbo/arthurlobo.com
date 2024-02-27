@@ -35,7 +35,7 @@ const topics: TopicsProps[] = [
 
 export const About = () => {
     return (
-        <section className="mx-5 flex flex-col items-start gap-12 overflow-hidden border-b border-b-hover py-5 md:items-center lg:gap-32 lg:py-32 xl:mx-28">
+        <section className="flex flex-col w-full items-start gap-12 overflow-hidden md:items-center lg:gap-32">
             <div className="flex w-full flex-col items-start justify-between gap-12 md:items-center lg:flex-row lg:gap-0">
                 <div className="flex w-full flex-col items-start justify-center gap-12 md:items-center lg:max-w-[540px] lg:items-start xl:max-w-[593px] xl:gap-16">
                     <div className="flex w-full flex-col items-start gap-7 md:items-center lg:items-start">

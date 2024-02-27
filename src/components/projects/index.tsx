@@ -119,7 +119,7 @@ const projects: ProjectProps[] = [
 
 export const Projects = () => {
     return (
-        <section className="mx-5 flex flex-col items-start gap-12 overflow-visible border-b border-b-hover py-5 lg:gap-24 lg:py-32 xl:mx-28">
+        <section className="flex w-full flex-col items-start gap-12 lg:gap-24">
             <Title icon={IconPalette} label="Projects" title="Some of my side projects" align="center" />
             {projects.map((project, index) => (
                 <Project key={index} {...project} />
