@@ -28,18 +28,18 @@ export const TracingBeam = ({ children, className }: { children: ReactNode; clas
             }
         };
 
-        window.addEventListener('resize', handleResize);
+        window.addEventListener("resize", handleResize);
 
         // Call the function directly to update the height on first render
         handleResize();
 
         return () => {
-            window.removeEventListener('resize', handleResize);
+            window.removeEventListener("resize", handleResize);
         };
     }, []);
 
     useEffect(() => {
-        return scrollYProgressVelocity.onChange((latestVelocity) => {
+        return scrollYProgressVelocity.on("change", (latestVelocity) => {
             setVelocity(latestVelocity);
         });
     }, []);
