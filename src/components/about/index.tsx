@@ -1,7 +1,7 @@
 import { IconCode, IconDiscountCheck, IconFlare, IconSchool } from "@tabler/icons-react";
 
 import { Topics, TopicsProps } from "./topics";
-import { CtaButton, Title } from "@/components/ui";
+import { CtaButtons, Title } from "@/components/ui";
 
 const topics: TopicsProps[] = [
     {
@@ -49,7 +49,7 @@ export const About = () => {
                             <span className="text-primary">my true passion.</span>
                         </p>
                     </div>
-                    <CtaButton
+                    <CtaButtons
                         primary={{ label: "Find me on LinkedIn", link: "https://www.linkedin.com/in/arthurlbo/" }}
                         secondary={{ label: "Check out my GitHub", link: "https://www.github.com/arthurlbo" }}
                     />

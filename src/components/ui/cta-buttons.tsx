@@ -7,12 +7,12 @@ export interface ButtonProps {
     link: string;
 }
 
-export interface CtaButtonProps {
+export interface CtaButtonsProps {
     primary: ButtonProps;
     secondary: ButtonProps;
 }
 
-export const CtaButton = ({ primary, secondary }: CtaButtonProps) => {
+export const CtaButtons = ({ primary, secondary }: CtaButtonsProps) => {
     return (
         <div className="flex w-full flex-col items-center gap-5 md:w-auto md:flex-row">
             <Link href={primary.link} target="_blank">
