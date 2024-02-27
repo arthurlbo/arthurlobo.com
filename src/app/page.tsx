@@ -1,4 +1,5 @@
-import { About, Career, Hero, MovingTechs, Projects, Divider } from "@/components";
+import { Divider } from "@/components/ui";
+import { About, Career, Hero, MovingTechs, Projects } from "@/components";
 
 export default function Home() {
     return (
