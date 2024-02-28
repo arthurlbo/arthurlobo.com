@@ -41,7 +41,7 @@ export const MovingTechs = () => {
     const extendedTechs = techs.concat(techs);
 
     return (
-        <section className="relative flex h-20 w-full max-w-[100vw] items-center justify-center overflow-x-hidden border-y border-y-hover group">
+        <section className="group relative flex h-20 w-full max-w-[100vw] items-center justify-center overflow-x-hidden border-y border-y-hover">
             <ul className="flex h-full w-full animate-infinity-card items-center justify-between gap-6 group-hover:[animation-play-state:paused] lg:animate-infinity-card-lg">
                 {extendedTechs.map((tech, index) => (
                     <li key={index} className="flex flex-none items-center gap-6">

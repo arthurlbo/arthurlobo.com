@@ -34,7 +34,9 @@ export const ExperienceCard = ({
                 <h1 className="text-xl font-semibold italic text-primary">{jobTitle}</h1>
                 <div className="flex items-center gap-5">
                     <Link href={companyLink} target="_blank">
-                        <h2 className="text-base font-normal text-primary underline hover:text-primary/80 transition-all duration-300 ease-in-out">{company}</h2>
+                        <h2 className="text-base font-normal text-primary underline transition-all duration-300 ease-in-out hover:text-primary/80">
+                            {company}
+                        </h2>
                     </Link>
                     <div className="h-5 w-px flex-none bg-hover" />
                     <h3 className="text-base font-normal text-secondary">{location}</h3>
@@ -59,7 +61,7 @@ export const ExperienceCard = ({
                 </div>
             )}
             {technologies && <TechnologiesWrapper technologies={technologies} />}
-            <div className="absolute -left-[56px] top-1/2 flex h-4 w-4 z-50 -translate-y-1/2 items-center justify-center rounded-full border border-[#212024] shadow-sm">
+            <div className="absolute -left-[56px] top-1/2 z-50 flex h-4 w-4 -translate-y-1/2 items-center justify-center rounded-full border border-[#212024] shadow-sm">
                 <div className={cn("h-2 w-2 rounded-full border border-hover", pointClassName)} />
             </div>
         </div>

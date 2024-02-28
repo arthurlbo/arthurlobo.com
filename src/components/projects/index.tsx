@@ -71,7 +71,7 @@ const projects: ProjectProps[] = [
             "sqlite",
             "radix",
         ],
-        beamClassName: "from-[#370986] to-[#8C59F5]"
+        beamClassName: "from-[#370986] to-[#8C59F5]",
     },
     {
         title: "Feedget",
@@ -96,7 +96,7 @@ const projects: ProjectProps[] = [
             "jest",
             "mailtrap",
         ],
-        beamClassName: "from-[#8C59F5] to-[#86C1E8]"
+        beamClassName: "from-[#8C59F5] to-[#86C1E8]",
     },
     {
         title: "Delta",
@@ -119,7 +119,7 @@ const projects: ProjectProps[] = [
             "radix",
             "reactHookForm",
         ],
-        beamClassName: "from-[#0079FF] to-[#A4B8E3]"
+        beamClassName: "from-[#0079FF] to-[#A4B8E3]",
     },
 ];
 

@@ -69,7 +69,7 @@ export const Menu = ({ children }: MenuProps) => {
                 </svg>
             </motion.button>
             <motion.div
-                className="absolute left-0 top-[70px] flex h-[calc(100vh-70px)] w-full flex-col items-center justify-between bg-background/95 z-50 p-8"
+                className="absolute left-0 top-[70px] z-50 flex h-[calc(100vh-70px)] w-full flex-col items-center justify-between bg-background/95 p-8"
                 initial="closed"
                 animate={isOpen ? "open" : "closed"}
                 variants={navigationVariants}
