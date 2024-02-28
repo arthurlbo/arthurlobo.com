@@ -45,6 +45,25 @@ const config = {
                     from: { transform: "translateX(0)" },
                     to: { transform: "translateX(-200%)" },
                 },
+                beam: {
+                    "0%": {
+                        left: "0",
+                        opacity: "0",
+                    },
+                    "25%": {
+                        opacity: "0.5",
+                    },
+                    "50%": {
+                        opacity: "0.8",
+                    },
+                    "75%": {
+                        opacity: "0.5",
+                    },
+                    "100%": {
+                        opacity: "0",
+                        left: "100%",
+                    },
+                },
             },
             animation: {
                 "accordion-down": "accordion-down 0.2s ease-out",
@@ -53,6 +72,7 @@ const config = {
                 move: "move 5s ease-in-out",
                 "infinity-card": "infinity-card 80s forwards linear infinite",
                 "infinity-card-lg": "infinity-card-lg 80s forwards linear infinite",
+                beam: "beam 4s linear infinite",
             },
             colors: {
                 background: "#000000",
@@ -60,6 +80,7 @@ const config = {
                 primary: "#F2F2F2",
                 secondary: "#8F9BA8",
                 accent: "#7200CF",
+                complementary: "#6344F5",
             },
             fontFamily: {
                 sans: "var(--font-plus_jakarta_sans)",

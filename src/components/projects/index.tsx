@@ -1,6 +1,7 @@
 import { IconPalette } from "@tabler/icons-react";
 
-import { Title } from "@/components/ui";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, Title } from "@/components/ui";
+
 import { Project, ProjectProps } from "./project";
 
 import YaziImg from "@/assets/yazi.webp";
@@ -17,7 +18,7 @@ const projects: ProjectProps[] = [
             "Memories can be made public and are displayed on a timeline. The API, developed in TypeScript with Fastify and Prisma, ensures efficiency and scalability, while NextJS, React, and Tailwind are used for the web app, providing an intuitive interface. ReactNative with TypeScript is utilized for mobile, ensuring efficient authentication with expo-auth-session and expo-routes.",
         ],
         image: TimeCapsuleImg,
-        link: "timecapsule.arthurlobo.com",
+        link: "https://timecapsule.arthurlobo.com",
         repository: "https://github.com/arthurlbo/time-capsule",
         technologies: [
             "react",
@@ -33,6 +34,7 @@ const projects: ProjectProps[] = [
             "node",
             "sqlite",
         ],
+        beamClassName: "from-[#7457E0] to-[#FF997A]",
     },
     {
         title: "Yazi.tv",
@@ -41,9 +43,10 @@ const projects: ProjectProps[] = [
             "I've meticulously dissected the application into reusable components, fostering efficiency, maintainability and end-to-end testing with Cypress to guarantee a seamless and bug-free experience from start to finish.",
         ],
         image: YaziImg,
-        link: "yazi.arthurlobo.com",
+        link: "https://yazi.arthurlobo.com",
         repository: "https://github.com/arthurlbo/yazitv",
         technologies: ["react", "next", "typescript", "tailwind", "cypress", "shadcn", "figma"],
+        beamClassName: "from-[#ED2BA3] to-[#8A29F0]",
     },
     {
         title: "Habits",
@@ -52,7 +55,7 @@ const projects: ProjectProps[] = [
             "Developed using TypeScript, Fastify, and Prisma, our API offers a robust and practical approach to habit management. The web application, crafted with React, TypeScript, and Tailwind, provides an intuitive and user-friendly interface for habit tracking. Meanwhile, our mobile app, built with ReactNative and Expo, ensures seamless habit monitoring on the go.",
         ],
         image: HabitsImg,
-        link: "habits.arthurlobo.com",
+        link: "https://habits.arthurlobo.com",
         repository: "https://github.com/arthurlbo/habits",
         technologies: [
             "react",
@@ -68,6 +71,7 @@ const projects: ProjectProps[] = [
             "sqlite",
             "radix",
         ],
+        beamClassName: "from-[#370986] to-[#8C59F5]"
     },
     {
         title: "Feedget",
@@ -76,7 +80,7 @@ const projects: ProjectProps[] = [
             "The feedback capture API, developed in TypeScript, utilizes Express, Prisma, Nodemailer, and Mailtrap libraries, providing a comprehensive solution for collecting and sending user feedback via email. For the web application, we utilized React, TypeScript, Tailwind, Vite, and other tools to create an intuitive and user-friendly interface for efficiently collecting feedback. Leveraging ReactNative with TypeScript and Expo for the mobile app, we ensured seamless setup and utilization of user feedback features.",
         ],
         image: FeedgetImg,
-        link: "feedget.arthurlobo.com",
+        link: "https://feedget.arthurlobo.com",
         repository: "https://github.com/arthurlbo/feedget",
         technologies: [
             "react",
@@ -92,6 +96,7 @@ const projects: ProjectProps[] = [
             "jest",
             "mailtrap",
         ],
+        beamClassName: "from-[#8C59F5] to-[#86C1E8]"
     },
     {
         title: "Delta",
@@ -100,7 +105,7 @@ const projects: ProjectProps[] = [
             "Inside the code, I focused on following the good practices of React, breaking down the application into reusable components, leaving the form and inputs ready to be sent to an API and being able to be reused in different ways, validating form information with zod, testing components with cypress, and documenting components with storybook.",
         ],
         image: DeltaImg,
-        link: "delta.arthurlobo.com",
+        link: "https://delta.arthurlobo.com",
         repository: "https://github.com/arthurlbo/delta-login",
         technologies: [
             "react",
@@ -114,6 +119,7 @@ const projects: ProjectProps[] = [
             "radix",
             "reactHookForm",
         ],
+        beamClassName: "from-[#0079FF] to-[#A4B8E3]"
     },
 ];
 
@@ -121,9 +127,17 @@ export const Projects = () => {
     return (
         <section className="flex w-full flex-col items-start gap-12 lg:gap-24">
             <Title icon={IconPalette} label="Projects" title="Some of my side projects" align="center" />
-            {projects.map((project, index) => (
-                <Project key={index} {...project} />
-            ))}
+            <Carousel className="w-full" opts={{ loop: true, duration: 0 }}>
+                <CarouselContent>
+                    {projects.map((project, index) => (
+                        <CarouselItem key={index}>
+                            <Project {...project} />
+                        </CarouselItem>
+                    ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+            </Carousel>
         </section>
     );
 };
