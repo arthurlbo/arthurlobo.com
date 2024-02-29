@@ -34,6 +34,9 @@ export const NavLink = ({ label, href }: NavLinkProps) => {
                 hover:text-primary/80
                 after:hover:origin-left
                 after:hover:scale-x-100
+                focus:outline-none
+                focus:ring-0
+                focus:duration-0
                 after:focus:origin-left
                 after:focus:scale-x-100
                 xl:text-sm

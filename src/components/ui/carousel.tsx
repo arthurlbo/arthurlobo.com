@@ -177,7 +177,7 @@ const CarouselPrevious = React.forwardRef<HTMLButtonElement>(({ ...props }, ref)
     return (
         <button
             ref={ref}
-            className="absolute -left-16 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-hover bg-transparent text-primary transition-all duration-300 ease-in-out hover:bg-hover"
+            className="absolute -left-16 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-hover bg-transparent text-primary transition-all duration-300 ease-in-out hover:bg-hover focus:outline-none focus:ring-2 focus:ring-accent/70 focus:ring-offset-2 focus:ring-offset-hover/80 focus:duration-0"
             disabled={!canScrollPrev}
             onClick={scrollPrev}
             {...props}
@@ -195,7 +195,7 @@ const CarouselNext = React.forwardRef<HTMLButtonElement>(({ ...props }, ref) => 
     return (
         <button
             ref={ref}
-            className="absolute -right-16 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-hover bg-transparent text-primary transition-all duration-300 ease-in-out hover:bg-hover"
+            className="absolute -right-16 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-hover bg-transparent text-primary transition-all duration-300 ease-in-out hover:bg-hover focus:outline-none focus:ring-2 focus:ring-accent/70 focus:ring-offset-2 focus:ring-offset-hover/80 focus:duration-0"
             disabled={!canScrollNext}
             onClick={scrollNext}
             {...props}

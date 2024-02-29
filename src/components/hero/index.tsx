@@ -19,9 +19,10 @@ export const Hero = () => {
                         <span className="group relative p-2">
                             obsessed
                             <Image
+                                tabIndex={0}
                                 src={FigmaIndicator}
                                 alt="Figma Indicator"
-                                className="absolute -right-[20%] -top-[6%] w-[40px] group-hover:animate-move md:w-[45px] massive:w-[50px]"
+                                className="absolute -right-[20%] -top-[6%] w-[40px] group-hover:animate-move focus:animate-move focus:outline-none focus:ring-0 focus:ring-offset-0 md:w-[45px] massive:w-[50px]"
                             />
                             <Image
                                 src={FigmaBorder}
@@ -38,12 +39,19 @@ export const Hero = () => {
                         hidden
                         items-center
                         gap-1
+                        rounded-lg
                         text-secondary
                         transition-all
                         duration-300
                         ease-in-out
                         hover:-translate-y-0.5
                         hover:text-secondary/80
+                        focus:outline-none
+                        focus:ring-2
+                        focus:ring-accent/70
+                        focus:ring-offset-4
+                        focus:ring-offset-background
+                        focus:duration-0
                         lg:flex
                     "
                 >

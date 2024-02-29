@@ -13,7 +13,7 @@ export interface SocialButtonProps
 }
 
 const socialButtonVariants = cva(
-    "flex items-center justify-center rounded-full border border-hover animate-shimmer hover:bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] hover:bg-[length:200%_100%] hover:border-slate-800 hover:shadow-lg hover:shadow-accent/30",
+    "flex items-center justify-center rounded-full border border-hover animate-shimmer hover:bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] hover:bg-[length:200%_100%] hover:border-slate-800 hover:shadow-lg hover:shadow-accent/30 focus:outline-none focus:ring-2 focus:ring-accent/70 focus:ring-offset-2 focus:ring-offset-hover/80",
     {
         variants: {
             size: {

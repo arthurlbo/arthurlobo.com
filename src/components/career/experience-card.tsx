@@ -33,7 +33,11 @@ export const ExperienceCard = ({
             <div className="flex w-full flex-col items-start gap-7">
                 <h1 className="text-xl font-semibold italic text-primary">{jobTitle}</h1>
                 <div className="flex items-center gap-5">
-                    <Link href={companyLink} target="_blank">
+                    <Link
+                        href={companyLink}
+                        target="_blank"
+                        className="rounded-lg focus:outline-none focus:ring-2 focus:ring-accent/70 focus:ring-offset-4 focus:ring-offset-background"
+                    >
                         <h2 className="text-base font-normal text-primary underline transition-all duration-300 ease-in-out hover:text-primary/80">
                             {company}
                         </h2>
