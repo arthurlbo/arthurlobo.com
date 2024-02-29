@@ -2,6 +2,7 @@ import Image, { StaticImageData } from "next/image";
 
 import { cn } from "@/utils/cn";
 import { TechnologiesMap } from "@/utils/constants";
+
 import { CtaButtons, TechnologiesWrapper } from "@/components/ui";
 
 export interface ProjectProps {
@@ -19,7 +20,7 @@ export const Project = ({ description, image, link, repository, technologies, ti
         <div className="relative flex w-full flex-col items-start gap-12 rounded-2xl border border-hover p-12">
             <span
                 className={cn(
-                    "absolute -top-px z-40 h-px w-px animate-beam rounded-full before:absolute before:h-px before:w-12 before:bg-gradient-to-r before:content-['']",
+                    "absolute -top-px z-40 h-full w-full animate-beam rounded-full before:absolute before:h-px before:w-24 before:bg-gradient-to-r before:content-['']",
                     beamClassName,
                 )}
             />
