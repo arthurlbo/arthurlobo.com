@@ -54,7 +54,7 @@ const Pattern = () => {
 
     return (
         <div
-            className="relative z-30 flex flex-row opacity-[0.3]"
+            className="relative z-30 flex flex-row opacity-[0.4]"
             style={{ clipPath: "polygon(1% 0, 100% 0, 100% 100%)" }}
         >
             {matrix.map((row, rowIdx) => (
