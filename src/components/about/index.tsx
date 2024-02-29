@@ -1,7 +1,9 @@
 import { IconCode, IconDiscountCheck, IconFlare, IconSchool } from "@tabler/icons-react";
 
-import { Topics, TopicsProps } from "./topics";
 import { CtaButtons, Title } from "@/components/ui";
+
+import { Topics, TopicsProps } from "./topics";
+import { BackgroundCellCore } from "./background-cell";
 
 const topics: TopicsProps[] = [
     {
@@ -35,10 +37,11 @@ const topics: TopicsProps[] = [
 
 export const About = () => {
     return (
-        <section className="flex w-full flex-col items-start gap-12 overflow-hidden md:items-center lg:gap-32">
+        <section className="relative flex h-full w-full flex-col items-start gap-12 md:items-center lg:gap-32">
+            <BackgroundCellCore />
             <div className="flex w-full flex-col items-start justify-between gap-12 md:items-center lg:flex-row lg:gap-0">
                 <div className="flex w-full flex-col items-start justify-center gap-12 md:items-center lg:max-w-[540px] lg:items-start xl:max-w-[593px] xl:gap-16">
-                    <div className="flex w-full flex-col items-start gap-7 md:items-center lg:items-start">
+                    <div className="z-50 flex w-full flex-col items-start gap-7 md:items-center lg:items-start">
                         <Title label="About Me" icon={IconDiscountCheck} title="Arthur Carneiro Lobo" />
                         <p className="font-regular text-start text-xl text-secondary md:text-center lg:text-start">
                             I am <span className="text-primary">20 years</span> old and currently based in{" "}
@@ -54,10 +57,7 @@ export const About = () => {
                         secondary={{ label: "Check out my GitHub", link: "https://www.github.com/arthurlbo" }}
                     />
                 </div>
-                <div className="relative h-[380px] w-full lg:w-[340px]">
-                    <div className="absolute left-0 top-0 z-20 h-[380px] w-full rounded-[26px] bg-hover lg:w-[340px]" />
-                    <div className="absolute right-0 top-5 z-10 h-[320px] w-full rounded-full bg-gradient-to-tr from-accent to-accent/5 blur-[80px] lg:w-[300px]" />
-                </div>
+                <div className="z-50 h-[380px] w-full rounded-[26px] bg-hover lg:w-[340px]" />
             </div>
             <div className="flex w-full flex-col items-center gap-8 xl:flex-row">
                 {topics.map((topic, index) => (
