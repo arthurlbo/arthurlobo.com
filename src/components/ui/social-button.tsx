@@ -18,7 +18,7 @@ const socialButtonVariants = cva(
         variants: {
             size: {
                 small: "h-11 w-11",
-                big: "h-14 w-14",
+                big: "h-12 w-12",
             },
         },
         defaultVariants: {
@@ -31,7 +31,7 @@ const iconVariants = cva("text-primary", {
     variants: {
         iconSize: {
             small: "h-5 w-5",
-            big: "h-7 w-7",
+            big: "h-6 w-6",
         },
     },
     defaultVariants: {
