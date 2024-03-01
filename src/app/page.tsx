@@ -5,7 +5,7 @@ export default function Home() {
         <>
             <Hero />
             <MovingTechs />
-            <div className="flex w-full flex-col items-start gap-5 px-5 pb-5 pt-5 xl:gap-28 xl:px-28 xl:pb-12 xl:pt-28">
+            <div className="flex w-full max-w-[100vw] flex-col items-start gap-12 overflow-hidden px-5 pb-12 pt-12 lg:gap-28 lg:pt-28 xl:px-28">
                 <About />
                 <Career />
                 <Projects />

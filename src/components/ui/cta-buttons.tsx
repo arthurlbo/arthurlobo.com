@@ -15,7 +15,7 @@ export interface CtaButtonsProps {
 export const CtaButtons = ({ primary, secondary }: CtaButtonsProps) => {
     return (
         <div className="z-50 flex w-full flex-col items-center gap-5 md:w-auto md:flex-row">
-            <Link href={primary.link} target="_blank" tabIndex={-1}>
+            <Link href={primary.link} target="_blank" tabIndex={-1} className="w-full">
                 <button
                     className="
                         group
@@ -23,7 +23,7 @@ export const CtaButtons = ({ primary, secondary }: CtaButtonsProps) => {
                         w-full
                         animate-shimmer
                         items-center
-                        justify-between
+                        justify-center
                         gap-8
                         rounded-full
                         border
@@ -40,6 +40,7 @@ export const CtaButtons = ({ primary, secondary }: CtaButtonsProps) => {
                         focus:ring-offset-2
                         focus:ring-offset-background
                         md:w-auto
+                        md:justify-between
                     "
                 >
                     <span className="text-sm font-semibold">{primary.label}</span>

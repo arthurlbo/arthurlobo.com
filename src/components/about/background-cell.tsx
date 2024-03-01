@@ -89,7 +89,7 @@ export const BackgroundCellCore = () => {
     };
 
     return (
-        <div ref={ref} onMouseMove={handleMouseMove} className="absolute inset-0 h-[135%]">
+        <div ref={ref} onMouseMove={handleMouseMove} className="absolute inset-0 h-[112%] xl:h-[135%]">
             <div className="absolute inset-y-0 -right-28 -top-28 h-full w-[110%] overflow-hidden">
                 <Pattern />
             </div>

@@ -14,7 +14,7 @@ const projects: ProjectProps[] = [
     {
         title: "Time Capsule",
         description: [
-            "Introducing a time capsule application where users can record and cherish their life's best moments. With GitHub OAuth authentication, users can create accounts and register memories, including images and descriptions.",
+            "Introducing a time capsule app for users to record and share life’s best moments. With GitHub OAuth, users can create accounts and register memories.",
             "Memories can be made public and are displayed on a timeline. The API, developed in TypeScript with Fastify and Prisma, ensures efficiency and scalability, while NextJS, React, and Tailwind are used for the web app, providing an intuitive interface. ReactNative with TypeScript is utilized for mobile, ensuring efficient authentication with expo-auth-session and expo-routes.",
         ],
         image: TimeCapsuleImg,

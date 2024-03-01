@@ -12,8 +12,8 @@ interface TitleProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, Vari
 const titleVariants = cva("flex w-full flex-col gap-3", {
     variants: {
         align: {
-            start: "items-start md:items-center lg:items-start",
-            center: "items-center",
+            start: "items-start",
+            center: "items-start lg:items-center",
         },
     },
     defaultVariants: {

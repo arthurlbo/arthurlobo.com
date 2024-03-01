@@ -1,6 +1,7 @@
 import { IconBriefcase2 } from "@tabler/icons-react";
 
-import { Title, TracingBeam } from "@/components/ui";
+import { Title } from "@/components/ui";
+import { TracingBeam } from "./tracing-beam";
 import { ExperienceCard, ExperienceCardProps } from "./experience-card";
 
 const experiences: ExperienceCardProps[] = [
@@ -80,7 +81,7 @@ export const Career = () => {
         <section className="flex w-full flex-col items-start gap-12 overflow-visible lg:gap-24">
             <Title icon={IconBriefcase2} label="Career" title="My work history" align="center" />
             <TracingBeam>
-                <div className="flex h-full w-full flex-col items-start gap-12 pl-12">
+                <div className="flex h-full w-full flex-col items-start gap-12 pl-5 md:pl-12">
                     {experiences.map((experience, index) => (
                         <ExperienceCard key={index} {...experience} />
                     ))}

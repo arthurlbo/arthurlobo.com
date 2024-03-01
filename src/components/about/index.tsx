@@ -40,10 +40,10 @@ export const About = () => {
         <section className="relative flex h-full w-full flex-col items-start gap-12 md:items-center lg:gap-32">
             <BackgroundCellCore />
             <div className="flex w-full flex-col items-start justify-between gap-12 md:items-center lg:flex-row lg:gap-0">
-                <div className="flex w-full flex-col items-start justify-center gap-12 md:items-center lg:max-w-[540px] lg:items-start xl:max-w-[593px] xl:gap-16">
-                    <div className="z-50 flex w-full flex-col items-start gap-7 md:items-center lg:items-start">
+                <div className="flex w-full flex-col items-start justify-center gap-12 lg:max-w-[540px] xl:max-w-[593px] xl:gap-16">
+                    <div className="z-50 flex w-full flex-col items-start gap-7">
                         <Title label="About Me" icon={IconDiscountCheck} title="Arthur Carneiro Lobo" />
-                        <p className="font-regular text-start text-xl text-secondary md:text-center lg:text-start">
+                        <p className="font-regular text-start text-xl text-secondary">
                             I am <span className="text-primary">20 years</span> old and currently based in{" "}
                             <span className="text-primary">Brazil.</span> I began programming out of curiosity when I
                             was 17, and it was <span className="text-primary">love at first sight.</span> Since then, I

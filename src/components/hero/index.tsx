@@ -11,10 +11,10 @@ import FigmaIndicator from "@/assets/figma-indicator.svg";
 export const Hero = () => {
     return (
         <section className="mt-[70px] flex h-auto min-h-[calc(100vh-70px)] w-full max-w-[100vw] flex-col items-center justify-between overflow-hidden px-5 py-5 lg:h-[calc(100vh-90px)] lg:flex-row lg:justify-between lg:py-0 xl:mt-[90px] xl:min-h-0 xl:px-28">
-            <div className="flex h-full w-full flex-none flex-col items-center justify-center gap-16 md:max-w-xl lg:items-start xl:max-w-2xl xl:gap-20 2xl:max-w-[700px] massive:max-w-4xl">
+            <div className="flex h-full w-full flex-none flex-col items-center justify-center gap-16 md:max-w-2xl lg:items-start  xl:gap-20 2xl:max-w-[700px] massive:max-w-4xl">
                 <div className="flex flex-col items-center gap-5 lg:items-start">
                     <span className="text-base font-normal text-secondary">Hello there! I'm Arthur👋</span>
-                    <h1 className="text-center text-[2.2rem] font-semibold leading-normal text-primary md:text-[2.5rem] md:leading-snug lg:text-start xl:text-[2.7rem] 2xl:text-[3rem] massive:text-[3.75rem]">
+                    <h1 className="text-center text-[2.2rem] font-semibold leading-normal text-primary md:text-[2.7rem] md:leading-snug lg:text-start  2xl:text-[3rem] massive:text-[3.75rem]">
                         A Frontend Developer{" "}
                         <span className="group relative p-2">
                             obsessed

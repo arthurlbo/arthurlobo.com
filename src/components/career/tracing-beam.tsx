@@ -54,13 +54,13 @@ export const TracingBeam = ({ children, className }: { children: ReactNode; clas
     });
 
     return (
-        <motion.div ref={ref} className={cn("relative h-full w-full", className)}>
+        <motion.div ref={ref} className={cn("relative h-full w-full flex-none", className)}>
             <div className="absolute">
                 <svg
                     viewBox={`0 0 20 ${svgHeight + 5}`}
                     width="20"
                     height={svgHeight + 5} // Set the SVG height
-                    className="hidden lg:block"
+                    className="block"
                     aria-hidden="true"
                 >
                     <motion.path

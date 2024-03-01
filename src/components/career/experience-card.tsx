@@ -29,10 +29,10 @@ export const ExperienceCard = ({
     pointClassName,
 }: ExperienceCardProps) => {
     return (
-        <div className="relative flex h-full w-full flex-col items-start gap-12 rounded-2xl border border-hover p-10 pt-7">
+        <div className="relative flex h-full w-full flex-col items-start gap-12 rounded-2xl border border-hover p-5 md:p-10 md:pt-7">
             <div className="flex w-full flex-col items-start gap-7">
                 <h1 className="text-xl font-semibold italic text-primary">{jobTitle}</h1>
-                <div className="flex items-center gap-5">
+                <div className="flex w-full flex-col items-start gap-5 md:flex-row md:items-center">
                     <Link
                         href={companyLink}
                         target="_blank"
@@ -42,9 +42,9 @@ export const ExperienceCard = ({
                             {company}
                         </h2>
                     </Link>
-                    <div className="h-5 w-px flex-none bg-hover" />
+                    <div className="h-px w-full flex-none bg-hover md:h-5 md:w-px" />
                     <h3 className="text-base font-normal text-secondary">{location}</h3>
-                    <div className="h-5 w-px flex-none bg-hover" />
+                    <div className="h-px w-full flex-none bg-hover md:h-5 md:w-px" />
                     <h4 className="text-base font-normal text-secondary">{duration}</h4>
                 </div>
             </div>
@@ -65,7 +65,7 @@ export const ExperienceCard = ({
                 </div>
             )}
             {technologies && <TechnologiesWrapper technologies={technologies} />}
-            <div className="absolute -left-[58px] top-1/2 z-50 flex h-5 w-5 -translate-y-1/2 items-center justify-center rounded-full border border-[#212024] shadow-sm">
+            <div className="absolute -left-[30px] top-1/2 z-50 flex h-5 w-5 -translate-y-1/2 items-center justify-center rounded-full border border-[#212024] shadow-sm md:-left-[58px]">
                 <div className={cn("h-[10px] w-[10px] rounded-full border border-hover", pointClassName)} />
             </div>
         </div>
