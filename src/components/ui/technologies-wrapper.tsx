@@ -94,7 +94,7 @@ export const TechnologiesWrapper = ({ technologies }: TechnologiesWrapperProps) 
                         <Tooltip delayDuration={0}>
                             <TooltipTrigger asChild>
                                 <div className="flex h-14 w-14 flex-none items-center justify-center rounded-2xl border border-hover p-[14px]">
-                                    <Image src={tech.icon} alt={tech.label} priority className="h-auto w-auto" />
+                                    <Image src={tech.icon} alt={tech.label} className="h-auto w-auto" loading="lazy" />
                                 </div>
                             </TooltipTrigger>
                             <TooltipContent className="flex items-center justify-center rounded-lg border border-hover bg-background/90 px-4 py-1.5">
