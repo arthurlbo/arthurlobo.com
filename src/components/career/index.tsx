@@ -63,7 +63,7 @@ const experiences: ExperienceCardProps[] = [
             "vite",
             "zod",
         ],
-        pointClassName: "bg-gradient-to-r from-[#E100FF] to-[#4BC0C8]",
+        pointClassName: "bg-gradient-to-r from-[#E100FF] to-[#3f6bfb]",
     },
     {
         jobTitle: "Junior Frontend Developer",
@@ -71,7 +71,7 @@ const experiences: ExperienceCardProps[] = [
         companyLink: "https://adamrobo.com.br/lp/",
         location: "Curitiba, Paraná, Brazil",
         duration: "Apr 2022 - Dec 2022 • 9 mos",
-        pointClassName: "bg-gradient-to-r from-[#4BC0C8] to-[#0052D4]",
+        pointClassName: "bg-gradient-to-r from-[#3F5EFB] to-[#1CB5E0]",
     },
 ];
 

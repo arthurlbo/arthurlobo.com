@@ -65,8 +65,8 @@ export const ExperienceCard = ({
                 </div>
             )}
             {technologies && <TechnologiesWrapper technologies={technologies} />}
-            <div className="absolute -left-[56px] top-1/2 z-50 flex h-4 w-4 -translate-y-1/2 items-center justify-center rounded-full border border-[#212024] shadow-sm">
-                <div className={cn("h-2 w-2 rounded-full border border-hover", pointClassName)} />
+            <div className="absolute -left-[58px] top-1/2 z-50 flex h-5 w-5 -translate-y-1/2 items-center justify-center rounded-full border border-[#212024] shadow-sm">
+                <div className={cn("h-[10px] w-[10px] rounded-full border border-hover", pointClassName)} />
             </div>
         </div>
     );
