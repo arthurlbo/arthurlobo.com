@@ -39,7 +39,7 @@ export const Project = ({ description, image, link, repository, technologies, ti
                         secondary={{ label: "Repository", link: repository }}
                     />
                 </div>
-                <Image src={image} alt={title} width={650} className="h-auto" loading="lazy" />
+                <Image src={image} alt={title} width={650} className="h-auto" loading="lazy" placeholder="blur" />
             </div>
             <TechnologiesWrapper technologies={technologies} />
             <div className="absolute inset-x-0 -bottom-px mx-auto h-px w-full bg-gradient-to-r from-transparent via-accent/50 to-transparent shadow-2xl" />
