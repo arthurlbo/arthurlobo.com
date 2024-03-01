@@ -17,22 +17,24 @@ export interface ProjectProps {
 
 export const Project = ({ description, image, link, repository, technologies, title, beamClassName }: ProjectProps) => {
     return (
-        <div className="relative flex w-full flex-col items-start gap-12 rounded-2xl border border-hover p-12">
+        <div className="relative flex w-full cursor-grab flex-col items-start gap-0 rounded-2xl border border-hover p-12 pt-9">
             <span
                 className={cn(
                     "absolute -top-px z-40 h-full w-full animate-beam rounded-full before:absolute before:h-px before:w-24 before:bg-gradient-to-r before:content-['']",
                     beamClassName,
                 )}
             />
-            <div className="flex w-full items-center justify-between">
-                <div className="flex w-full flex-col items-start gap-12">
-                    <h1 className="text-3xl font-semibold text-primary">{title}</h1>
-                    <div className="flex max-w-xl flex-col items-start gap-6">
-                        {description.map((desc, index) => (
-                            <p key={index} className="text-base font-normal text-secondary">
-                                {desc}
-                            </p>
-                        ))}
+            <div className="flex w-full items-start justify-between">
+                <div className="flex w-full flex-col items-start gap-14">
+                    <div className="flex w-full flex-col items-start gap-10">
+                        <h1 className="text-3xl font-semibold leading-none text-primary">{title}</h1>
+                        <div className="flex max-w-[600px] flex-col items-start gap-5">
+                            {description.map((desc, index) => (
+                                <p key={index} className="text-base font-normal text-secondary">
+                                    {desc}
+                                </p>
+                            ))}
+                        </div>
                     </div>
                     <CtaButtons
                         primary={{ label: "View project on live", link }}

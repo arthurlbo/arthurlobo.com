@@ -88,7 +88,7 @@ export const TechnologiesWrapper = ({ technologies }: TechnologiesWrapperProps) 
                 <IconCode className="h-5 w-5 text-primary" />
                 <h1 className="text-lg font-medium text-primary">Technologies</h1>
             </div>
-            <div className="flex w-full flex-wrap items-start justify-start gap-8">
+            <div className="flex w-full max-w-7xl flex-wrap items-start justify-start gap-8">
                 {filteredTechnologies.map((tech, index) => (
                     <TooltipProvider key={index}>
                         <Tooltip delayDuration={0}>

@@ -29,7 +29,7 @@ export const ExperienceCard = ({
     pointClassName,
 }: ExperienceCardProps) => {
     return (
-        <div className="relative flex h-full w-full flex-col items-start gap-12 rounded-2xl border border-hover p-12">
+        <div className="relative flex h-full w-full flex-col items-start gap-12 rounded-2xl border border-hover p-10 pt-7">
             <div className="flex w-full flex-col items-start gap-7">
                 <h1 className="text-xl font-semibold italic text-primary">{jobTitle}</h1>
                 <div className="flex items-center gap-5">
