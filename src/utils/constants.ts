@@ -65,9 +65,8 @@ export const socialLinks: SocialButtonProps[] = [
  */
 export const navLinks: NavLinkProps[] = [
     { label: "Home", href: "/" },
-    { label: "About", href: "#about" },
-    { label: "Career", href: "#career" },
-    { label: "Stack", href: "#stack" },
-    { label: "Projects", href: "#projects" },
-    { label: "Contact", href: "#contact" },
+    { label: "About", href: "/#about" },
+    { label: "Career", href: "/#career" },
+    { label: "Projects", href: "/#projects" },
+    { label: "Contact", href: "/#contact" },
 ];

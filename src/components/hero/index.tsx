@@ -13,7 +13,10 @@ import FigmaIndicator from "@/assets/figma-indicator.svg";
  */
 export const Hero = () => {
     return (
-        <section className="mt-[70px] flex h-auto min-h-[calc(100vh-70px)] w-full max-w-[100vw] flex-col items-center justify-between overflow-hidden px-5 py-5 lg:h-[calc(100vh-90px)] lg:flex-row lg:justify-between lg:py-0 xl:mt-[90px] xl:min-h-0 xl:px-28">
+        <section
+            id="home"
+            className="mt-[70px] flex h-auto min-h-[calc(100vh-70px)] w-full max-w-[100vw] flex-col items-center justify-between overflow-hidden px-5 py-5 lg:h-[calc(100vh-90px)] lg:flex-row lg:justify-between lg:py-0 xl:mt-[90px] xl:min-h-0 xl:px-28"
+        >
             <div className="flex h-full w-full flex-none flex-col items-center justify-center gap-16 md:max-w-2xl lg:items-start  xl:gap-20 2xl:max-w-[700px] massive:max-w-4xl">
                 <div className="flex flex-col items-center gap-5 lg:items-start">
                     <span className="text-base font-normal text-secondary">Hello there! I'm Arthur👋</span>
@@ -39,7 +42,7 @@ export const Hero = () => {
                 </div>
 
                 <Link
-                    href="#about"
+                    href="/#about"
                     className="
                         hidden
                         items-center

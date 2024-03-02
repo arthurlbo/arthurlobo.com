@@ -86,7 +86,7 @@ const experiences: ExperienceCardProps[] = [
  */
 export const Career = () => {
     return (
-        <section className="flex w-full flex-col items-start gap-12 overflow-visible lg:gap-24">
+        <section id="career" className="flex w-full flex-col items-start gap-12 overflow-visible lg:gap-24">
             <Title icon={IconBriefcase2} label="Career" title="My work history" align="center" />
 
             <TracingBeam>

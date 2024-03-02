@@ -1,14 +1,18 @@
 import { socialLinks } from "@/utils/constants";
 
+import { ScrollToTop } from "./scroll-to-top";
 import { BackgroundBeams } from "./background-beams";
 import { Copy, SocialButton } from "@/components/ui";
 
 /**
- * Footer section.
+ * Contact section.
  */
-export const Footer = () => {
+export const Contact = () => {
     return (
-        <section className="relative flex w-full flex-col items-center justify-center gap-6 md:gap-12 md:pt-24 lg:gap-24">
+        <section
+            id="contact"
+            className="relative flex w-full flex-col items-center justify-center gap-6 md:gap-12 md:pt-24 lg:gap-24"
+        >
             <h1 className="z-50 text-center text-4xl font-extrabold leading-relaxed text-primary md:max-w-4xl lg:text-[3rem]">
                 Connect with me on any of these platforms to get in touch!
             </h1>
@@ -28,9 +32,7 @@ export const Footer = () => {
                 {/* Divider */}
                 <div className="h-3 w-px flex-none bg-hover" />
 
-                <button className="rounded-lg bg-transparent text-sm font-semibold text-secondary transition-all duration-300 ease-in-out hover:text-primary focus:outline-none focus:ring-2  focus:ring-accent/70 focus:ring-offset-4  focus:ring-offset-background focus:duration-0">
-                    Back to top
-                </button>
+                <ScrollToTop />
             </div>
 
             <BackgroundBeams />

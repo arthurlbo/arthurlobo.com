@@ -48,7 +48,10 @@ export const About = () => {
     const myAge = dayjs().diff(birthDate, "year");
 
     return (
-        <section className="relative flex h-full w-full flex-col items-start gap-12 md:items-center lg:gap-32">
+        <section
+            id="about"
+            className="relative flex h-full w-full flex-col items-start gap-12 md:items-center lg:gap-32"
+        >
             <BackgroundCell />
 
             <div className="flex w-full flex-col items-start justify-between gap-12 md:items-center lg:flex-row lg:gap-0">

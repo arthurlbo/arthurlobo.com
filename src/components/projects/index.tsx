@@ -131,7 +131,7 @@ const projects: ProjectProps[] = [
  */
 export const Projects = () => {
     return (
-        <section className="flex w-full flex-col items-start gap-12 lg:gap-24">
+        <section id="projects" className="flex w-full flex-col items-start gap-12 lg:gap-24">
             <Title icon={IconPalette} label="Projects" title="Some of my side projects" align="center" />
 
             <Carousel className="w-full" opts={{ loop: true, duration: 0 }}>

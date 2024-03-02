@@ -6,3 +6,7 @@ body {
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
 }
+
+html {
+    scroll-behavior: smooth !important;
+}
