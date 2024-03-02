@@ -18,6 +18,17 @@ export interface ExperienceCardProps {
     pointClassName?: string;
 }
 
+/**
+ * Experience card component.
+ * @param jobTitle - Job title.
+ * @param company - Company name.
+ * @param companyLink - Company link.
+ * @param location - Location of the company.
+ * @param duration - Duration of the job.
+ * @param achievements - Achievements in the job.
+ * @param technologies - Technologies used in the job.
+ * @param pointClassName - Class name for the point.
+ */
 export const ExperienceCard = ({
     jobTitle,
     company,
@@ -42,12 +53,19 @@ export const ExperienceCard = ({
                             {company}
                         </h2>
                     </Link>
+
+                    {/* Divider */}
                     <div className="h-px w-full flex-none bg-hover md:h-5 md:w-px" />
+
                     <h3 className="text-base font-normal text-secondary">{location}</h3>
+
+                    {/* Divider */}
                     <div className="h-px w-full flex-none bg-hover md:h-5 md:w-px" />
+
                     <h4 className="text-base font-normal text-secondary">{duration}</h4>
                 </div>
             </div>
+
             {achievements && (
                 <div className="flex w-full flex-col items-start gap-7">
                     <div className="flex w-full items-center gap-2">
@@ -64,7 +82,10 @@ export const ExperienceCard = ({
                     </ul>
                 </div>
             )}
+
             {technologies && <TechnologiesWrapper technologies={technologies} />}
+
+            {/* Point */}
             <div className="absolute -left-[30px] top-1/2 z-50 flex h-5 w-5 -translate-y-1/2 items-center justify-center rounded-full border border-[#212024] shadow-sm md:-left-[58px]">
                 <div className={cn("h-[10px] w-[10px] rounded-full border border-hover", pointClassName)} />
             </div>

@@ -3,6 +3,9 @@
 import { memo } from "react";
 import { motion } from "framer-motion";
 
+/**
+ * Background beams component.
+ */
 export const BackgroundBeams = memo(() => {
     const paths = [
         "M-380 -189C-380 -189 -312 216 152 343C616 470 684 875 684 875",
@@ -83,7 +86,7 @@ export const BackgroundBeams = memo(() => {
                     ></motion.path>
                 ))}
                 <defs>
-                    {paths.map((path, index) => (
+                    {paths.map((_, index) => (
                         <motion.linearGradient
                             id={`linearGradient-${index}`}
                             x1="100%"

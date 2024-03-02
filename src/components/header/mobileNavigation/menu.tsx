@@ -23,6 +23,9 @@ const navigationVariants = {
     closed: { opacity: 0, scaleY: 0 },
 };
 
+/**
+ * Menu component.
+ */
 export const Menu = ({ children }: MenuProps) => {
     const [isOpen, toggleOpen] = useCycle(false, true);
 
@@ -51,6 +54,7 @@ export const Menu = ({ children }: MenuProps) => {
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-hover xl:hidden"
                 onClick={onClick}
             >
+                {/* Animated icon */}
                 <svg width="20" height="20" viewBox="0 0 24 24">
                     <motion.path
                         {...path01Variants.closed}
@@ -68,6 +72,8 @@ export const Menu = ({ children }: MenuProps) => {
                     />
                 </svg>
             </motion.button>
+
+            {/* Menu content */}
             <motion.div
                 className="absolute left-0 top-[70px] z-50 flex h-[calc(100vh-70px)] w-full flex-col items-center justify-between bg-background/95 p-8 xl:hidden"
                 initial="closed"

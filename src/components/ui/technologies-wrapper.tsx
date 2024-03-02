@@ -31,9 +31,10 @@ import ZodIcon from "@/assets/icons/zod.svg";
 
 import Image from "next/image";
 
+import { IconCode } from "@tabler/icons-react";
+
 import { TechnologiesMap } from "@/utils/constants";
 import { Tooltip, TooltipArrow, TooltipContent, TooltipProvider, TooltipTrigger } from "./tooltip";
-import { IconCode } from "@tabler/icons-react";
 
 export type Technologies = {
     [key in TechnologiesMap]: {
@@ -79,6 +80,10 @@ const technologiesMap: Technologies = {
     zod: { label: "Zod", icon: ZodIcon },
 };
 
+/**
+ * Technologies wrapper component used to display the technologies used in some project or section.
+ * @param technologies - Technologies used.
+ */
 export const TechnologiesWrapper = ({ technologies }: TechnologiesWrapperProps) => {
     const filteredTechnologies = technologies.map((tech) => technologiesMap[tech]);
 
@@ -88,6 +93,7 @@ export const TechnologiesWrapper = ({ technologies }: TechnologiesWrapperProps) 
                 <IconCode className="h-5 w-5 text-primary" />
                 <h1 className="text-lg font-medium text-primary">Technologies</h1>
             </div>
+
             <div className="flex w-full max-w-7xl flex-wrap items-start justify-start gap-8">
                 {filteredTechnologies.map((tech, index) => (
                     <TooltipProvider key={index}>
@@ -97,6 +103,7 @@ export const TechnologiesWrapper = ({ technologies }: TechnologiesWrapperProps) 
                                     <Image src={tech.icon} alt={tech.label} className="h-auto w-auto" loading="lazy" />
                                 </div>
                             </TooltipTrigger>
+
                             <TooltipContent className="flex items-center justify-center rounded-lg border border-hover bg-background/90 px-4 py-1.5">
                                 <h1 className="text-xs font-medium text-primary">{tech.label}</h1>
                                 <TooltipArrow className="fill-hover" />

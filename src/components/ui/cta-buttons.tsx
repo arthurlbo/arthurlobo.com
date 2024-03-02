@@ -12,6 +12,11 @@ export interface CtaButtonsProps {
     secondary: ButtonProps;
 }
 
+/**
+ * Call to action buttons component that will be used on the projects and about section.
+ * @param primary - Primary button props (label and link).
+ * @param secondary - Secondary button props (label and link).
+ */
 export const CtaButtons = ({ primary, secondary }: CtaButtonsProps) => {
     return (
         <div className="z-50 flex w-full flex-col items-center gap-5 md:w-auto md:flex-row">
@@ -48,6 +53,7 @@ export const CtaButtons = ({ primary, secondary }: CtaButtonsProps) => {
                     </div>
                 </button>
             </Link>
+
             <Link href={secondary.link} target="_blank" tabIndex={-1}>
                 <button
                     className="

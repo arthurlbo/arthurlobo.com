@@ -3,6 +3,9 @@ import { NavLinkProps } from "@/components/header/nav-link";
 
 import { IconBrandGithub, IconBrandGmail, IconBrandInstagram, IconBrandLinkedin } from "@tabler/icons-react";
 
+/**
+ * List technologies that I use.
+ */
 export type TechnologiesMap =
     | "chrakraui"
     | "cypress"
@@ -35,6 +38,9 @@ export type TechnologiesMap =
     | "vite"
     | "zod";
 
+/**
+ * My social links.
+ */
 export const socialLinks: SocialButtonProps[] = [
     {
         icon: IconBrandInstagram,
@@ -54,6 +60,9 @@ export const socialLinks: SocialButtonProps[] = [
     },
 ];
 
+/**
+ * Nav links for the header.
+ */
 export const navLinks: NavLinkProps[] = [
     { label: "Home", href: "/" },
     { label: "About", href: "#about" },

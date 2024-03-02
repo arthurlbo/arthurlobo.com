@@ -4,10 +4,18 @@ import { ReactNode, useEffect, useRef, useState } from "react";
 
 import { motion, useTransform, useScroll, useVelocity, useSpring } from "framer-motion";
 
-import { cn } from "@/utils/cn";
+interface TracingBeamProps {
+    children: ReactNode;
+}
 
-export const TracingBeam = ({ children, className }: { children: ReactNode; className?: string }) => {
-    const ref = useRef<HTMLDivElement>(null);
+/**
+ * Tracing beam component.
+ * @param children - The children to render.
+ * @param className - The class name to apply.
+ */
+export const TracingBeam = ({ children }: TracingBeamProps) => {
+    const ref = useRef<HTMLDivElement | null>(null);
+
     const { scrollYProgress } = useScroll({
         target: ref,
         offset: ["start start", "end start"],
@@ -17,7 +25,7 @@ export const TracingBeam = ({ children, className }: { children: ReactNode; clas
     const scrollYProgressVelocity = useVelocity(scrollYProgress);
     const [_, setVelocity] = useState(0);
 
-    const contentRef = useRef<HTMLDivElement>(null);
+    const contentRef = useRef<HTMLDivElement | null>(null);
 
     const [svgHeight, setSvgHeight] = useState(0);
 
@@ -48,13 +56,14 @@ export const TracingBeam = ({ children, className }: { children: ReactNode; clas
         stiffness: 500,
         damping: 90,
     });
+
     const y2 = useSpring(useTransform(scrollYProgress, [0, 1], [50, svgHeight - 200]), {
         stiffness: 500,
         damping: 90,
     });
 
     return (
-        <motion.div ref={ref} className={cn("relative h-full w-full flex-none", className)}>
+        <motion.div ref={ref} className="relative h-full w-full flex-none">
             <div className="absolute">
                 <svg
                     viewBox={`0 0 20 ${svgHeight + 5}`}

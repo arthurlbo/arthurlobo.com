@@ -3,7 +3,10 @@ import { navLinks, socialLinks } from "@/utils/constants";
 import { NavLink } from "./nav-link";
 import { SocialButton } from "@/components/ui";
 
-export const Desktop = () => {
+/**
+ * Main navigation for desktop devices that will be displayed on the header.
+ */
+export const DesktopNavigation = () => {
     return (
         <>
             <nav className="hidden flex-1 items-center justify-center gap-8 xl:flex">

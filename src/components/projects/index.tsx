@@ -10,6 +10,9 @@ import HabitsImg from "@/assets/habits.webp";
 import FeedgetImg from "@/assets/feedget.webp";
 import TimeCapsuleImg from "@/assets/timecapsule.webp";
 
+/**
+ * My side projects.
+ **/
 const projects: ProjectProps[] = [
     {
         title: "Time Capsule",
@@ -123,10 +126,14 @@ const projects: ProjectProps[] = [
     },
 ];
 
+/**
+ * Projects section.
+ */
 export const Projects = () => {
     return (
         <section className="flex w-full flex-col items-start gap-12 lg:gap-24">
             <Title icon={IconPalette} label="Projects" title="Some of my side projects" align="center" />
+
             <Carousel className="w-full" opts={{ loop: true, duration: 0 }}>
                 <CarouselContent>
                     {projects.map((project, index) => (
@@ -135,6 +142,8 @@ export const Projects = () => {
                         </CarouselItem>
                     ))}
                 </CarouselContent>
+
+                {/* Navigation buttons */}
                 <CarouselPrevious />
                 <CarouselNext />
             </Carousel>

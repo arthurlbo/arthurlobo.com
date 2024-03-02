@@ -9,6 +9,9 @@ interface TitleProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, Vari
     icon: IconType;
 }
 
+/**
+ * Style variants for the title component, used to align the title.
+ */
 const titleVariants = cva("flex w-full flex-col gap-3", {
     variants: {
         align: {
@@ -21,6 +24,13 @@ const titleVariants = cva("flex w-full flex-col gap-3", {
     },
 });
 
+/**
+ * Title component used in the sections.
+ * @param title - Title of the section.
+ * @param label - Label of the section.
+ * @param icon - Icon of the section.
+ * @param align - Alignment of the title.
+ */
 export const Title = ({ title, label, icon: Icon, align }: TitleProps) => {
     return (
         <div className={cn(titleVariants({ align }))}>
@@ -28,6 +38,7 @@ export const Title = ({ title, label, icon: Icon, align }: TitleProps) => {
                 <Icon className="h-4 w-4" />
                 <h2 className="text-sm font-bold leading-tight">{label}</h2>
             </div>
+
             <h1 className="text-4xl font-semibold text-primary">{title}</h1>
         </div>
     );

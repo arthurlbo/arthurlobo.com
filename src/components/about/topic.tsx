@@ -2,12 +2,17 @@ import { ReactNode } from "react";
 
 import { IconType } from "@/lib/iconType";
 
-export interface TopicsProps {
+export interface TopicProps {
     icon: IconType;
     children: ReactNode;
 }
 
-export const Topics = ({ icon: Icon, children }: TopicsProps) => {
+/**
+ * Topic component that will be used in the About section.
+ * @param icon - Icon to be displayed.
+ * @param children - Content to be displayed.
+ */
+export const Topic = ({ icon: Icon, children }: TopicProps) => {
     return (
         <div className="relative z-50 flex min-h-[123px] w-full flex-row items-center gap-5 rounded-2xl border border-hover bg-background p-6">
             <div className="flex h-12 w-12 flex-none items-center justify-center rounded-2xl border border-hover bg-transparent">

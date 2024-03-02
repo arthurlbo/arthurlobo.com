@@ -4,6 +4,9 @@ import { lazy } from "react";
 
 const Spline = lazy(() => import("@splinetool/react-spline"));
 
+/**
+ * Spline card displayed on the hero section.
+ */
 export const SplineCard = () => {
     return (
         <Spline

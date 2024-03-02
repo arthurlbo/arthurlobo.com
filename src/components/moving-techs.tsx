@@ -1,5 +1,8 @@
 import { IconBolt } from "@tabler/icons-react";
 
+/**
+ * List of my technologies.
+ */
 const techs = [
     "JavaScript",
     "TypeScript",
@@ -37,6 +40,9 @@ const techs = [
 ];
 
 // TODO - Improve the animation in different screen sizes.
+/**
+ * Moving techs section.
+ */
 export const MovingTechs = () => {
     const extendedTechs = techs.concat(techs);
 
@@ -50,6 +56,8 @@ export const MovingTechs = () => {
                     </li>
                 ))}
             </ul>
+
+            {/* Gradient overlay */}
             <div className="absolute inset-y-0 left-0 w-14 bg-gradient-to-r from-black to-transparent" />
             <div className="absolute inset-y-0 right-0 w-14 bg-gradient-to-l from-black to-transparent" />
         </section>

@@ -4,10 +4,13 @@ import { IconCode, IconDiscountCheck, IconFlare, IconSchool } from "@tabler/icon
 
 import { CtaButtons, Title } from "@/components/ui";
 
-import { Topics, TopicsProps } from "./topics";
-import { BackgroundCellCore } from "./background-cell";
+import { Topic, TopicProps } from "./topic";
+import { BackgroundCell } from "./background-cell";
 
-const topics: TopicsProps[] = [
+/**
+ * Topics to be displayed on the about section.
+ */
+const topics: TopicProps[] = [
     {
         icon: IconCode,
         children: (
@@ -37,13 +40,17 @@ const topics: TopicsProps[] = [
     },
 ];
 
+/**
+ * About section.
+ */
 export const About = () => {
     const birthDate = "2003-07-01";
     const myAge = dayjs().diff(birthDate, "year");
 
     return (
         <section className="relative flex h-full w-full flex-col items-start gap-12 md:items-center lg:gap-32">
-            <BackgroundCellCore />
+            <BackgroundCell />
+
             <div className="flex w-full flex-col items-start justify-between gap-12 md:items-center lg:flex-row lg:gap-0">
                 <div className="flex w-full flex-col items-start justify-center gap-12 lg:max-w-[540px] xl:max-w-[593px] xl:gap-16">
                     <div className="z-50 flex w-full flex-col items-start gap-7">
@@ -62,11 +69,12 @@ export const About = () => {
                         secondary={{ label: "Check out my GitHub", link: "https://www.github.com/arthurlbo" }}
                     />
                 </div>
+
                 <div className="z-50 h-[380px] w-full rounded-[26px] bg-hover lg:w-[340px]" />
             </div>
             <div className="flex w-full flex-col items-center gap-8 xl:flex-row">
                 {topics.map((topic, index) => (
-                    <Topics key={index} {...topic} />
+                    <Topic key={index} {...topic} />
                 ))}
             </div>
         </section>

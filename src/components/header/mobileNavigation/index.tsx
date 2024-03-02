@@ -4,7 +4,10 @@ import { Menu } from "./menu";
 import { NavLink } from "../nav-link";
 import { Copy, SocialButton } from "@/components/ui";
 
-export const Mobile = () => {
+/**
+ * Menu for mobile devices that will be displayed on the header.
+ */
+export const MobileNavigation = () => {
     return (
         <Menu>
             <div className="flex flex-1 flex-col items-center justify-center gap-8 pb-8">
@@ -19,6 +22,7 @@ export const Mobile = () => {
                         <SocialButton key={key} {...link} />
                     ))}
                 </div>
+
                 <Copy />
             </div>
         </Menu>

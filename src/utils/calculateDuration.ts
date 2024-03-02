@@ -3,6 +3,11 @@ import duration from "dayjs/plugin/duration";
 
 dayjs.extend(duration);
 
+/**
+ * Calculate the duration between two dates in years and months.
+ * @param startDate - Start date.
+ * @param endDate - End date.
+ */
 export function calculateDuration(startDate: string, endDate: string) {
     const start = dayjs(startDate);
     const end = dayjs(endDate);

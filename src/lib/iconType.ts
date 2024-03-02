@@ -1,5 +1,5 @@
 import { ElementType } from "react";
 import { TablerIconsProps } from "@tabler/icons-react";
 
-// Type for some icon prop.
+// Type to use when you want to use icons as props.
 export type IconType = ElementType<TablerIconsProps>;

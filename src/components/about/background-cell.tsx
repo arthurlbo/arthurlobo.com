@@ -1,6 +1,6 @@
 "use client";
 
-import { Dispatch, useEffect, useRef, useState } from "react";
+import { Dispatch, MouseEvent, useEffect, useRef, useState } from "react";
 
 import { motion, useAnimation } from "framer-motion";
 
@@ -11,6 +11,13 @@ interface CellProps {
     setClickedCell: Dispatch<number[] | null>;
 }
 
+/**
+ * Cell component in the pattern.
+ * @param rowIdx - Row index of the cell.
+ * @param colIdx - Column index of the cell.
+ * @param clickedCell - The cell that was clicked.
+ * @param setClickedCell - Function to set the clicked cell.
+ */
 const Cell = ({ rowIdx, colIdx, clickedCell, setClickedCell }: CellProps) => {
     const controls = useAnimation();
 
@@ -44,6 +51,9 @@ const Cell = ({ rowIdx, colIdx, clickedCell, setClickedCell }: CellProps) => {
     );
 };
 
+/**
+ * Pattern component.
+ */
 const Pattern = () => {
     const [clickedCell, setClickedCell] = useState<number[] | null>(null);
 
@@ -74,13 +84,18 @@ const Pattern = () => {
     );
 };
 
-export const BackgroundCellCore = () => {
+/**
+ * BackgroundCell component.
+ */
+export const BackgroundCell = () => {
     const [_, setMousePosition] = useState({ x: 0, y: 0 });
 
-    const ref = useRef<any>(null);
+    const ref = useRef<HTMLDivElement | null>(null);
 
-    const handleMouseMove = (event: any) => {
+    const handleMouseMove = (event: MouseEvent<HTMLDivElement>) => {
         const rect = ref.current && ref.current.getBoundingClientRect();
+
+        if (!rect) return;
 
         setMousePosition({
             x: event.clientX - rect.left,

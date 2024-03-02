@@ -5,6 +5,11 @@ export interface NavLinkProps {
     href: string;
 }
 
+/**
+ * Navigation link component that will be displayed on the desktop and mobile main navigation.
+ * @param label - Label of the link.
+ * @param href - Href of the link.
+ */
 export const NavLink = ({ label, href }: NavLinkProps) => {
     return (
         <Link

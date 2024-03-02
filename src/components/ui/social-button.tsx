@@ -12,6 +12,9 @@ export interface SocialButtonProps
     href: string;
 }
 
+/**
+ * Style variants for the social button.
+ */
 const socialButtonVariants = cva(
     "flex items-center justify-center rounded-full border border-hover animate-shimmer hover:bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] hover:bg-[length:200%_100%] hover:border-slate-800 hover:shadow-lg hover:shadow-accent/30 focus:outline-none focus:ring-2 focus:ring-accent/70 focus:ring-offset-2 focus:ring-offset-hover/80",
     {
@@ -27,6 +30,9 @@ const socialButtonVariants = cva(
     },
 );
 
+/**
+ * Style variants for the social button icon.
+ */
 const iconVariants = cva("text-primary", {
     variants: {
         iconSize: {
@@ -39,6 +45,13 @@ const iconVariants = cva("text-primary", {
     },
 });
 
+/**
+ * Social button component used to display social media links.
+ * @param icon - Icon of the social media.
+ * @param href - Href of the social media.
+ * @param size - Size of the social button.
+ * @param iconSize - Size of the social button icon.
+ */
 export const SocialButton = ({ icon: Icon, href, size, iconSize }: SocialButtonProps) => {
     return (
         <Link href={href} target="_blank" className={cn(socialButtonVariants({ size }))}>
