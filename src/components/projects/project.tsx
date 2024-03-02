@@ -51,7 +51,7 @@ export const Project = ({ description, image, link, repository, technologies, ti
                 />
             </div>
             <TechnologiesWrapper technologies={technologies} />
-            <span className="static bottom-5 right-5 self-end text-xs font-semibold text-secondary last:hidden md:absolute">
+            <span className="static bottom-5 right-5 self-end text-xs font-semibold text-secondary md:absolute lg:hidden">
                 Swipe to the next ...
             </span>
             <div className="absolute inset-x-0 -bottom-px mx-auto h-px w-full bg-gradient-to-r from-transparent via-accent/50 to-transparent shadow-2xl" />
