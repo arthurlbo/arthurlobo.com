@@ -15,7 +15,7 @@ export interface CtaButtonsProps {
 export const CtaButtons = ({ primary, secondary }: CtaButtonsProps) => {
     return (
         <div className="z-50 flex w-full flex-col items-center gap-5 md:w-auto md:flex-row">
-            <Link href={primary.link} target="_blank" tabIndex={-1} className="w-full">
+            <Link href={primary.link} target="_blank" tabIndex={-1} className="w-full md:w-auto">
                 <button
                     className="
                         group
@@ -39,7 +39,6 @@ export const CtaButtons = ({ primary, secondary }: CtaButtonsProps) => {
                         focus:ring-accent/70
                         focus:ring-offset-2
                         focus:ring-offset-background
-                        md:w-auto
                         md:justify-between
                     "
                 >
@@ -72,8 +71,8 @@ export const CtaButtons = ({ primary, secondary }: CtaButtonsProps) => {
                         md:w-auto
                     "
                 >
-                    <span className="text-sm font-semibold">{secondary.label}</span>
-                    <IconBrandGithub className="h-4 w-4" />
+                    <span className="flex-none text-sm font-semibold">{secondary.label}</span>
+                    <IconBrandGithub className="h-4 w-4 flex-none" />
                 </button>
             </Link>
         </div>
