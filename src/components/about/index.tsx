@@ -1,3 +1,5 @@
+import dayjs from "dayjs";
+
 import { IconCode, IconDiscountCheck, IconFlare, IconSchool } from "@tabler/icons-react";
 
 import { CtaButtons, Title } from "@/components/ui";
@@ -36,10 +38,8 @@ const topics: TopicsProps[] = [
 ];
 
 export const About = () => {
-    const currentMonth = new Date().getMonth();
-    const currentYear = new Date().getFullYear();
-
-    const myAge = currentMonth < 6 ? currentYear - 2003 - 1 : currentYear - 2003;
+    const birthDate = "2003-07-01";
+    const myAge = dayjs().diff(birthDate, "year");
 
     return (
         <section className="relative flex h-full w-full flex-col items-start gap-12 md:items-center lg:gap-32">
