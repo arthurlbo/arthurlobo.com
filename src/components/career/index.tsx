@@ -1,5 +1,7 @@
 import { IconBriefcase2 } from "@tabler/icons-react";
 
+import { calculateDuration } from "@/utils/calculateDuration";
+
 import { Title } from "@/components/ui";
 import { TracingBeam } from "./tracing-beam";
 import { ExperienceCard, ExperienceCardProps } from "./experience-card";
@@ -10,7 +12,7 @@ const experiences: ExperienceCardProps[] = [
         company: "Wolk Tecnologia",
         companyLink: "https://www.wolk.com.br/index.html",
         location: "Curitiba, Paraná, Brazil",
-        duration: "Dec 2023 - Mar 2024 • 4 mos",
+        duration: `Dec 2023 - Present • ${calculateDuration("2023/12/01", new Date().toDateString())}`,
         achievements: [
             "Led the Frontend of two dashboard projects (financial and operational), replacing the company's existing legacy systems enhancing performance and user experience.",
             "Successfully achieve real-time data updates in the dashboards, ensuring an exceptional and immersive user experience.",
@@ -35,7 +37,7 @@ const experiences: ExperienceCardProps[] = [
         company: "Adam Robo",
         companyLink: "https://adamrobo.com.br/lp/",
         location: "Curitiba, Paraná, Brazil",
-        duration: "Dec 2022 - Jan 2024 • 1 yr 2 mos",
+        duration: `Dec 2022 - Jan 2024 • ${calculateDuration("2022/12/01/", "2024/01/01")}`,
         achievements: [
             "Training team members in React and TypeScript.",
             "Elaborated the Front-end architecture to ensure system performance and scalability.",
@@ -71,7 +73,7 @@ const experiences: ExperienceCardProps[] = [
         company: "Adam Robo",
         companyLink: "https://adamrobo.com.br/lp/",
         location: "Curitiba, Paraná, Brazil",
-        duration: "Apr 2022 - Dec 2022 • 9 mos",
+        duration: `Apr 2022 - Dec 2022 • ${calculateDuration("2022/04/01", "2022/12/01")}`,
         pointClassName: "bg-gradient-to-r from-[#3F5EFB] to-[#1CB5E0]",
     },
 ];
