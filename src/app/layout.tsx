@@ -13,7 +13,8 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 
 export const metadata = {
     title: "Arthur Lobo | Portfolio",
-    description: "Arthur Lobo's portfolio",
+    description:
+        "Arthur Lobo's portfolio, a Frontend developer based in Brazil, specializing in engineering exceptional user experiences across different devices. With focus on React and TypeScript, transforming ideas into high-performance web apps.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
