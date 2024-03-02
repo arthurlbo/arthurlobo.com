@@ -36,6 +36,11 @@ const topics: TopicsProps[] = [
 ];
 
 export const About = () => {
+    const currentMonth = new Date().getMonth();
+    const currentYear = new Date().getFullYear();
+
+    const myAge = currentMonth < 6 ? currentYear - 2003 - 1 : currentYear - 2003;
+
     return (
         <section className="relative flex h-full w-full flex-col items-start gap-12 md:items-center lg:gap-32">
             <BackgroundCellCore />
@@ -44,7 +49,7 @@ export const About = () => {
                     <div className="z-50 flex w-full flex-col items-start gap-7">
                         <Title label="About Me" icon={IconDiscountCheck} title="Arthur Carneiro Lobo" />
                         <p className="font-regular text-start text-xl text-secondary">
-                            I am <span className="text-primary">20 years</span> old and currently based in{" "}
+                            I am <span className="text-primary">{myAge} years</span> old and currently based in{" "}
                             <span className="text-primary">Brazil.</span> I began programming out of curiosity when I
                             was 17, and it was <span className="text-primary">love at first sight.</span> Since then, I
                             have been pushing myself day by day to improve my skills, particularly in{" "}
