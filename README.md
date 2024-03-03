@@ -1,8 +1,11 @@
 ### Hi there! 👋
 
 > Welcome to my personal website, where I showcase a collection of my projects, highlight my skills, and document my journey as a developer thus far.
+> 
 > Leveraging the power of React and Next.js, it offers a smooth and efficient browsing experience with server-side rendering capabilities for enhanced performance.
+> 
 > TypeScript is utilized throughout the codebase to ensure robustness and type safety, while Tailwind CSS provides a highly customizable and responsive design system, resulting in a sleek and modern aesthetic. Additionally, Framer Motion adds fluid animations and transitions, enhancing the overall user experience.
+> 
 > Also, Cypress is employed for end-to-end testing, ensuring the reliability and functionality of the website across different scenarios.
 
 ## What is inside?
