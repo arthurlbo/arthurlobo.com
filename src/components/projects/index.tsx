@@ -1,6 +1,14 @@
 import { IconPalette } from "@tabler/icons-react";
 
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, Title } from "@/components/ui";
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+    FadeInWhileInView,
+    Title,
+} from "@/components/ui";
 
 import { Project, ProjectProps } from "./project";
 
@@ -131,21 +139,25 @@ const projects: ProjectProps[] = [
  */
 export const Projects = () => {
     return (
-        <section id="projects" className="flex w-full flex-col items-start gap-12 lg:gap-24">
-            <Title icon={IconPalette} label="Projects" title="Some of my side projects" align="center" />
+        <section id="projects" className="flex w-full flex-col items-start gap-12 lg:items-center lg:gap-24">
+            <FadeInWhileInView initial={{ y: -40 }} animate={{ y: 0 }}>
+                <Title icon={IconPalette} label="Projects" title="Some of my side projects" align="center" />
+            </FadeInWhileInView>
 
             <Carousel className="w-full" opts={{ loop: true, duration: 0 }}>
-                <CarouselContent>
-                    {projects.map((project, index) => (
-                        <CarouselItem key={index}>
-                            <Project {...project} />
-                        </CarouselItem>
-                    ))}
-                </CarouselContent>
+                <FadeInWhileInView initial={{ x: -40 }} animate={{ x: 0 }}>
+                    <CarouselContent>
+                        {projects.map((project, index) => (
+                            <CarouselItem key={index}>
+                                <Project {...project} />
+                            </CarouselItem>
+                        ))}
+                    </CarouselContent>
 
-                {/* Navigation buttons */}
-                <CarouselPrevious />
-                <CarouselNext />
+                    {/* Navigation buttons */}
+                    <CarouselPrevious />
+                    <CarouselNext />
+                </FadeInWhileInView>
             </Carousel>
         </section>
     );

@@ -2,7 +2,7 @@ import { IconBriefcase2 } from "@tabler/icons-react";
 
 import { calculateDuration } from "@/utils/calculateDuration";
 
-import { Title } from "@/components/ui";
+import { Title, FadeInWhileInView } from "@/components/ui";
 import { TracingBeam } from "./tracing-beam";
 import { ExperienceCard, ExperienceCardProps } from "./experience-card";
 
@@ -86,13 +86,20 @@ const experiences: ExperienceCardProps[] = [
  */
 export const Career = () => {
     return (
-        <section id="career" className="flex w-full flex-col items-start gap-12 overflow-visible lg:gap-24">
-            <Title icon={IconBriefcase2} label="Career" title="My work history" align="center" />
+        <section
+            id="career"
+            className="flex w-full flex-col items-start gap-12 overflow-visible lg:items-center lg:gap-24"
+        >
+            <FadeInWhileInView initial={{ y: 40 }} animate={{ y: 0 }}>
+                <Title icon={IconBriefcase2} label="Career" title="My work history" align="center" />
+            </FadeInWhileInView>
 
             <TracingBeam>
                 <div className="flex h-full w-full flex-col items-start gap-12 pl-5 md:pl-12">
                     {experiences.map((experience, index) => (
-                        <ExperienceCard key={index} {...experience} />
+                        <FadeInWhileInView key={index} initial={{ x: -40 }} animate={{ x: 0 }} className="w-full">
+                            <ExperienceCard {...experience} />
+                        </FadeInWhileInView>
                     ))}
                 </div>
             </TracingBeam>

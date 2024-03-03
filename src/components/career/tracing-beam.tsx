@@ -2,7 +2,7 @@
 
 import { ReactNode, useEffect, useRef, useState } from "react";
 
-import { motion, useTransform, useScroll, useVelocity, useSpring } from "framer-motion";
+import { motion, useTransform, useScroll, useVelocity, useSpring, useAnimation } from "framer-motion";
 
 interface TracingBeamProps {
     children: ReactNode;
@@ -15,6 +15,8 @@ interface TracingBeamProps {
  */
 export const TracingBeam = ({ children }: TracingBeamProps) => {
     const ref = useRef<HTMLDivElement | null>(null);
+
+    const controls = useAnimation();
 
     const { scrollYProgress } = useScroll({
         target: ref,
@@ -62,6 +64,31 @@ export const TracingBeam = ({ children }: TracingBeamProps) => {
         damping: 90,
     });
 
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    controls.start("visible");
+                }
+            },
+            {
+                root: null,
+                rootMargin: "0px",
+                threshold: 0.1,
+            },
+        );
+
+        if (ref.current) {
+            observer.observe(ref.current);
+        }
+
+        return () => {
+            if (ref.current) {
+                observer.unobserve(ref.current);
+            }
+        };
+    }, [controls]);
+
     return (
         <motion.div ref={ref} className="relative h-full w-full flex-none">
             <div className="absolute">
@@ -76,8 +103,12 @@ export const TracingBeam = ({ children }: TracingBeamProps) => {
                         d={`M 0 0 V ${svgHeight + 5}`}
                         fill="none"
                         stroke="#212024"
-                        transition={{
-                            duration: 10,
+                        animate={controls}
+                        initial={{ scaleY: 0, originY: 0 }}
+                        transition={{ duration: 6 }}
+                        variants={{
+                            hidden: { scaleY: 0 },
+                            visible: { scaleY: 1 },
                         }}
                     ></motion.path>
                     <motion.path
