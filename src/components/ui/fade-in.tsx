@@ -62,7 +62,7 @@ export const FadeInWhileInView = ({
             whileInView={{ opacity: 1, ...animate }}
             transition={{ duration, delay }}
             viewport={{ once: true }}
-            className={cn("", className)}
+            className={cn("z-50", className)}
         >
             {children}
         </MotionComponent>

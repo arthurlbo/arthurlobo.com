@@ -85,7 +85,7 @@ export const About = () => {
                     </FadeInWhileInView>
                 </div>
 
-                <FadeInWhileInView initial={{ x: 40 }} animate={{ x: 0 }} className="z-50 w-full lg:w-auto">
+                <FadeInWhileInView initial={{ x: 40 }} animate={{ x: 0 }} className="w-full lg:w-auto">
                     <Image
                         src={Me}
                         alt="Arthur Carneiro Lobo"
