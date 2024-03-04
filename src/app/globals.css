@@ -10,3 +10,7 @@ body {
 html {
     scroll-behavior: smooth !important;
 }
+
+::selection {
+    color: white;
+}

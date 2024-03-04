@@ -19,9 +19,26 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="en">
+        <html
+            lang="en"
+            className="scrollbar scrollbar-track-[#424242] scrollbar-thumb-[#686868] scrollbar-w-2 hover:scrollbar-thumb-[#7b7b7b] active:scrollbar-thumb-[#7b7b7b]"
+        >
             <body
-                className={`${plusJakartaSans.variable} max-w-screen relative flex min-h-screen w-full flex-col items-center justify-center overflow-x-hidden bg-background font-sans`}
+                className={`
+                    ${plusJakartaSans.variable}
+                    relative
+                    flex
+                    min-h-screen
+                    w-full
+                    max-w-[100vw]
+                    flex-col
+                    items-center
+                    justify-center
+                    overflow-x-hidden
+                    bg-background
+                    font-sans
+                    selection:bg-accent
+                `}
             >
                 <Header />
                 {children}
