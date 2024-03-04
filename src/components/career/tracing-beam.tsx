@@ -105,7 +105,7 @@ export const TracingBeam = ({ children }: TracingBeamProps) => {
                         stroke="#212024"
                         animate={controls}
                         initial={{ scaleY: 0, originY: 0 }}
-                        transition={{ duration: 6 }}
+                        transition={{ duration: 4 }}
                         variants={{
                             hidden: { scaleY: 0 },
                             visible: { scaleY: 1 },
