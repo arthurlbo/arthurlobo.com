@@ -15,6 +15,8 @@ export const metadata = {
     title: "Arthur Lobo | Portfolio",
     description:
         "Arthur Lobo's portfolio, a Frontend developer based in Brazil, specializing in engineering exceptional user experiences across different devices. With focus on React and TypeScript, transforming ideas into high-performance web apps.",
+    keywords:
+        "Arthur Lobo, Frontend Developer, React, TypeScript, Portfolio, Next 14, Frontend Engineer, Developer portfolio, Framer motion, Web portfolio, Frontend portfolio, Web developer portfolio, Web developer, Frontend",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
