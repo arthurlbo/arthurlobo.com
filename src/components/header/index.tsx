@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import { Container } from "./container";
 import { MobileNavigation } from "./mobileNavigation";
 import { DesktopNavigation } from "./desktop-navigation";
 
@@ -11,27 +12,7 @@ import LogoArthur from "@/assets/logo.svg";
  */
 export const Header = () => {
     return (
-        <div
-            className="
-                absolute
-                left-0
-                top-0
-                flex
-                h-[70px]
-                w-full
-                max-w-[100vw]
-                items-center
-                justify-between
-                border-b
-                border-hover
-                bg-transparent
-                px-5
-                xl:h-[90px]
-                xl:border-b-0
-                xl:px-28
-                xl:pb-0
-            "
-        >
+        <Container>
             <Link
                 tabIndex={0}
                 href="/"
@@ -39,10 +20,8 @@ export const Header = () => {
             >
                 <Image src={LogoArthur} alt="Logo Arthur Lobo" priority width={170} className="xl:-[170px] w-[140px]" />
             </Link>
-
             <DesktopNavigation />
-
             <MobileNavigation />
-        </div>
+        </Container>
     );
 };
