@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import dayjs from "dayjs";
 
 import { IconCode, IconDiscountCheck, IconFlare, IconSchool } from "@tabler/icons-react";
@@ -6,6 +8,8 @@ import { CtaButtons, FadeInWhileInView, Title } from "@/components/ui";
 
 import { Topic, TopicProps } from "./topic";
 import { BackgroundCell } from "./background-cell";
+
+import Me from "@/assets/me.webp";
 
 /**
  * Topics to be displayed on the about section.
@@ -81,8 +85,13 @@ export const About = () => {
                     </FadeInWhileInView>
                 </div>
 
-                <FadeInWhileInView initial={{ x: 40 }} animate={{ x: 0 }} className="w-full lg:w-auto">
-                    <div className="z-50 h-[380px] w-full rounded-[26px] bg-hover lg:w-[340px]" />
+                <FadeInWhileInView initial={{ x: 40 }} animate={{ x: 0 }} className="z-50 w-full lg:w-auto">
+                    <Image
+                        src={Me}
+                        alt="Arthur Carneiro Lobo"
+                        className="z-50 h-auto max-h-[380px] w-full rounded-[26px] object-cover object-top md:object-center lg:max-h-[600px] lg:w-[300px] 2xl:w-[340px]"
+                        priority
+                    />
                 </FadeInWhileInView>
             </div>
 
