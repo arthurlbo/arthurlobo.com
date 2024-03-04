@@ -1,4 +1,4 @@
-import { HeroPattern } from "@/components/ui/hero-pattern";
+import { HeroPattern } from "@/components/hero-pattern";
 
 describe("<HeroPattern />", () => {
     beforeEach(() => {

@@ -33,7 +33,7 @@ import Image from "next/image";
 
 import { IconCode } from "@tabler/icons-react";
 
-import { TechnologiesMap } from "@/utils/constants";
+import { TechnologiesMap } from "@/utils";
 import { Tooltip, TooltipArrow, TooltipContent, TooltipProvider, TooltipTrigger } from "./tooltip";
 
 export type Technologies = {

@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 
 const getInitialState = (query: string, defaultState?: boolean) => {
@@ -25,7 +27,7 @@ const getInitialState = (query: string, defaultState?: boolean) => {
  * @param query - Media query to match.
  * @param defaultState - Default state when the media query is not matched.
  */
-const useMedia = (query: string, defaultState?: boolean) => {
+export const useMedia = (query: string, defaultState?: boolean) => {
     const [state, setState] = useState(getInitialState(query, defaultState));
 
     useEffect(() => {
@@ -49,5 +51,3 @@ const useMedia = (query: string, defaultState?: boolean) => {
 
     return state;
 };
-
-export default useMedia;

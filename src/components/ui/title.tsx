@@ -1,4 +1,4 @@
-import { cn } from "@/utils/cn";
+import { cn } from "@/utils";
 import { VariantProps, cva } from "class-variance-authority";
 
 import { IconType } from "@/lib/iconType";

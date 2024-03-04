@@ -6,7 +6,7 @@ import useEmblaCarousel, { type UseEmblaCarouselType } from "embla-carousel-reac
 
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 
-import { cn } from "@/utils/cn";
+import { cn } from "@/utils";
 
 type CarouselApi = UseEmblaCarouselType[1];
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>;

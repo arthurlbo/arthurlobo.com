@@ -1,9 +1,8 @@
 import Image, { StaticImageData } from "next/image";
 
-import { cn } from "@/utils/cn";
-import { TechnologiesMap } from "@/utils/constants";
+import { cn, TechnologiesMap } from "@/utils";
 
-import { CtaButtons, TechnologiesWrapper } from "@/components/ui";
+import { CtaButtons, TechnologiesWrapper } from "@/components";
 
 export interface ProjectProps {
     title: string;

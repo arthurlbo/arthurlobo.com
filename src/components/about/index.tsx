@@ -4,7 +4,7 @@ import dayjs from "dayjs";
 
 import { IconCode, IconDiscountCheck, IconFlare, IconSchool } from "@tabler/icons-react";
 
-import { CtaButtons, FadeInWhileInView, Title } from "@/components/ui";
+import { CtaButtons, FadeInWhileInView, Title } from "@/components";
 
 import { Topic, TopicProps } from "./topic";
 import { BackgroundCell } from "./background-cell";

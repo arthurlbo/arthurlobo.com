@@ -2,10 +2,9 @@ import Link from "next/link";
 
 import { IconTargetArrow } from "@tabler/icons-react";
 
-import { cn } from "@/utils/cn";
-import { TechnologiesMap } from "@/utils/constants";
+import { cn, TechnologiesMap } from "@/utils";
 
-import { TechnologiesWrapper } from "@/components/ui";
+import { TechnologiesWrapper } from "@/components";
 
 export interface ExperienceCardProps {
     jobTitle: string;

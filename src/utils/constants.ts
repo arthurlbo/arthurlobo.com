@@ -1,5 +1,5 @@
-import { SocialButtonProps } from "@/components/ui";
-import { NavLinkProps } from "@/components/header/nav-link";
+import { SocialButtonProps } from "@/components";
+import { NavLinkProps } from "@/componentsheader/nav-link";
 
 import { IconBrandGithub, IconBrandGmail, IconBrandInstagram, IconBrandLinkedin } from "@tabler/icons-react";
 

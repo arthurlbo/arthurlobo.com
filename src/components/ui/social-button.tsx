@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { VariantProps, cva } from "class-variance-authority";
 
-import { cn } from "@/utils/cn";
+import { cn } from "@/utils";
 import { IconType } from "@/lib/iconType";
 
 export interface SocialButtonProps

@@ -80,26 +80,30 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
         ├── header
         ├── hero
         ├── projects
+        ├── moving-techs
         ├── ui
     ├── lib
     ├── utils
+        ├── hooks
 ```
 
-| Folder         | Description                                    |
-| -------------- | ---------------------------------------------- |
-| **e2e**        | e2e tests in the app                           |
-| **app**        | Pages                                          |
-| **assets**     | Images and static files for application        |
-| **components** | Page's components                              |
-| **header**     | Page's header                                  |
-| **ui**         | Reusable ui components                         |
-| **about**      | Components related to the about section        |
-| **career**     | Components related to the career section       |
-| **contact**    | Components related to the contact section      |
-| **hero**       | Components related to the hero section         |
-| **projects**   | Components related to the projects section     |
-| **lib**        | Configuration of libraries used in the project |
-| **utils**      | Auxiliary and reusable functions               |
+| Folder             | Description                                    |
+| ------------------ | ---------------------------------------------- |
+| **e2e**            | e2e tests in the app                           |
+| **app**            | Pages                                          |
+| **assets**         | Images and static files for application        |
+| **components**     | Page's components                              |
+| **header**         | Page's header                                  |
+| **ui**             | Reusable ui components                         |
+| **about**          | Components related to the about section        |
+| **career**         | Components related to the career section       |
+| **contact**        | Components related to the contact section      |
+| **hero**           | Components related to the hero section         |
+| **projects**       | Components related to the projects section     |
+| **moving-techs**   | Components related to the moving techs section |
+| **lib**            | Configuration of libraries used in the project |
+| **utils**          | Auxiliary and reusable functions               |
+| **hooks**          | Reusable custom react hooks                    |
 
 ## Conventions
 

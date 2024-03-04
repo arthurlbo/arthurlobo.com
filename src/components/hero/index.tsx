@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import { IconChevronDown } from "@tabler/icons-react";
 
-import { FadeIn } from "@/components/ui";
+import { FadeIn } from "@/components";
 
 import { SplineCard } from "./spline-card";
 

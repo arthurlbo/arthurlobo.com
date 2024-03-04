@@ -3,7 +3,7 @@
 import { ElementType, ReactNode } from "react";
 import { Target, TargetAndTransition, motion } from "framer-motion";
 
-import { cn } from "@/utils/cn";
+import { cn } from "@/utils";
 
 interface FadeInProps {
     children: ReactNode;

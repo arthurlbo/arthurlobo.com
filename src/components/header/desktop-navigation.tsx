@@ -1,7 +1,7 @@
-import { navLinks, socialLinks } from "@/utils/constants";
+import { navLinks, socialLinks } from "@/utils";
 
 import { NavLink } from "./nav-link";
-import { SocialButton } from "@/components/ui";
+import { SocialButton } from "@/components";
 
 /**
  * Main navigation for desktop devices that will be displayed on the header.

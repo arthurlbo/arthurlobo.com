@@ -1,4 +1,4 @@
-import { Hello } from "@/components/ui/hello";
+import { Hello } from "@/components/hello";
 
 describe("<Hello />", () => {
     beforeEach(() => {

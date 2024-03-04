@@ -1,8 +1,8 @@
-import { socialLinks } from "@/utils/constants";
+import { socialLinks } from "@/utils";
 
 import { ScrollToTop } from "./scroll-to-top";
 import { BackgroundBeams } from "./background-beams";
-import { Copy, FadeInWhileInView, SocialButton } from "@/components/ui";
+import { Copy, FadeInWhileInView, SocialButton } from "@/components";
 
 /**
  * Contact section.

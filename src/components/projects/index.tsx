@@ -8,7 +8,7 @@ import {
     CarouselPrevious,
     FadeInWhileInView,
     Title,
-} from "@/components/ui";
+} from "@/components";
 
 import { Project, ProjectProps } from "./project";
 

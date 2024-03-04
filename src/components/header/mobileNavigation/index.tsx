@@ -1,8 +1,8 @@
-import { navLinks, socialLinks } from "@/utils/constants";
+import { navLinks, socialLinks } from "@/utils";
 
 import { Menu } from "./menu";
 import { NavLink } from "../nav-link";
-import { Copy, SocialButton } from "@/components/ui";
+import { Copy, SocialButton } from "@/components";
 
 /**
  * Menu for mobile devices that will be displayed on the header.

@@ -1,8 +1,9 @@
 import { IconBriefcase2 } from "@tabler/icons-react";
 
-import { calculateDuration } from "@/utils/calculateDuration";
+import { calculateDuration } from "@/utils";
 
-import { Title, FadeInWhileInView } from "@/components/ui";
+import { Title, FadeInWhileInView } from "@/components";
+
 import { TracingBeam } from "./tracing-beam";
 import { ExperienceCard, ExperienceCardProps } from "./experience-card";
 

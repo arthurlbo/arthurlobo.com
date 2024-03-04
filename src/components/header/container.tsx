@@ -4,7 +4,7 @@ import { ReactNode, useEffect, useState } from "react";
 
 import { motion, useScroll, useTransform } from "framer-motion";
 
-import useMedia from "@/utils/hooks/useMedia";
+import { useMedia } from "@/utils";
 
 interface ContainerProps {
     children: ReactNode;
