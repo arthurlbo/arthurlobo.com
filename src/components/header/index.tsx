@@ -11,7 +11,27 @@ import LogoArthur from "@/assets/logo.svg";
  */
 export const Header = () => {
     return (
-        <div className="absolute left-0 top-0 flex h-[70px] w-full max-w-[100vw] items-center justify-between border-b border-hover bg-transparent px-5 xl:h-[90px] xl:border-b-0 xl:px-28 xl:pb-0">
+        <div
+            className="
+                absolute
+                left-0
+                top-0
+                flex
+                h-[70px]
+                w-full
+                max-w-[100vw]
+                items-center
+                justify-between
+                border-b
+                border-hover
+                bg-transparent
+                px-5
+                xl:h-[90px]
+                xl:border-b-0
+                xl:px-28
+                xl:pb-0
+            "
+        >
             <Link
                 tabIndex={0}
                 href="/"

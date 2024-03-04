@@ -48,7 +48,23 @@ export const CtaButtons = ({ primary, secondary }: CtaButtonsProps) => {
                     "
                 >
                     <span className="text-sm font-semibold">{primary.label}</span>
-                    <div className="flex h-7 w-7 flex-none items-center justify-center rounded-full bg-hover transition-all duration-500 ease-in-out group-hover:rotate-[320deg] group-hover:scale-110">
+                    <div
+                        className="
+                            flex
+                            h-7
+                            w-7
+                            flex-none
+                            items-center
+                            justify-center
+                            rounded-full
+                            bg-hover
+                            transition-all
+                            duration-500
+                            ease-in-out
+                            group-hover:rotate-[320deg]
+                            group-hover:scale-110
+                        "
+                    >
                         <IconArrowRight className="h-4 w-4" />
                     </div>
                 </button>

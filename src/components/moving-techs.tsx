@@ -39,7 +39,6 @@ const techs = [
     "GitHub Actions",
 ];
 
-// TODO - Improve the animation in different screen sizes.
 /**
  * Moving techs section.
  */
