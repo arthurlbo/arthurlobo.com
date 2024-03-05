@@ -90,7 +90,7 @@ export const TracingBeam = ({ children }: TracingBeamProps) => {
     }, [controls]);
 
     return (
-        <motion.div ref={ref} className="relative h-full w-full flex-none">
+        <motion.div data-testid="career-tracing-beam" ref={ref} className="relative h-full w-full flex-none">
             <div className="absolute">
                 <svg
                     viewBox={`0 0 20 ${svgHeight + 5}`}

@@ -144,19 +144,19 @@ export const Projects = () => {
                 <Title icon={IconPalette} label="Projects" title="Some of my side projects" align="center" />
             </FadeInWhileInView>
 
-            <Carousel className="w-full" opts={{ loop: true, duration: 0 }}>
+            <Carousel data-testid="project-carousel" className="w-full" opts={{ loop: true, duration: 0 }}>
                 <FadeInWhileInView initial={{ x: -40 }} animate={{ x: 0 }}>
-                    <CarouselContent>
+                    <CarouselContent data-testid="project-carousel-content">
                         {projects.map((project, index) => (
-                            <CarouselItem key={index}>
+                            <CarouselItem data-testid="project-carousel-item" key={index}>
                                 <Project {...project} />
                             </CarouselItem>
                         ))}
                     </CarouselContent>
 
                     {/* Navigation buttons */}
-                    <CarouselPrevious />
-                    <CarouselNext />
+                    <CarouselPrevious data-testid="project-carousel-previous" />
+                    <CarouselNext data-testid="project-carousel-next" />
                 </FadeInWhileInView>
             </Carousel>
         </section>

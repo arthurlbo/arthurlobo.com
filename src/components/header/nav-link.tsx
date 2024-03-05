@@ -3,6 +3,7 @@ import Link from "next/link";
 export interface NavLinkProps {
     label: string;
     href: string;
+    screen?: "desktop" | "mobile";
 }
 
 /**
@@ -10,9 +11,10 @@ export interface NavLinkProps {
  * @param label - Label of the link.
  * @param href - Href of the link.
  */
-export const NavLink = ({ label, href }: NavLinkProps) => {
+export const NavLink = ({ screen, label, href }: NavLinkProps) => {
     return (
         <Link
+            data-testid={`nav-link-${screen}`}
             href={href}
             className="
                 after:ease-out-cubic

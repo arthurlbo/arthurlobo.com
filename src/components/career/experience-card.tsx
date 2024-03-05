@@ -39,7 +39,10 @@ export const ExperienceCard = ({
     pointClassName,
 }: ExperienceCardProps) => {
     return (
-        <div className="relative flex h-full w-full flex-col items-start gap-12 rounded-2xl border border-hover p-5 md:p-10 md:pt-7">
+        <div
+            data-testid="career-experience"
+            className="relative flex h-full w-full flex-col items-start gap-12 rounded-2xl border border-hover p-5 md:p-10 md:pt-7"
+        >
             <div className="flex w-full flex-col items-start gap-7">
                 <h1 className="text-xl font-semibold italic text-primary">{jobTitle}</h1>
                 <div className="flex w-full flex-col items-start gap-5 md:flex-row md:items-center">
@@ -86,6 +89,7 @@ export const ExperienceCard = ({
 
             {/* Point */}
             <div
+                data-testid="experience-point"
                 className="
                     absolute
                     -left-[30px]

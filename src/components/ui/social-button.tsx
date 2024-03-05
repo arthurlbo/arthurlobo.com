@@ -10,6 +10,7 @@ export interface SocialButtonProps
         VariantProps<typeof iconVariants> {
     icon: IconType;
     href: string;
+    section?: string;
 }
 
 /**
@@ -52,9 +53,15 @@ const iconVariants = cva("text-primary", {
  * @param size - Size of the social button.
  * @param iconSize - Size of the social button icon.
  */
-export const SocialButton = ({ icon: Icon, href, size, iconSize }: SocialButtonProps) => {
+export const SocialButton = ({ icon: Icon, href, size, iconSize, section }: SocialButtonProps) => {
     return (
-        <Link href={href} target="_blank" className={cn(socialButtonVariants({ size }))}>
+        <Link
+            data-testid={`social-button-${section}`}
+            href={href}
+            target="_blank"
+            rel="noreferrer"
+            className={cn(socialButtonVariants({ size }))}
+        >
             <Icon className={cn(iconVariants({ iconSize }))} />
         </Link>
     );

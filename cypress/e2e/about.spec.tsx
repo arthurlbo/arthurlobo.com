@@ -1,6 +1,4 @@
-import { About } from "@/components";
-
-describe("About", () => {
+describe("About section", () => {
     beforeEach(() => {
         cy.visit("/");
     });
@@ -27,7 +25,13 @@ describe("About", () => {
             .and("have.attr", "rel", "noreferrer");
     });
 
-    it("should render all the topics", () => {
-        cy.get("[data-testid=about-topic]").should("have.length", 3);
+    it("should render all the topics correctly", () => {
+        cy.get("[data-testid=about-topic]")
+            .should("have.length", 3)
+            .each((topic) => {
+                cy.wrap(topic).within(() => {
+                    cy.get("h3").should("exist");
+                });
+            });
     });
 });

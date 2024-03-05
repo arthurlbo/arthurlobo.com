@@ -88,7 +88,7 @@ export const TechnologiesWrapper = ({ technologies }: TechnologiesWrapperProps) 
     const filteredTechnologies = technologies.map((tech) => technologiesMap[tech]);
 
     return (
-        <div className="flex w-full flex-col items-start gap-7">
+        <div data-testid="technologies-wrapper" className="flex w-full flex-col items-start gap-7">
             <div className="flex items-center gap-2">
                 <IconCode className="h-5 w-5 text-primary" />
                 <h1 className="text-lg font-medium text-primary">Technologies</h1>

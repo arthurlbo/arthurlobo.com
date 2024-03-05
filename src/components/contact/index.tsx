@@ -23,7 +23,7 @@ export const Contact = () => {
                 <div className="z-50 flex items-center gap-5">
                     {socialLinks.map((link, key) => (
                         <>
-                            <SocialButton key={key} {...link} size="big" iconSize="big" />
+                            <SocialButton key={key} {...link} size="big" iconSize="big" section="contact" />
                             <div className="h-6 w-px flex-none bg-hover last:hidden" />
                         </>
                     ))}

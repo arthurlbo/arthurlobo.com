@@ -9,15 +9,15 @@ import { SocialButton } from "@/components";
 export const DesktopNavigation = () => {
     return (
         <>
-            <nav className="hidden flex-1 items-center justify-center gap-8 xl:flex">
+            <nav data-testid="desktop-nav" className="hidden flex-1 items-center justify-center gap-8 xl:flex">
                 {navLinks.map((link, key) => (
-                    <NavLink key={key} {...link} />
+                    <NavLink key={key} {...link} screen="desktop" />
                 ))}
             </nav>
 
             <div className="hidden items-center gap-3 xl:flex">
                 {socialLinks.map((link, key) => (
-                    <SocialButton key={key} {...link} />
+                    <SocialButton key={key} {...link} section="header-desktop" />
                 ))}
             </div>
         </>

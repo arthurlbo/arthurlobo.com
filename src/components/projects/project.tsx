@@ -26,9 +26,13 @@ export interface ProjectProps {
  */
 export const Project = ({ description, image, link, repository, technologies, title, beamClassName }: ProjectProps) => {
     return (
-        <div className="relative flex w-full cursor-grab flex-col items-start gap-12 rounded-2xl border border-hover p-5 pt-2 md:p-12 md:pt-9 xl:gap-8 2xl:gap-0">
+        <div
+            data-testid="project"
+            className="relative flex w-full cursor-grab flex-col items-start gap-12 rounded-2xl border border-hover p-5 pt-2 md:p-12 md:pt-9 xl:gap-8 2xl:gap-0"
+        >
             {/* Beam animation */}
             <span
+                data-testid="project-beam"
                 className={cn(
                     "absolute -top-px z-40 h-full w-full animate-beam rounded-full before:absolute before:h-px before:w-24 before:bg-gradient-to-r before:content-['']",
                     beamClassName,
@@ -55,6 +59,7 @@ export const Project = ({ description, image, link, repository, technologies, ti
                 </div>
 
                 <Image
+                    data-testid="project-image"
                     src={image}
                     alt={title}
                     width={650}
