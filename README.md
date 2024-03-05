@@ -15,6 +15,7 @@
 -   [TypeScript](https://www.typescriptlang.org)
 -   [Tailwind CSS](https://tailwindcss.com/)
 -   [Shadcn UI](https://ui.shadcn.com/)
+-   [class-variance-authority](https://cva.style/docs)
 -   [Tabler Icons](https://tablericons.com/)
 -   [Spline 3D](https://spline.design/)
 -   [Framer Motion](https://www.framer.com/motion)
