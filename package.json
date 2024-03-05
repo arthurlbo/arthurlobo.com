@@ -20,6 +20,8 @@
         "@radix-ui/react-tooltip": "^1.0.7",
         "@splinetool/react-spline": "^2.2.6",
         "@tabler/icons-react": "^2.47.0",
+        "@vercel/analytics": "^1.2.2",
+        "@vercel/speed-insights": "^1.0.10",
         "class-variance-authority": "^0.7.0",
         "clsx": "^2.1.0",
         "dayjs": "^1.11.10",
