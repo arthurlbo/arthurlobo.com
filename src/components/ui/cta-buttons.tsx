@@ -20,7 +20,7 @@ export interface CtaButtonsProps {
 export const CtaButtons = ({ primary, secondary }: CtaButtonsProps) => {
     return (
         <div className="z-50 flex w-full flex-col items-center gap-5 md:w-auto md:flex-row">
-            <Link href={primary.link} target="_blank" tabIndex={-1} className="w-full md:w-auto">
+            <Link href={primary.link} target="_blank" rel="noreferrer" tabIndex={-1} className="w-full md:w-auto">
                 <button
                     className="
                         group
@@ -70,7 +70,7 @@ export const CtaButtons = ({ primary, secondary }: CtaButtonsProps) => {
                 </button>
             </Link>
 
-            <Link href={secondary.link} target="_blank" tabIndex={-1}>
+            <Link href={secondary.link} target="_blank" rel="noreferrer" tabIndex={-1}>
                 <button
                     className="
                         flex

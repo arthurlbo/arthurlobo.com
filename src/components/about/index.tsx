@@ -79,7 +79,7 @@ export const About = () => {
 
                     <FadeInWhileInView initial={{ y: 40 }} animate={{ y: 0 }} className="w-full">
                         <CtaButtons
-                            primary={{ label: "Find me on LinkedIn", link: "https://www.linkedin.com/in/arthurlbo/" }}
+                            primary={{ label: "Find me on LinkedIn", link: "https://www.linkedin.com/in/arthurlbo" }}
                             secondary={{ label: "Check out my GitHub", link: "https://www.github.com/arthurlbo" }}
                         />
                     </FadeInWhileInView>
