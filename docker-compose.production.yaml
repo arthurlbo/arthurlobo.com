@@ -1,0 +1,52 @@
+services:
+    postgres:
+        image: postgres:15-alpine
+        container_name: postgres_production
+        restart: always
+        environment:
+            POSTGRES_USER: ${DB_USERNAME}
+            POSTGRES_PASSWORD: ${DB_PASSWORD}
+            POSTGRES_DB: ${DB_DATABASE}
+        ports:
+            - "${DB_PORT}:5432"
+        env_file:
+            - .env.production
+        volumes:
+            - postgres_db_vol:/var/lib/postgresql/data
+        networks:
+            - production-net
+
+    api:
+        container_name: api_production
+        build:
+            context: .
+            dockerfile: apps/api/Dockerfile
+        restart: always
+        ports:
+            - "${API_PORT}:3001"
+        env_file:
+            - .env.production
+        depends_on:
+            - postgres
+        networks:
+            - production-net
+
+    web:
+        container_name: web_production
+        build:
+            context: .
+            dockerfile: apps/web/Dockerfile
+        restart: always
+        ports:
+            - "${WEB_PORT}:3000"
+        env_file:
+            - .env.production
+        networks:
+            - production-net
+
+volumes:
+    postgres_db_vol: {}
+
+networks:
+    production-net:
+        driver: bridge

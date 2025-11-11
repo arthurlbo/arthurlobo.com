@@ -1,0 +1,28 @@
+{
+    "name": "@repo/playwright",
+    "version": "0.0.1",
+    "type": "module",
+    "private": true,
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsup"
+    },
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.cjs"
+        }
+    },
+    "peerDependencies": {
+        "@playwright/test": "^1.56.0"
+    },
+    "devDependencies": {
+        "@repo/tsup": "workspace:*",
+        "@repo/typescript": "workspace:*",
+        "tsup": "^8.5.0",
+        "typescript": "^5.9.3"
+    }
+}

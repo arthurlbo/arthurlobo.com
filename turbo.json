@@ -1,0 +1,58 @@
+{
+    "$schema": "https://turborepo.com/schema.json",
+    "ui": "tui",
+    "globalEnv": [
+        "NODE_ENV",
+        "WEB_PORT",
+        "API_PORT",
+        "DB_HOST",
+        "DB_PORT",
+        "DB_USERNAME",
+        "DB_PASSWORD",
+        "DB_DATABASE"
+    ],
+    "tasks": {
+        "build": {
+            "dependsOn": ["^build"],
+            "inputs": ["$TURBO_DEFAULT$", ".env*"],
+            "outputs": [".next/**", "!.next/cache/**", "dist/**"]
+        },
+        "dev": {
+            "cache": false,
+            "persistent": true
+        },
+        "start": {
+            "cache": false,
+            "persistent": true
+        },
+        "migrate:up": {
+            "cache": false
+        },
+        "migrate:down": {
+            "cache": false
+        },
+        "clear:db": {
+            "cache": false
+        },
+        "lint": {},
+        "lint:fix": {},
+        "prettier:fix": {},
+        "format": {},
+        "typecheck": {},
+        "test:unit": {
+            "cache": true,
+            "outputs": []
+        },
+        "test:unit:coverage": {
+            "outputs": ["coverage/**"]
+        },
+        "test:e2e": {
+            "cache": true,
+            "outputs": []
+        },
+        "test:all": {
+            "cache": true,
+            "outputs": []
+        }
+    }
+}

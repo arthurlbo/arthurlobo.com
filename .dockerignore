@@ -1,0 +1,35 @@
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Dependências locais
+node_modules
+.pnpm-store
+
+# Artefatos de build
+dist
+.next
+.turbo
+build
+
+# Arquivos de ambiente
+.env
+.env.*
+!.env.example
+
+# Arquivos do S.O.
+.DS_Store
+Thumbs.db
+
+# Configurações de IDE
+.idea
+.vscode
+
+# Outros
+.git
+.dockerignore
+Dockerfile
+

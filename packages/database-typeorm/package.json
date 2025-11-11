@@ -1,0 +1,40 @@
+{
+    "name": "@repo/database-typeorm",
+    "version": "0.0.1",
+    "type": "module",
+    "private": true,
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsup",
+        "typeorm:tsx": "tsx ./node_modules/typeorm/cli.js",
+        "migrate:up": "pnpm typeorm:tsx migration:run -d ./src/data-source.ts",
+        "migrate:down": "pnpm typeorm:tsx migration:revert -d ./src/data-source.ts",
+        "clear:db": "pnpm typeorm:tsx schema:drop -d ./src/data-source.ts"
+    },
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.cjs"
+        }
+    },
+    "peerDependencies": {
+        "typeorm": "^0.3.27"
+    },
+    "dependencies": {
+        "@repo/env": "workspace:*",
+        "pg": "^8.16.3",
+        "typeorm": "^0.3.27"
+    },
+    "devDependencies": {
+        "@repo/eslint": "workspace:*",
+        "@repo/tsup": "workspace:*",
+        "@repo/typescript": "workspace:*",
+        "@swc/core": "^1.13.5",
+        "ts-node": "^10.9.1",
+        "tsup": "^8.5.0",
+        "tsx": "^4.20.6"
+    }
+}

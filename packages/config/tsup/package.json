@@ -1,0 +1,25 @@
+{
+    "name": "@repo/tsup",
+    "version": "0.0.1",
+    "private": true,
+    "type": "module",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsup"
+    },
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.cjs"
+        }
+    },
+    "peerDependencies": {
+        "tsup": "^8.5.0"
+    },
+    "devDependencies": {
+        "@repo/typescript": "workspace:*"
+    }
+}

@@ -1,0 +1,22 @@
+services:
+    postgres:
+        image: postgres:15-alpine
+        container_name: postgres_dev
+        restart: always
+        environment:
+            POSTGRES_USER: ${DB_USERNAME}
+            POSTGRES_PASSWORD: ${DB_PASSWORD}
+            POSTGRES_DB: ${DB_DATABASE}
+        ports:
+            - "${DB_PORT}:5432"
+        volumes:
+            - postgres_db_vol:/var/lib/postgresql/data
+        networks:
+            - dev-net
+
+volumes:
+    postgres_db_vol: {}
+
+networks:
+    dev-net:
+        driver: bridge

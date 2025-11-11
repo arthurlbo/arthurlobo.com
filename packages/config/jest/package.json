@@ -1,0 +1,44 @@
+{
+    "name": "@repo/jest",
+    "version": "0.0.1",
+    "type": "module",
+    "private": true,
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsup"
+    },
+    "exports": {
+        "./base": {
+            "types": "./dist/base.d.ts",
+            "import": "./dist/base.mjs",
+            "require": "./dist/base.cjs"
+        },
+        "./next": {
+            "types": "./dist/next.d.ts",
+            "import": "./dist/next.mjs",
+            "require": "./dist/next.cjs"
+        },
+        "./nest": {
+            "types": "./dist/nest.d.ts",
+            "import": "./dist/nest.mjs",
+            "require": "./dist/nest.cjs"
+        },
+        "./nest-e2e": {
+            "types": "./dist/nest-e2e.d.ts",
+            "import": "./dist/nest-e2e.mjs",
+            "require": "./dist/nest-e2e.cjs"
+        }
+    },
+    "peerDependencies": {
+        "jest": "^30.2.0"
+    },
+    "devDependencies": {
+        "@repo/tsup": "workspace:*",
+        "@repo/typescript": "workspace:*",
+        "@types/jest": "^30.0.0",
+        "tsup": "^8.5.0",
+        "typescript": "^5.9.3"
+    }
+}

@@ -1,0 +1,62 @@
+{
+    "name": "fullstack-monorepo-template",
+    "description": "A modern Full-stack monorepo template to kickstart your web development.",
+    "author": "Arthur Lobo",
+    "private": true,
+    "version": "0.0.1",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/arthurlbo/fullstack-monorepo-template.git"
+    },
+    "scripts": {
+        "commit": "cz",
+        "prepare": "husky",
+        "build": "turbo run build",
+        "dev": "pnpm env::dev turbo run dev",
+        "start:dev": "pnpm env::dev turbo run start",
+        "start:staging": "pnpm env::staging turbo run start",
+        "start:production": "pnpm env::production turbo run start",
+        "lint": "turbo run lint",
+        "lint:fix": "turbo run lint:fix",
+        "prettier:fix": "turbo run prettier:fix",
+        "format": "turbo run format",
+        "typecheck": "turbo run typecheck",
+        "migrate:up:dev": "pnpm env::dev pnpm migrate::up",
+        "migrate:down:dev": "pnpm env::dev pnpm migrate::down",
+        "clear:db:dev": "pnpm env::dev pnpm clear::db",
+        "docker:dev": "docker compose -f docker-compose.development.yaml --env-file .env.development up -d",
+        "docker:staging": "docker compose -f docker-compose.staging.yaml --env-file .env.staging up -d",
+        "docker:production": "docker compose -f docker-compose.production.yaml --env-file .env.production up -d",
+        "migrate::up": "turbo run migrate:up --filter=@repo/database-typeorm",
+        "migrate::down": "turbo run migrate:down --filter=@repo/database-typeorm",
+        "clear::db": "turbo run clear:db --filter=@repo/database-typeorm",
+        "env::dev": "cross-env NODE_ENV=development",
+        "env::staging": "cross-env NODE_ENV=staging",
+        "env::production": "cross-env NODE_ENV=production"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^20.1.0",
+        "@commitlint/config-conventional": "^20.0.0",
+        "@repo/typescript": "workspace:*",
+        "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+        "@types/node": "^24.7.2",
+        "commitizen": "^4.3.1",
+        "cross-env": "^10.1.0",
+        "cz-conventional-changelog": "^3.3.0",
+        "husky": "^9.1.7",
+        "prettier": "^3.6.2",
+        "prettier-plugin-tailwindcss": "^0.6.14",
+        "turbo": "^2.5.8",
+        "typescript": "5.9.2"
+    },
+    "packageManager": "pnpm@10.18.2",
+    "engines": {
+        "node": ">=20"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    }
+}

@@ -1,0 +1,53 @@
+{
+    "name": "@repo/eslint",
+    "version": "0.0.1",
+    "type": "module",
+    "private": true,
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsup"
+    },
+    "exports": {
+        "./base": {
+            "types": "./dist/base.d.ts",
+            "import": "./dist/base.mjs",
+            "require": "./dist/base.cjs"
+        },
+        "./next": {
+            "types": "./dist/next.d.ts",
+            "import": "./dist/next.mjs",
+            "require": "./dist/next.cjs"
+        },
+        "./nest": {
+            "types": "./dist/nest.d.ts",
+            "import": "./dist/nest.mjs",
+            "require": "./dist/nest.cjs"
+        },
+        "./react": {
+            "types": "./dist/react.d.ts",
+            "import": "./dist/react.mjs",
+            "require": "./dist/react.cjs"
+        }
+    },
+    "peerDependencies": {
+        "eslint": "^9.37.0"
+    },
+    "dependencies": {
+        "@eslint/js": "^9.37.0",
+        "@next/eslint-plugin-next": "^15.5.5",
+        "eslint-config-prettier": "^10.1.8",
+        "eslint-plugin-prettier": "^5.5.4",
+        "eslint-plugin-react": "^7.37.5",
+        "eslint-plugin-react-hooks": "^5.2.0",
+        "eslint-plugin-turbo": "^2.5.8",
+        "globals": "^16.4.0",
+        "typescript-eslint": "^8.46.1"
+    },
+    "devDependencies": {
+        "@repo/tsup": "workspace:*",
+        "@repo/typescript": "workspace:*",
+        "tsup": "^8.5.0"
+    }
+}

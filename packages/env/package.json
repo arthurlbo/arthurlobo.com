@@ -1,0 +1,30 @@
+{
+    "name": "@repo/env",
+    "version": "0.0.1",
+    "type": "module",
+    "private": true,
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsup"
+    },
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.cjs"
+        }
+    },
+    "dependencies": {
+        "dotenv": "^17.2.3",
+        "find-up": "^8.0.0",
+        "zod": "^4.1.12"
+    },
+    "devDependencies": {
+        "@repo/tsup": "workspace:*",
+        "@repo/typescript": "workspace:*",
+        "tsup": "^8.5.0",
+        "typescript": "^5.9.3"
+    }
+}
