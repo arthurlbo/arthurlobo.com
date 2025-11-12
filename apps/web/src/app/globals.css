@@ -1,5 +1,5 @@
 @import "@repo/design-system/globals.css";
 
 @theme inline {
-    --font-sans: var(--font-plus_jakarta_sans);
+    --font-sans: var(--font-ibm_plex-sans);
 }
