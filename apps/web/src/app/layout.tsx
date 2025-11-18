@@ -3,9 +3,10 @@ import "./globals.css";
 import { ReactNode } from "react";
 
 import type { Metadata } from "next";
-import { IBM_Plex_Sans } from "next/font/google";
+import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 
-import { SEO_CONFIG } from "@/shared/constants/seo";
+import { Desktop } from "@/shared/components/navigation";
+import { SEO_CONFIG } from "@/shared/constants";
 
 import { Providers } from "./_providers";
 
@@ -13,7 +14,14 @@ const ibmPlexSans = IBM_Plex_Sans({
     subsets: ["latin"],
     style: ["normal"],
     weight: ["400", "500", "600", "700"],
-    variable: "--font-ibm_plex_sans",
+    variable: "--font-ibm-plex-sans",
+});
+
+const ibmPlexMono = IBM_Plex_Mono({
+    subsets: ["latin"],
+    style: ["normal"],
+    weight: ["400", "500", "600", "700"],
+    variable: "--font-ibm-plex-mono",
 });
 
 export const metadata: Metadata = {
@@ -52,16 +60,20 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     return (
         <html lang="en" suppressHydrationWarning>
             <body
-                className={`${ibmPlexSans.variable} bg-background relative flex min-h-screen w-full max-w-full flex-col items-center justify-center overflow-x-hidden font-sans antialiased`}
+                className={`${ibmPlexSans.variable} ${ibmPlexMono.variable} bg-background relative flex h-screen w-full max-w-screen flex-col items-center justify-center overflow-x-hidden overflow-y-auto font-sans antialiased`}
             >
                 <Providers
                     themeConfig={{
                         attribute: "class",
                         enableSystem: true,
-                        defaultTheme: "system",
+                        defaultTheme: "dark",
                     }}
                 >
-                    {children}
+                    <Desktop />
+
+                    <main className="flex h-full w-full flex-col items-start justify-start gap-4 overflow-x-hidden p-4 xl:max-w-[calc(100vw-280px)] xl:self-end">
+                        {children}
+                    </main>
                 </Providers>
             </body>
         </html>

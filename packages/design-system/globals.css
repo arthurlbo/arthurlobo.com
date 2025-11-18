@@ -165,10 +165,3 @@
     --radius-lg: var(--radius);
     --radius-xl: calc(var(--radius) + 4px);
 }
-
-@layer base {
-    ::selection {
-        background: var(--color-surface);
-        color: var(--color-text-primary);
-    }
-}
