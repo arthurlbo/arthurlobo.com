@@ -32,9 +32,9 @@
         "@repo/eslint": "workspace:*",
         "@repo/tsup": "workspace:*",
         "@repo/typescript": "workspace:*",
-        "@swc/core": "^1.13.5",
-        "ts-node": "^10.9.1",
-        "tsup": "^8.5.0",
+        "@swc/core": "^1.15.2",
+        "ts-node": "^10.9.2",
+        "tsup": "^8.5.1",
         "tsx": "^4.20.6"
     }
 }
