@@ -22,7 +22,7 @@
         transform: translate(0, 0);
     }
     25% {
-        transform: translate(-90px, 35px);
+        transform: translate(-90px, 10px);
     }
     50% {
         transform: translate(-120px, 50px);
@@ -32,5 +32,25 @@
     }
     100% {
         transform: translate(0, 0);
+    }
+}
+
+@media (min-width: 1280px) {
+    @keyframes move {
+        0% {
+            transform: translate(0, 0);
+        }
+        25% {
+            transform: translate(-90px, 35px);
+        }
+        50% {
+            transform: translate(-120px, 50px);
+        }
+        75% {
+            transform: translate(-60px, 60px);
+        }
+        100% {
+            transform: translate(0, 0);
+        }
     }
 }

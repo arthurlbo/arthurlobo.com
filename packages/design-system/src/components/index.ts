@@ -25,3 +25,14 @@ export {
     DialogTitle,
     DialogTrigger,
 } from "./dialog";
+
+export {
+    SheetTitle,
+    SheetTrigger,
+    SheetHeader,
+    SheetFooter,
+    SheetDescription,
+    SheetContent,
+    SheetClose,
+    Sheet,
+} from "./sheet";

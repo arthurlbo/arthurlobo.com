@@ -5,7 +5,7 @@ import { ReactNode } from "react";
 import type { Metadata } from "next";
 import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 
-import { Desktop } from "@/shared/components/navigation";
+import { Desktop, Mobile } from "@/shared/components/navigation";
 import { SEO_CONFIG } from "@/shared/constants";
 
 import { Providers } from "./_providers";
@@ -70,6 +70,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                     }}
                 >
                     <Desktop />
+                    <Mobile />
 
                     <main className="flex h-full w-full flex-col items-start justify-start gap-4 overflow-x-hidden p-4 xl:max-w-[calc(100vw-280px)] xl:self-end">
                         {children}
