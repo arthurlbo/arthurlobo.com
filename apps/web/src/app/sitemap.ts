@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-import { SEO_CONFIG } from "@/shared/constants/seo";
+import { SEO_CONFIG } from "@/shared/constants";
 
 export default function sitemap(): MetadataRoute.Sitemap {
     return [

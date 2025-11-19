@@ -1,5 +1,56 @@
 @import "@repo/design-system/globals.css";
+@plugin "tailwind-scrollbar";
 
 @theme inline {
-    --font-sans: var(--font-ibm_plex-sans);
+    --font-sans: var(--font-ibm-plex-sans);
+    --font-mono: var(--font-ibm-plex-mono);
+
+    --animate-move: move 5s ease-in-out;
+
+    --breakpoint-massive: 1600px;
+}
+
+@layer base {
+    ::selection {
+        background: var(--color-surface);
+        color: var(--color-text-primary);
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(-90px, 10px);
+    }
+    50% {
+        transform: translate(-120px, 50px);
+    }
+    75% {
+        transform: translate(-60px, 60px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@media (min-width: 1280px) {
+    @keyframes move {
+        0% {
+            transform: translate(0, 0);
+        }
+        25% {
+            transform: translate(-90px, 35px);
+        }
+        50% {
+            transform: translate(-120px, 50px);
+        }
+        75% {
+            transform: translate(-60px, 60px);
+        }
+        100% {
+            transform: translate(0, 0);
+        }
+    }
 }
