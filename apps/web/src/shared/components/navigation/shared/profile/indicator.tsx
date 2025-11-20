@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import Image from "next/image";
 
-import IndicatorIcon from "@/assets/indicator.svg";
+import IndicatorIcon from "@/assets/navigation/indicator.svg";
 import { cn } from "@/shared/utils";
 
 export const Indicator = () => {

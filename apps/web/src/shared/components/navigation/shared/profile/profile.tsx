@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import Me from "@/assets/me.webp";
+import Me from "@/assets/navigation/me.webp";
 
 import { Indicator } from "./indicator";
 

@@ -2,8 +2,8 @@
 @plugin "tailwind-scrollbar";
 
 @theme inline {
-    --font-sans: var(--font-ibm-plex-sans);
-    --font-mono: var(--font-ibm-plex-mono);
+    --font-sans: var(--font-space-grotesk);
+    --font-mono: var(--font-space-mono);
 
     --animate-move: move 5s ease-in-out;
 

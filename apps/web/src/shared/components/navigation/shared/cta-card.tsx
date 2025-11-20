@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import SphereLeft from "@/assets/sphere-left.webp";
-import SphereRight from "@/assets/sphere-right.webp";
+import SphereLeft from "@/assets/navigation/sphere-left.webp";
+import SphereRight from "@/assets/navigation/sphere-right.webp";
 
 /**
  * Cta card component of the main-nav.
