@@ -66,7 +66,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                     themeConfig={{
                         attribute: "class",
                         enableSystem: true,
-                        defaultTheme: "dark",
                     }}
                 >
                     <Desktop />

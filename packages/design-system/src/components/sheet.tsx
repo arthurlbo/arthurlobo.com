@@ -22,22 +22,15 @@ function SheetPortal({ ...props }: React.ComponentProps<typeof SheetPrimitive.Po
     return <SheetPrimitive.Portal data-slot="sheet-portal" {...props} />;
 }
 
-// Radix for some reason its overwriting the styles, the bg, inset and z-index are not being applied, need to set them inlined.
 function SheetOverlay({ className, ...props }: React.ComponentProps<typeof SheetPrimitive.Overlay>) {
     return (
         <SheetPrimitive.Overlay
             data-slot="sheet-overlay"
             className={cn(
-                "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 backdrop-blur-sm  fixed inset-0 z-50 bg-black/50",
+                "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-40 bg-black/50 backdrop-blur-xs",
                 className,
             )}
             {...props}
-            style={{
-                position: "fixed",
-                inset: 0,
-                zIndex: 40,
-                backgroundColor: "rgba(0, 0, 0, 0.5)",
-            }}
         />
     );
 }
@@ -55,14 +48,15 @@ function SheetContent({
     return (
         <SheetPortal>
             <SheetOverlay />
+
             <SheetPrimitive.Content
                 data-slot="sheet-content"
                 className={cn(
-                    "bg-background data-[state=open]:animate-in data-[state=closed]:animate-out border-border fixed z-50 flex max-h-screen flex-col gap-4 overflow-y-scroll border-b transition ease-in-out data-[state=closed]:duration-300 data-[state=open]:duration-500",
+                    "bg-background data-[state=open]:animate-in data-[state=closed]:animate-out border-border fixed z-50 flex h-full max-h-screen flex-col gap-4 overflow-y-scroll p-4 transition ease-in-out data-[state=closed]:duration-300 data-[state=open]:duration-500",
                     side === "right" &&
-                        "data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right inset-y-0 right-0 h-full w-full border-l",
+                        "data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right inset-y-0 right-0 h-full w-full border-l md:max-w-[420px]",
                     side === "left" &&
-                        "data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left inset-y-0 left-0 h-full w-3/4 border-r sm:max-w-sm",
+                        "data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left inset-y-0 left-0 h-full w-full border-r md:max-w-[420px]",
                     side === "top" &&
                         "data-[state=closed]:slide-out-to-top data-[state=open]:slide-in-from-top inset-x-0 top-0 h-auto",
                     side === "bottom" &&

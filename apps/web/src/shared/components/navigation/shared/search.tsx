@@ -61,13 +61,17 @@ export const Search = () => {
                 </kbd>
             </div>
 
-            <CommandDialog open={open} onOpenChange={setOpen} className="border-border h-[400px] max-w-lg rounded-2xl">
+            <CommandDialog
+                open={open}
+                onOpenChange={setOpen}
+                className="border-border bg-background h-[400px] max-w-lg rounded-2xl"
+            >
                 <CommandInput
                     placeholder="Type a command or search..."
                     containerClassName="border-b border-border h-14 [&_svg]:size-4 [&_svg]:text-text-tertiary"
                 />
 
-                <CommandList className="px-2 pb-4">
+                <CommandList className="h-full max-h-none px-2 pb-4">
                     <CommandEmpty>No results found.</CommandEmpty>
 
                     {COMMAND_GROUPS.map(({ heading, items }) => (
@@ -82,10 +86,11 @@ export const Search = () => {
                                             href={disabled ? "" : link}
                                             target={internalLink ? "_self" : "_blank"}
                                             rel={internalLink ? undefined : "noopener noreferrer"}
+                                            tabIndex={disabled ? -1 : 0}
                                             className={cn(
                                                 "group flex w-full items-center gap-2 rounded-lg px-3 py-2 first:mt-2",
                                                 "text-text-primary hover:bg-surface hover:border-border border border-transparent bg-transparent font-sans text-sm font-semibold",
-                                                "transition-all duration-300 ease-in-out",
+                                                "focus-visible:ring-accent-primary focus-visible:ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
                                             )}
                                         >
                                             <IconArrowRight className="text-text-tertiary transition-al ease-in- h-4 w-4 shrink-0 duration-300 group-hover:translate-x-0.5" />
@@ -95,7 +100,7 @@ export const Search = () => {
                                 ))}
                             </CommandGroup>
 
-                            <CommandSeparator className="bg-surface my-1 last:hidden" />
+                            <CommandSeparator className="bg-surface mt-2 last:hidden" />
                         </Fragment>
                     ))}
                 </CommandList>

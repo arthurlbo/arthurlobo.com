@@ -32,13 +32,13 @@ export const Theme = () => {
 
                 <div className="border-border flex items-center gap-1 rounded-full border p-0.5">
                     {THEME_BUTTONS.map(({ value, icon: Icon }) => {
-                        const isActive = (theme || "dark") === value;
+                        const isActive = (theme || "system") === value;
 
                         return (
                             <Button
                                 key={value}
                                 className={cn(
-                                    "h-auto w-auto cursor-pointer rounded-full border bg-transparent p-[3px]",
+                                    "h-auto w-auto cursor-pointer rounded-full border bg-transparent p-[3px] hover:bg-transparent",
                                     isActive
                                         ? "border-border text-text-primary"
                                         : "text-text-tertiary hover:text-text-primary border-transparent",
