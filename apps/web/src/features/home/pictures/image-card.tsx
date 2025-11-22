@@ -30,9 +30,9 @@ export const ImageCard = ({ alt, className, src }: IImageCardProps) => {
                 )}
             />
 
-            <p className="text-text-primary absolute bottom-4 left-4 text-sm font-bold opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100">
+            <span className="text-text-primary absolute bottom-3 left-3 max-w-[180px] text-sm font-bold opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100">
                 {alt}
-            </p>
+            </span>
         </div>
     );
 };

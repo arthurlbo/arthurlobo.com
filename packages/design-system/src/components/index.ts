@@ -1,4 +1,5 @@
 export { Switch } from "./switch";
+export { DotPattern } from "./dot-pattern";
 export { Button, buttonVariants } from "./button";
 
 export {

@@ -1,6 +1,8 @@
 @import "@repo/design-system/globals.css";
 @plugin "tailwind-scrollbar";
 
+@source "../";
+
 @theme inline {
     --font-sans: var(--font-space-grotesk);
     --font-mono: var(--font-space-mono);
