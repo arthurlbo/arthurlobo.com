@@ -38,7 +38,7 @@ const events: IEventProps[] = [
 export const Timeline = () => {
     return (
         <div className="absolute top-0 right-4 h-full">
-            <DotPattern className="text-border/70 h-[300px] w-[300px]" />
+            <DotPattern className="text-border/70 group-hover:text-accent-primary/20 h-[300px] w-[300px] transition-all duration-300 ease-in-out" />
 
             <div className="border-border bg-surface/50 absolute top-0 left-1/2 z-20 h-full w-2 -translate-x-1/2 border-x" />
 

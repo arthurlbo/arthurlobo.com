@@ -8,7 +8,12 @@ interface IProps {
 
 export const Heading = ({ className, description, title }: IProps) => {
     return (
-        <div className={cn("flex w-full flex-col items-start justify-start gap-2", className)}>
+        <div
+            className={cn(
+                "z-10 flex w-full max-w-3xs shrink-0 flex-col items-start justify-start gap-2 p-4",
+                className,
+            )}
+        >
             <span className="text-text-tertiary font-mono text-sm">{title}</span>
             <p className="text-text-primary text-base font-semibold">{description}</p>
         </div>
