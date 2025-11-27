@@ -10,7 +10,7 @@ export const Heading = ({ className, description, title }: IProps) => {
     return (
         <div
             className={cn(
-                "z-10 flex w-full max-w-3xs shrink-0 flex-col items-start justify-start gap-2 p-4",
+                "z-10 flex h-full w-full max-w-3xs shrink-0 flex-col items-start justify-start gap-1 p-4",
                 className,
             )}
         >

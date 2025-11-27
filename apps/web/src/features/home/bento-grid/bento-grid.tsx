@@ -1,5 +1,6 @@
 import { About } from "./about";
 import { Projects } from "./projects";
+import { Stack } from "./stack";
 
 export const HomeBentoGrid = () => {
     return (
@@ -10,9 +11,9 @@ export const HomeBentoGrid = () => {
             </div>
 
             <div className="flex h-1/2 w-full items-center justify-between gap-2">
-                <div className="border-border h-full w-full rounded-2xl border" />
-                <div className="border-border h-full w-full rounded-2xl border" />
-                <div className="border-border h-full w-full rounded-2xl border" />
+                <Stack />
+                <div className="border-border h-full flex-1 rounded-2xl border" />
+                <div className="border-border h-full w-[232px] rounded-2xl border" />
             </div>
         </div>
     );
