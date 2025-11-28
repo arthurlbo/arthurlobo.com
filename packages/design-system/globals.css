@@ -44,11 +44,6 @@
     --destructive: oklch(0.577 0.245 27.325);
     --input: oklch(0.929 0.013 255.508);
     --ring: var(--accent-primary);
-    --chart-1: oklch(0.646 0.222 41.116);
-    --chart-2: oklch(0.6 0.118 184.704);
-    --chart-3: oklch(0.398 0.07 227.392);
-    --chart-4: oklch(0.828 0.189 84.429);
-    --chart-5: oklch(0.769 0.188 70.08);
     --sidebar: var(--surface);
     --sidebar-foreground: var(--text-primary);
     --sidebar-primary: var(--accent-primary);
@@ -57,6 +52,13 @@
     --sidebar-accent-foreground: var(--text-primary);
     --sidebar-border: var(--border);
     --sidebar-ring: var(--accent-primary);
+    --chart-1: oklch(0.646 0.222 41.116);
+    --chart-2: oklch(0.6 0.118 184.704);
+    --chart-3: oklch(0.398 0.07 227.392);
+    --chart-4: oklch(0.828 0.189 84.429);
+    --chart-5: oklch(0.769 0.188 70.08);
+    --chart-6: oklch(0.61 0.19 276); /* Accent primary */
+    --chart-7: oklch(0.79 0.14 184); /* Accent secondary */
 }
 
 .dark {
@@ -92,11 +94,6 @@
     --destructive: oklch(0.704 0.191 22.216);
     --input: oklch(1 0 0 / 15%);
     --ring: var(--accent-primary);
-    --chart-1: oklch(0.488 0.243 264.376);
-    --chart-2: oklch(0.696 0.17 162.48);
-    --chart-3: oklch(0.769 0.188 70.08);
-    --chart-4: oklch(0.627 0.265 303.9);
-    --chart-5: oklch(0.645 0.246 16.439);
     --sidebar: var(--surface);
     --sidebar-foreground: var(--text-primary);
     --sidebar-primary: var(--accent-primary);
@@ -105,6 +102,13 @@
     --sidebar-accent-foreground: var(--text-primary);
     --sidebar-border: var(--border);
     --sidebar-ring: var(--accent-primary);
+    --chart-1: oklch(0.488 0.243 264.376);
+    --chart-2: oklch(0.696 0.17 162.48);
+    --chart-3: oklch(0.769 0.188 70.08);
+    --chart-4: oklch(0.627 0.265 303.9);
+    --chart-5: oklch(0.645 0.246 16.439);
+    --chart-6: oklch(0.61 0.19 276); /* Accent primary */
+    --chart-7: oklch(0.79 0.14 184); /* Accent secondary */
 }
 
 @theme inline {
@@ -144,13 +148,6 @@
     --color-input: var(--input);
     --color-ring: var(--ring);
 
-    /* Charts */
-    --color-chart-1: var(--chart-1);
-    --color-chart-2: var(--chart-2);
-    --color-chart-3: var(--chart-3);
-    --color-chart-4: var(--chart-4);
-    --color-chart-5: var(--chart-5);
-
     /* Sidebar */
     --color-sidebar: var(--sidebar);
     --color-sidebar-foreground: var(--sidebar-foreground);
@@ -166,4 +163,13 @@
     --radius-md: calc(var(--radius) - 2px);
     --radius-lg: var(--radius);
     --radius-xl: calc(var(--radius) + 4px);
+
+    /* Charts */
+    --color-chart-1: var(--chart-1);
+    --color-chart-2: var(--chart-2);
+    --color-chart-3: var(--chart-3);
+    --color-chart-4: var(--chart-4);
+    --color-chart-5: var(--chart-5);
+    --color-chart-6: var(--chart-6);
+    --color-chart-7: var(--chart-7);
 }
