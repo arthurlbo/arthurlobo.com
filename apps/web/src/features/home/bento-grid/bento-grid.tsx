@@ -1,4 +1,5 @@
 import { About } from "./about";
+import { Contact } from "./contact";
 import { Dashboard } from "./dashboard";
 import { Projects } from "./projects";
 import { Stack } from "./stack";
@@ -14,7 +15,7 @@ export const HomeBentoGrid = () => {
             <div className="flex h-1/2 w-full items-center justify-between gap-2">
                 <Stack />
                 <Dashboard />
-                <div className="border-border h-full w-[232px] rounded-2xl border" />
+                <Contact />
             </div>
         </div>
     );
