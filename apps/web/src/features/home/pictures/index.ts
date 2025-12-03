@@ -1,0 +1,1 @@
+export { HomePictures } from "./pictures";

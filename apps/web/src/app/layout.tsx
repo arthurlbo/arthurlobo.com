@@ -3,25 +3,25 @@ import "./globals.css";
 import { ReactNode } from "react";
 
 import type { Metadata } from "next";
-import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
+import { Space_Grotesk, Space_Mono } from "next/font/google";
 
 import { Desktop, Mobile } from "@/shared/components/navigation";
 import { SEO_CONFIG } from "@/shared/constants";
 
 import { Providers } from "./_providers";
 
-const ibmPlexSans = IBM_Plex_Sans({
+const spaceGrotesk = Space_Grotesk({
     subsets: ["latin"],
     style: ["normal"],
     weight: ["400", "500", "600", "700"],
-    variable: "--font-ibm-plex-sans",
+    variable: "--font-space-grotesk",
 });
 
-const ibmPlexMono = IBM_Plex_Mono({
+const spaceMono = Space_Mono({
     subsets: ["latin"],
     style: ["normal"],
-    weight: ["400", "500", "600", "700"],
-    variable: "--font-ibm-plex-mono",
+    weight: ["400", "700"],
+    variable: "--font-space-mono",
 });
 
 export const metadata: Metadata = {
@@ -60,20 +60,19 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     return (
         <html lang="en" suppressHydrationWarning>
             <body
-                className={`${ibmPlexSans.variable} ${ibmPlexMono.variable} bg-background relative flex h-screen w-full max-w-screen flex-col items-center justify-center overflow-x-hidden overflow-y-auto font-sans antialiased`}
+                className={`${spaceGrotesk.variable} ${spaceMono.variable} bg-background flex min-h-screen w-full items-start justify-center overflow-x-hidden font-sans antialiased`}
             >
                 <Providers
                     themeConfig={{
                         attribute: "class",
                         enableSystem: true,
-                        defaultTheme: "dark",
                     }}
                 >
-                    <Desktop />
-                    <Mobile />
+                    <main className="relative flex h-full min-h-screen w-full max-w-[1536px] flex-col items-start justify-start xl:flex-row">
+                        <Desktop />
+                        <Mobile />
 
-                    <main className="flex h-full w-full flex-col items-start justify-start gap-4 overflow-x-hidden p-4 xl:max-w-[calc(100vw-280px)] xl:self-end">
-                        {children}
+                        <section className="flex h-full w-full flex-col gap-4 p-4">{children}</section>
                     </main>
                 </Providers>
             </body>

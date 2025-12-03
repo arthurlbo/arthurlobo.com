@@ -11,11 +11,7 @@ export const Drawer = () => {
                 <IconButton icon={IconMenu} />
             </SheetTrigger>
 
-            <SheetContent
-                side="right"
-                showDefaultCloseButton={false}
-                className="bg-background flex h-screen w-full max-w-screen flex-col gap-4 overflow-y-auto p-4 md:max-w-[420px]"
-            >
+            <SheetContent side="right" showDefaultCloseButton={false}>
                 <div className="flex w-full items-center justify-between gap-4">
                     <Profile />
 

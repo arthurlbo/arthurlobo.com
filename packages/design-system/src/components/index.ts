@@ -36,3 +36,13 @@ export {
     SheetClose,
     Sheet,
 } from "./sheet";
+
+export {
+    type TChartConfig,
+    ChartContainer,
+    ChartTooltip,
+    ChartStyle,
+    ChartTooltipContent,
+    ChartLegendContent,
+    ChartLegend,
+} from "./chart";
