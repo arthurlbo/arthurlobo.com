@@ -60,7 +60,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     return (
         <html lang="en" suppressHydrationWarning>
             <body
-                className={`${spaceGrotesk.variable} ${spaceMono.variable} bg-background relative flex h-screen w-full max-w-screen flex-col overflow-hidden font-sans antialiased`}
+                className={`${spaceGrotesk.variable} ${spaceMono.variable} bg-background flex min-h-screen w-full items-start justify-center overflow-x-hidden font-sans antialiased`}
             >
                 <Providers
                     themeConfig={{
@@ -68,11 +68,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                         enableSystem: true,
                     }}
                 >
-                    <Desktop />
-                    <Mobile />
+                    <main className="relative flex h-full min-h-screen w-full max-w-[1536px] flex-col items-start justify-start xl:flex-row">
+                        <Desktop />
+                        <Mobile />
 
-                    <main className="flex h-full w-full flex-1 flex-col overflow-x-hidden overflow-y-auto p-4 xl:max-w-[calc(100vw-280px)] xl:self-end">
-                        <div className="flex w-full flex-1 flex-col gap-4">{children}</div>
+                        <section className="flex h-full w-full flex-col gap-4 p-4">{children}</section>
                     </main>
                 </Providers>
             </body>
