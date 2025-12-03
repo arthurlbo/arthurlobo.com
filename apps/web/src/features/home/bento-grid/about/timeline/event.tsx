@@ -19,7 +19,7 @@ export const Event = ({ className, date, side, title }: IEventProps) => {
             )}
         >
             <span className="text-text-secondary font-bold">{title}</span>
-            <span className="text-text-primary line-clamp-1 w-[100px] font-normal">{date}</span>
+            <span className="text-text-primary line-clamp-1 w-[100px] font-normal lg:w-20 xl:w-[100px]">{date}</span>
         </div>
     );
 };

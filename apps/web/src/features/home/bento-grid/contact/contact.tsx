@@ -8,7 +8,7 @@ import { Line } from "./line";
 
 export const Contact = () => {
     return (
-        <Card link="/contact" className="w-[260px] flex-col items-center justify-between gap-4 p-4">
+        <Card link="/contact" className="flex-col items-center justify-between gap-4 p-4 lg:w-[260px]">
             <Heading
                 title="Contact"
                 description="Let's Connect!"

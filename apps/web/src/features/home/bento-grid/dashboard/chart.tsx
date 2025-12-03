@@ -46,7 +46,7 @@ export function Chart() {
 
     return (
         <div
-            className="absolute bottom-0 left-0 z-50 h-full w-full"
+            className="absolute bottom-0 left-0 z-50 h-[80%] w-full md:h-full lg:h-[80%] xl:h-full"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >

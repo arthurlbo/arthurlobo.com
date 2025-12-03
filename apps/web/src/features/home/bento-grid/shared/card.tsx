@@ -16,7 +16,7 @@ export const Card = ({ children, link, className }: IProps) => {
         <Link
             href={link}
             className={cn(
-                "border-border group relative flex h-full w-full cursor-pointer items-start justify-between gap-4 overflow-hidden rounded-2xl border transition-all duration-300 ease-in-out",
+                "border-border group relative flex h-[200px] w-full cursor-pointer items-start justify-between gap-4 overflow-hidden rounded-2xl border transition-all duration-300 ease-in-out lg:h-full",
                 className,
             )}
         >

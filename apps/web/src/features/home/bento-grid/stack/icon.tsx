@@ -4,15 +4,15 @@ import { cn } from "@/shared/utils";
 import { DeveloperIconProps } from "developer-icons/dist/icon";
 
 export interface IIconProps {
-    className: string;
     icon: ElementType<DeveloperIconProps>;
+    className?: string;
 }
 
 export const Icon = ({ className, icon: Icon }: IIconProps) => {
     return (
         <div
             className={cn(
-                "border-border bg-surface absolute z-20 flex h-8 w-8 items-center justify-center rounded-full border p-1.5 transition-all duration-500 ease-in-out group-hover:scale-[115%]",
+                "border-border bg-surface z-20 flex h-7 w-7 items-center justify-center rounded-full border p-1 transition-all duration-700 ease-in-out group-hover:rotate-[360deg]",
                 className,
             )}
         >

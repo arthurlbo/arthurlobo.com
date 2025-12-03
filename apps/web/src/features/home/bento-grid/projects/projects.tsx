@@ -9,17 +9,17 @@ const CARDS: IImageCardProps[] = [
     {
         src: TimeCapsule,
         alt: "Time Capsule project",
-        className: "right-[170px] h-[160px] top-20 delay-0 ease-out",
+        className: "right-[170px] h-[160px] top-32 sm:top-20 lg:top-24 xl:top-20 delay-0 ease-out",
     },
     {
         src: Delta,
         alt: "Delta Company project",
-        className: "right-[85px] h-full top-10 delay-[50ms] ease-in-out",
+        className: "right-[85px] h-full top-24 sm:top-10 delay-[50ms] ease-in-out",
     },
     {
         src: Yazi,
         alt: "Yazi.tv project",
-        className: "right-0 h-full top-4 delay-75 ease-in",
+        className: "right-0 h-full top-16 sm:top-4 delay-75 ease-in",
     },
 ];
 

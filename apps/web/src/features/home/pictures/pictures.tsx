@@ -40,7 +40,7 @@ const imageCards: IImageCardProps[] = [
 ];
 
 export const HomePictures = () => (
-    <section className="flex h-[280px] w-full items-center -space-x-3 overflow-x-auto overflow-y-hidden pl-4 lg:justify-center lg:-space-x-12 lg:pl-0 xl:-space-x-6 2xl:-space-x-3">
+    <section className="flex h-[280px] w-full shrink-0 items-center -space-x-3 overflow-x-auto overflow-y-hidden pl-4 lg:justify-center lg:-space-x-12 lg:pl-0 xl:-space-x-6 2xl:-space-x-3">
         {imageCards.map((card, index) => (
             <ImageCard key={index} {...card} />
         ))}
