@@ -1,4 +1,5 @@
 export { Switch } from "./switch";
+export { Particles } from "./particles";
 export { Button, buttonVariants } from "./button";
 
 export {
