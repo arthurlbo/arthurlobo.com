@@ -6,13 +6,13 @@ import { Stack } from "./stack";
 
 export const HomeBentoGrid = () => {
     return (
-        <div className="bg-surface/50 mt-6 flex h-auto w-full shrink-0 flex-col gap-2 overflow-hidden rounded-3xl p-4 lg:h-[440px]">
-            <div className="flex h-auto w-full flex-col items-center justify-between gap-2 lg:h-1/2 lg:flex-row">
+        <div className="bg-surface/50 mt-6 flex h-auto w-full shrink-0 flex-col gap-4 overflow-hidden rounded-3xl p-4 lg:h-[440px] lg:gap-2">
+            <div className="flex h-auto w-full flex-col items-center justify-between gap-4 lg:h-1/2 lg:flex-row lg:gap-2">
                 <About />
                 <Projects />
             </div>
 
-            <div className="flex h-auto w-full flex-col items-center justify-between gap-2 lg:h-1/2 lg:flex-row">
+            <div className="flex h-auto w-full flex-col items-center justify-between gap-4 lg:h-1/2 lg:flex-row lg:gap-2">
                 <Stack />
                 <Dashboard />
                 <Contact />
