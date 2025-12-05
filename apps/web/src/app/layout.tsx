@@ -65,14 +65,17 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 <Providers
                     themeConfig={{
                         attribute: "class",
-                        enableSystem: true,
+                        defaultTheme: "dark",
+                        enableSystem: false,
                     }}
                 >
                     <main className="relative flex h-full w-full max-w-[1536px] flex-col items-start justify-start xl:flex-row">
                         <Desktop />
                         <Mobile />
 
-                        <section className="flex h-full w-full flex-col gap-4 p-4">{children}</section>
+                        <section className="mt-[72px] flex h-full w-full flex-col gap-4 p-4 xl:mt-0">
+                            {children}
+                        </section>
                     </main>
                 </Providers>
             </body>
