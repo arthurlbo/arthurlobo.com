@@ -38,7 +38,7 @@ function CommandDialog({
                 <DialogTitle className="hidden" />
                 <DialogDescription className="hidden" />
 
-                <Command className="bg-background text-text-primary">{children}</Command>
+                <Command className="bg-background text-text-100">{children}</Command>
             </DialogContent>
         </Dialog>
     );
@@ -59,7 +59,7 @@ function CommandInput({
             <CommandPrimitive.Input
                 data-slot="command-input"
                 className={cn(
-                    "placeholder:text-text-tertiary flex h-full flex-1 rounded-lg bg-transparent py-3 text-sm outline-hidden outline-0 focus:outline-0 focus:outline-none focus-visible:ring-0 disabled:cursor-not-allowed disabled:opacity-50",
+                    "placeholder:text-text-300 flex h-full flex-1 rounded-lg bg-transparent py-3 text-sm outline-hidden outline-0 focus:outline-0 focus:outline-none focus-visible:ring-0 disabled:cursor-not-allowed disabled:opacity-50",
                     className,
                 )}
                 {...props}

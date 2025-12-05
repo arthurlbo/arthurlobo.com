@@ -28,11 +28,11 @@ export const NavLink = async ({ link, label, icon: Icon, internalLink = true, di
             tabIndex={disabled ? -1 : 0}
             className={cn(
                 "flex h-9 w-full items-center gap-2 rounded-lg border border-transparent px-3 py-2 text-sm",
-                "focus-visible:ring-accent-primary focus-visible:ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
+                "focus-visible:ring-primary-400 focus-visible:ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
                 isActive
-                    ? "bg-surface text-text-primary border-border font-semibold"
-                    : "hover:text-text-primary text-text-tertiary bg-transparent font-medium",
-                disabled && "hover:text-text-tertiary cursor-not-allowed opacity-50",
+                    ? "bg-surface-400 text-text-100 border-border-400 font-semibold"
+                    : "hover:text-text-100 text-text-300 bg-transparent font-medium",
+                disabled && "hover:text-text-300 cursor-not-allowed opacity-50",
             )}
         >
             <Icon className="h-5 w-5" />

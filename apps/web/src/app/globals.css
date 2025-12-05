@@ -14,8 +14,8 @@
 
 @layer base {
     ::selection {
-        background: var(--color-surface);
-        color: var(--color-text-primary);
+        background: var(--color-surface-400);
+        color: var(--color-text-100);
     }
 }
 

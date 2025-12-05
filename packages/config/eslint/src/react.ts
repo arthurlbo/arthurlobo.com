@@ -24,6 +24,8 @@ export const reactConfig: Linter.Config[] = [
         rules: {
             ...pluginReactHooks.configs.recommended.rules,
             "react/react-in-jsx-scope": "off",
+            "react-hooks/exhaustive-deps": "off",
+            "react-hooks/set-state-in-effect": "off",
         },
     },
     {

@@ -26,7 +26,7 @@ export const SOCIAL_LINKS: INavLinkProps[] = [
 export const SocialLinks = () => {
     return (
         <>
-            <span className="text-text-tertiary px-4 font-mono text-xs font-semibold">Social</span>
+            <span className="text-text-300 px-4 font-mono text-xs font-semibold">Social</span>
 
             <div className="flex w-full flex-col items-start gap-1">
                 {SOCIAL_LINKS.map((item) => (

@@ -12,8 +12,8 @@ export const ImageCard = ({ alt, className, src }: IImageCardProps) => {
     return (
         <div
             className={cn(
-                "border-border bg-background absolute w-[160px] overflow-hidden rounded-tl-2xl border pt-2 pl-2",
-                "group-hover:border-accent-primary/80 transition-all duration-500 group-hover:scale-105",
+                "border-border-400 bg-background absolute w-[160px] overflow-hidden rounded-tl-2xl border pt-2 pl-2",
+                "group-hover:border-primary-400 transition-all duration-500 group-hover:scale-105",
                 className,
             )}
         >

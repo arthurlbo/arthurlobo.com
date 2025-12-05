@@ -7,7 +7,7 @@ interface IIconButtonProps {
 
 export const IconButton = ({ icon: Icon }: IIconButtonProps) => {
     return (
-        <Button className="border-border hover:border-text-text-primary text-text-primary h-11 w-11 shrink-0 rounded-full border bg-transparent p-0 transition-all duration-300 ease-in-out">
+        <Button className="border-border-400 hover:border-primary-400 text-text-100 h-10 w-10 shrink-0 rounded-full border bg-transparent p-0 transition-all duration-300 ease-in-out">
             <Icon className="h-5 w-5" />
         </Button>
     );

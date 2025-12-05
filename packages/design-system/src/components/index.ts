@@ -1,4 +1,4 @@
-export { Switch } from "./switch";
+export { Skeleton } from "./skeleton";
 export { Particles } from "./particles";
 export { Button, buttonVariants } from "./button";
 export { TypingAnimation } from "./typing-animation";

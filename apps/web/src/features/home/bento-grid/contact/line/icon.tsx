@@ -12,8 +12,8 @@ export const Icon = ({ placement, icon: Icon }: IProps) => {
     return (
         <div
             className={cn(
-                "border-border bg-surface z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border p-1.5",
-                "group-hover:border-accent-primary/80 transition-all duration-700 ease-in-out",
+                "border-border-400 bg-surface-400 z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border p-1.5",
+                "group-hover:border-primary-400 transition-all duration-700 ease-in-out",
                 placement === "top" ? "-mt-2" : "-mb-2",
             )}
         >

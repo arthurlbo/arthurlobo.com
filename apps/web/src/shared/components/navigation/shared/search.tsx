@@ -50,13 +50,13 @@ export const Search = () => {
         <>
             <div
                 onClick={() => setOpen(true)}
-                className="border-surface hover:border-text-tertiary flex h-10 w-full shrink-0 cursor-pointer items-center justify-between gap-2 rounded-lg border px-3 transition-all duration-300 ease-in-out"
+                className="border-border-400 hover:border-text-300 flex h-10 w-full shrink-0 cursor-pointer items-center justify-between gap-2 rounded-lg border px-3 transition-all duration-300 ease-in-out"
             >
-                <IconSearch className="text-text-tertiary h-4 w-4 shrink-0" />
+                <IconSearch className="text-text-300 h-4 w-4 shrink-0" />
 
-                <span className="text-text-secondary flex-1 text-xs font-normal">Search something...</span>
+                <span className="text-text-200 flex-1 text-xs font-normal">Search something...</span>
 
-                <kbd className="bg-surface text-text-tertiary pointer-events-none inline-flex items-center rounded px-1 py-px font-mono text-[10px] font-semibold">
+                <kbd className="bg-surface-400 text-text-300 pointer-events-none inline-flex items-center rounded px-1 py-px font-mono text-[10px] font-semibold">
                     <span>CTRL + K</span>
                 </kbd>
             </div>
@@ -64,11 +64,11 @@ export const Search = () => {
             <CommandDialog
                 open={open}
                 onOpenChange={setOpen}
-                className="border-border bg-background h-[400px] max-w-lg rounded-2xl"
+                className="border-border-400 bg-background h-[400px] max-w-lg rounded-2xl"
             >
                 <CommandInput
                     placeholder="Type a command or search..."
-                    containerClassName="border-b border-border h-14 [&_svg]:size-4 [&_svg]:text-text-tertiary"
+                    containerClassName="border-b border-border-400 h-14 [&_svg]:size-4 [&_svg]:text-text-300"
                 />
 
                 <CommandList className="h-full max-h-none px-2 pb-4">
@@ -78,7 +78,7 @@ export const Search = () => {
                         <Fragment key={heading}>
                             <CommandGroup
                                 heading={heading}
-                                className="[&_[cmdk-group-heading]]:text-text-tertiary mt-4 [&_[cmdk-group-heading]]:px-5 [&_[cmdk-group-heading]]:font-mono [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:font-bold"
+                                className="[&_[cmdk-group-heading]]:text-text-300 mt-4 [&_[cmdk-group-heading]]:px-5 [&_[cmdk-group-heading]]:font-mono [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:font-bold"
                             >
                                 {items.map(({ label, link, disabled = false, internalLink = true }) => (
                                     <CommandItem key={link} asChild>
@@ -89,18 +89,18 @@ export const Search = () => {
                                             tabIndex={disabled ? -1 : 0}
                                             className={cn(
                                                 "group flex w-full items-center gap-2 rounded-lg px-3 py-2 first:mt-2",
-                                                "text-text-primary hover:bg-surface hover:border-border border border-transparent bg-transparent font-sans text-sm font-semibold",
-                                                "focus-visible:ring-accent-primary focus-visible:ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
+                                                "text-text-100 hover:bg-surface-400 hover:border-border-400 border border-transparent bg-transparent font-sans text-sm font-semibold",
+                                                "focus-visible:ring-primary-400 focus-visible:ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
                                             )}
                                         >
-                                            <IconArrowRight className="text-text-tertiary transition-al ease-in- h-4 w-4 shrink-0 duration-300 group-hover:translate-x-0.5" />
+                                            <IconArrowRight className="text-text-300 ease-in- h-4 w-4 shrink-0 transition-all duration-300 group-hover:translate-x-0.5" />
                                             <span>{label}</span>
                                         </Link>
                                     </CommandItem>
                                 ))}
                             </CommandGroup>
 
-                            <CommandSeparator className="bg-surface mt-2 last:hidden" />
+                            <CommandSeparator className="bg-surface-400 mt-2 last:hidden" />
                         </Fragment>
                     ))}
                 </CommandList>
