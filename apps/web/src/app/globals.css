@@ -14,8 +14,15 @@
 
 @layer base {
     ::selection {
-        background: var(--color-surface-400);
+        background: var(--color-primary-700);
         color: var(--color-text-100);
+    }
+    *:focus-visible {
+        outline: none;
+        box-shadow:
+            0 0 0 2px var(--color-background),
+            0 0 0 4px var(--color-primary-400);
+        transition: all 300ms ease-in-out;
     }
 }
 

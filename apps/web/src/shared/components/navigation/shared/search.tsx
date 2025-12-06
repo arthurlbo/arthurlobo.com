@@ -90,7 +90,7 @@ export const Search = () => {
                                             className={cn(
                                                 "group flex w-full items-center gap-2 rounded-lg px-3 py-2 first:mt-2",
                                                 "text-text-100 hover:bg-surface-400 hover:border-border-400 border border-transparent bg-transparent font-sans text-sm font-semibold",
-                                                "focus-visible:ring-primary-400 focus-visible:ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
+                                                "transition-all duration-300 ease-in-out",
                                             )}
                                         >
                                             <IconArrowRight className="text-text-300 ease-in- h-4 w-4 shrink-0 transition-all duration-300 group-hover:translate-x-0.5" />

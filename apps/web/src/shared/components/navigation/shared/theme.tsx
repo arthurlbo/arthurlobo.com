@@ -38,7 +38,7 @@ export const Theme = () => {
             <div className="flex h-9 w-full items-center justify-between gap-4 px-3 py-2">
                 <span className="text-text-300 font-medium">Theme</span>
 
-                <div className="border-border-400 flex items-center gap-1 overflow-hidden rounded-full border">
+                <div className="border-border-400 flex items-center gap-1 rounded-full border">
                     {THEME_BUTTONS.map(({ value, icon: Icon }) => {
                         const isActive = theme === value;
 
