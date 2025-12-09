@@ -33,21 +33,21 @@
     --text-600: oklch(0.8 0.01 265); /* #C3C6CE */
     --text-700: oklch(0.9 0.01 265); /* #E0E2E6 */
 
-    --primary-100: oklch(0.95 0.03 285); /* #F0EDFF */
-    --primary-200: oklch(0.85 0.08 285); /* #D8CFFF */
-    --primary-300: oklch(0.58 0.22 285); /* #8567FA */
-    --primary-400: oklch(0.5 0.24 285); /* #6F4CE6 */
-    --primary-500: oklch(0.42 0.22 285); /* #5A3DB8 */
-    --primary-600: oklch(0.35 0.18 285); /* #483091 */
-    --primary-700: oklch(0.28 0.15 285); /* #392570 */
+    --primary-100: oklch(0.90 0.06 235); /* #D1DFFF */
+    --primary-200: oklch(0.78 0.11 235); /* #9ABFFF */
+    --primary-300: oklch(0.54 0.19 235); /* #3A72FF */
+    --primary-400: oklch(0.44 0.21 235); /* #0F54E6 */
+    --primary-500: oklch(0.37 0.19 235); /* #0641C2 */
+    --primary-600: oklch(0.30 0.17 235); /* #04319E */
+    --primary-700: oklch(0.24 0.15 235); /* #03247A */
 
-    --accent-100: oklch(0.96 0.01 265); /* #F2F4F8 */
-    --accent-200: oklch(0.92 0.02 265); /* #E6E9F0 */
-    --accent-300: oklch(0.86 0.03 265); /* #D6DCE6 */
-    --accent-400: oklch(0.78 0.04 265); /* #C1C9D6 */
-    --accent-500: oklch(0.65 0.05 265); /* #9EA6B8 */
-    --accent-600: oklch(0.5 0.06 265); /* #767E91 */
-    --accent-700: oklch(0.35 0.06 265); /* #4F5666 */
+    --accent-100: oklch(0.92 0.05 175); /* #DFFAF2 */
+    --accent-200: oklch(0.85 0.08 175); /* #B5F0E3 */
+    --accent-300: oklch(0.74 0.13 175); /* #6EE0CD */
+    --accent-400: oklch(0.64 0.15 175); /* #39CFB8 */
+    --accent-500: oklch(0.54 0.13 175); /* #26B39C */
+    --accent-600: oklch(0.44 0.11 175); /* #1D917D */
+    --accent-700: oklch(0.35 0.09 175); /* #16705F */
 
     /* --- ShadCN Mappings (Light Mode) --- */
     --radius: 0.625rem;
@@ -124,21 +124,21 @@
     --text-600: oklch(0.35 0.02 237); /* #404040 */
     --text-700: oklch(0.25 0.02 237); /* #262626 */
 
-    --primary-100: oklch(0.76 0.16 285); /* #BCAFFD */
-    --primary-200: oklch(0.69 0.18 285); /* #A693FD */
-    --primary-300: oklch(0.62 0.2 285); /* #9076FC */
-    --primary-400: oklch(0.55 0.22 285); /* #7D5CFC */
-    --primary-500: oklch(0.48 0.2 285); /* #6944E3 */
-    --primary-600: oklch(0.41 0.18 285); /* #5632CA */
-    --primary-700: oklch(0.34 0.16 285); /* #4422B0 */
+    --primary-100: oklch(0.68 0.15 235); /* #8FA8FF */
+    --primary-200: oklch(0.61 0.17 235); /* #638DFF */
+    --primary-300: oklch(0.54 0.19 235); /* #3A72FF */
+    --primary-400: oklch(0.47 0.21 235); /* #1658F5 */
+    --primary-500: oklch(0.40 0.19 235); /* #0844D4 */
+    --primary-600: oklch(0.33 0.17 235); /* #0533B0 */
+    --primary-700: oklch(0.26 0.15 235); /* #03258C */
 
-    --accent-100: oklch(0.99 0.005 265); /* #FCFCFD */
-    --accent-200: oklch(0.96 0.01 265); /* #F2F4F8 */
-    --accent-300: oklch(0.92 0.02 265); /* #E8EAF4 */
-    --accent-400: oklch(0.85 0.03 265); /* #D4D7E6 */
-    --accent-500: oklch(0.75 0.04 265); /* #B9BDD1 */
-    --accent-600: oklch(0.65 0.05 265); /* #9EA3BB */
-    --accent-700: oklch(0.55 0.06 265); /* #8489A1 */
+    --accent-100: oklch(0.88 0.09 175); /* #C7F5EB */
+    --accent-200: oklch(0.81 0.11 175); /* #9AEBDC */
+    --accent-300: oklch(0.74 0.13 175); /* #6EE0CD */
+    --accent-400: oklch(0.67 0.15 175); /* #42D5BE */
+    --accent-500: oklch(0.60 0.13 175); /* #2DBEA7 */
+    --accent-600: oklch(0.53 0.11 175); /* #24A38E */
+    --accent-700: oklch(0.46 0.09 175); /* #1C8775 */
 
     /* --- ShadCN Mappings (Dark Mode) --- */
     --card: var(--surface-300);
