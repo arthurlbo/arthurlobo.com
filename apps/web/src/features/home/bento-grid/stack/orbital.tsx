@@ -69,7 +69,7 @@ export const Orbital = () => {
                         cx={centerX}
                         r={r}
                         className={cn(
-                            "stroke stroke-border-400 group-hover:stroke-primary-400 opacity-70 transition-all duration-500 ease-in-out group-hover:opacity-100",
+                            "stroke stroke-surface-500 group-hover:stroke-accent-500 opacity-70 transition-all duration-500 ease-in-out group-hover:opacity-100",
                             delay,
                         )}
                     />

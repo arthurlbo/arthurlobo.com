@@ -1,1 +1,1 @@
-export const Divider = () => <div className="bg-surface-400 h-px w-full shrink-0" />;
+export const Divider = () => <div className="bg-surface-500 h-px w-full shrink-0" />;

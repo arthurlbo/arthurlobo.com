@@ -7,7 +7,7 @@ import { Indicator } from "./indicator";
 export const Profile = () => {
     return (
         <div className="group relative flex w-full items-center gap-3 xl:py-1">
-            <div className="border-border-400 relative h-14 w-14 shrink-0 overflow-hidden rounded-full border xl:h-16 xl:w-16">
+            <div className="border-surface-500 relative h-14 w-14 shrink-0 overflow-hidden rounded-full border xl:h-16 xl:w-16">
                 <Image
                     src={Me}
                     alt="Profile"
@@ -18,8 +18,8 @@ export const Profile = () => {
             </div>
 
             <div className="flex flex-col items-start xl:gap-0.5">
-                <span className="text-text-100 text-base font-semibold xl:text-lg">Arthur Lobo</span>
-                <span className="text-text-200 text-sm font-normal">@arthurlbo</span>
+                <span className="text-primary-100 text-base font-semibold xl:text-lg">Arthur Lobo</span>
+                <span className="text-primary-200 text-sm font-normal">@arthurlbo</span>
             </div>
 
             <Indicator />

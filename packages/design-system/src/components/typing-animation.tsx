@@ -149,7 +149,7 @@ export function TypingAnimation({
 
     return (
         // eslint-disable-next-line react-hooks/static-components
-        <MotionComponent ref={elementRef} className={cn("leading-[5rem] tracking-[-0.02em]", className)} {...props}>
+        <MotionComponent ref={elementRef} className={cn("leading-20 tracking-[-0.02em]", className)} {...props}>
             {displayedText}
             {shouldShowCursor && (
                 <span className={cn("inline-block", blinkCursor && "animate-blink-cursor")}>{getCursorChar()}</span>

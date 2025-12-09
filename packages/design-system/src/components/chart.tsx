@@ -49,7 +49,7 @@ function ChartContainer({
                 data-slot="chart"
                 data-chart={chartId}
                 className={cn(
-                    "[&_.recharts-cartesian-axis-tick_text]:fill-muted-foreground [&_.recharts-cartesian-grid_line[stroke='#ccc']]:stroke-border-400/50 [&_.recharts-curve.recharts-tooltip-cursor]:stroke-border-400 [&_.recharts-polar-grid_[stroke='#ccc']]:stroke-border-400 [&_.recharts-radial-bar-background-sector]:fill-muted [&_.recharts-rectangle.recharts-tooltip-cursor]:fill-muted [&_.recharts-reference-line_[stroke='#ccc']]:stroke-border-400 flex aspect-video justify-center text-xs [&_.recharts-dot[stroke='#fff']]:stroke-transparent [&_.recharts-layer]:outline-hidden [&_.recharts-sector]:outline-hidden [&_.recharts-sector[stroke='#fff']]:stroke-transparent [&_.recharts-surface]:outline-hidden",
+                    "[&_.recharts-cartesian-axis-tick_text]:fill-muted-foreground [&_.recharts-cartesian-grid_line[stroke='#ccc']]:stroke-surface-500/50 [&_.recharts-curve.recharts-tooltip-cursor]:stroke-surface-500 [&_.recharts-polar-grid_[stroke='#ccc']]:stroke-surface-500 [&_.recharts-radial-bar-background-sector]:fill-muted [&_.recharts-rectangle.recharts-tooltip-cursor]:fill-muted [&_.recharts-reference-line_[stroke='#ccc']]:stroke-surface-500 flex aspect-video justify-center text-xs [&_.recharts-dot[stroke='#fff']]:stroke-transparent [&_.recharts-layer]:outline-hidden [&_.recharts-sector]:outline-hidden [&_.recharts-sector[stroke='#fff']]:stroke-transparent [&_.recharts-surface]:outline-hidden",
                     className,
                 )}
                 {...props}
@@ -149,7 +149,7 @@ function ChartTooltipContent({
     return (
         <div
             className={cn(
-                "border-border-400 bg-background grid min-w-[8rem] items-start gap-1.5 rounded-lg border px-2.5 py-1.5 text-xs shadow-xl",
+                "border-surface-500 bg-background grid min-w-32 items-start gap-1.5 rounded-lg border px-2.5 py-1.5 text-xs shadow-xl",
                 className,
             )}
         >
@@ -180,7 +180,7 @@ function ChartTooltipContent({
                                             !hideIndicator && (
                                                 <div
                                                     className={cn(
-                                                        "shrink-0 rounded-[2px] border-(--color-border-400) bg-(--color-background)",
+                                                        "shrink-0 rounded-[2px] border-(--color-surface-500) bg-(--color-background)",
                                                         {
                                                             "h-2.5 w-2.5": indicator === "dot",
                                                             "w-1": indicator === "line",

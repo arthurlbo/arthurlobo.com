@@ -28,7 +28,7 @@ export const Line = ({ leftIcon, rightIcon, placement }: IProps) => {
             >
                 <path
                     d="M0 16.5 Q 99 1, 198 16.5"
-                    className="stroke group-hover:stroke-primary-400 stroke-border-400 fill-none transition-all duration-700 ease-in-out"
+                    className="stroke group-hover:stroke-accent-500 stroke-surface-500 fill-none transition-all duration-700 ease-in-out"
                     vectorEffect="non-scaling-stroke"
                 />
             </svg>

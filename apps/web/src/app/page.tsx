@@ -6,7 +6,7 @@ export default function Home() {
     return (
         <>
             <HomeHeading />
-            <div className="bg-border-400 my-4 h-px w-full shrink-0" />
+            <div className="bg-surface-500 my-4 h-px w-full shrink-0" />
             <HomePictures />
             <HomeBentoGrid />
         </>

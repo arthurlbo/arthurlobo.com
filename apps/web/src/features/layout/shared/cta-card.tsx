@@ -12,14 +12,14 @@ export const CtaCard = () => {
         <Link
             href="/contact"
             target="_blank"
-            className="border-border-400 hover:border-text-300 group relative max-h-[200px] w-full flex-1 cursor-pointer overflow-hidden rounded-2xl border transition-all duration-300 xl:min-h-44"
+            className="border-surface-500 hover:border-accent-500 group relative max-h-[200px] w-full flex-1 cursor-pointer overflow-hidden rounded-2xl border transition-all duration-300 xl:min-h-44"
         >
             <Image
                 src={SphereLeft}
                 alt="Sphere Left"
                 priority
                 width={188}
-                className="infinite absolute -top-20 -left-20 z-0 h-auto rotate-180 transition-all duration-1000 group-hover:rotate-[540deg]"
+                className="infinite absolute -top-20 -left-20 z-0 h-auto rotate-180 transition-all duration-1000 group-hover:rotate-540"
             />
 
             <Image
@@ -27,13 +27,13 @@ export const CtaCard = () => {
                 alt="Sphere Right"
                 priority
                 width={188}
-                className="infinite absolute -right-[90px] -bottom-[90px] z-0 h-auto rotate-180 duration-1000 group-hover:rotate-[540deg]"
+                className="infinite absolute -right-[90px] -bottom-[90px] z-0 h-auto rotate-180 duration-1000 group-hover:rotate-540"
             />
 
             <div className="flex h-full flex-col items-center justify-center gap-3">
-                <span className="text-text-100 z-10 text-[18px] font-bold">Let’s Connect</span>
+                <span className="text-primary-100 z-10 text-[18px] font-bold">Let’s Connect</span>
 
-                <span className="text-text-200 z-10 max-w-[240px] text-center text-sm font-medium">
+                <span className="text-primary-200 z-10 max-w-60 text-center text-sm font-medium">
                     Reach out to discuss projects, opportunities, or tech ideas.
                 </span>
             </div>

@@ -2,9 +2,33 @@
 
 import Link from "next/link";
 
+
+
 import { useIsActiveRoute } from "@/shared/hooks";
 import { TablerIcon } from "@tabler/icons-react";
 import { VariantProps, cva } from "class-variance-authority";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 type TNavigationLinkVariantsProps = VariantProps<typeof navigationLinkVariants>;
 
@@ -24,17 +48,14 @@ const navigationLinkVariants = cva(
         gap-2
         text-sm
         font-medium
-        border
-        text-text-300
+        text-primary-300
         transition-all
         duration-300
         ease-in-out
-        hover:text-text-100
-        border-transparent
+        hover:text-primary-100
         data-[state=active]:font-semibold
-        data-[state=active]:bg-surface-400
-        data-[state=active]:text-text-100
-        data-[state=active]:border-border-400
+        data-[state=active]:bg-accent-500
+        data-[state=active]:text-primary-100
     `,
     {
         variants: {
@@ -50,7 +71,7 @@ const navigationLinkVariants = cva(
                 tab: "h-auto w-auto px-4 py-2 rounded-full",
             },
             disabled: {
-                true: "cursor-not-allowed opacity-80 hover:bg-transparent hover:text-text-300",
+                true: "cursor-not-allowed opacity-80 hover:bg-transparent hover:text-primary-300",
                 false: "",
             },
         },
