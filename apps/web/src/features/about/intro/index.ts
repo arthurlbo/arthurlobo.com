@@ -1,0 +1,1 @@
+export { AboutIntro } from "./intro";
