@@ -1,8 +1,9 @@
+"use client";
+
+import { INavigationLinkProps, NavigationLink } from "@/shared/components/ui";
 import { IconBrandGithub, IconBrandInstagram, IconBrandLinkedin } from "@tabler/icons-react";
 
-import { INavLinkProps, NavLink } from "./nav-link";
-
-export const SOCIAL_LINKS: INavLinkProps[] = [
+export const SOCIAL_NAVIGATION_LINKS: INavigationLinkProps[] = [
     {
         label: "LinkedIn",
         icon: IconBrandLinkedin,
@@ -23,14 +24,14 @@ export const SOCIAL_LINKS: INavLinkProps[] = [
     },
 ];
 
-export const SocialLinks = () => {
+export const SocialNavigation = () => {
     return (
         <>
             <span className="text-text-300 px-4 font-mono text-xs font-semibold">Social</span>
 
             <div className="flex w-full flex-col items-start gap-1">
-                {SOCIAL_LINKS.map((item) => (
-                    <NavLink key={item.link} {...item} />
+                {SOCIAL_NAVIGATION_LINKS.map((item) => (
+                    <NavigationLink key={item.link} {...item} />
                 ))}
             </div>
         </>

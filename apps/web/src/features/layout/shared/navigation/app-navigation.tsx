@@ -1,3 +1,6 @@
+"use client";
+
+import { INavigationLinkProps, NavigationLink } from "@/shared/components/ui";
 import {
     IconAddressBook,
     IconChartLine,
@@ -7,9 +10,7 @@ import {
     IconUser,
 } from "@tabler/icons-react";
 
-import { INavLinkProps, NavLink } from "./nav-link";
-
-export const LINK_ITEMS: INavLinkProps[] = [
+export const APP_NAVIGATION_LINKS: INavigationLinkProps[] = [
     {
         label: "Home",
         icon: IconHome2,
@@ -39,15 +40,14 @@ export const LINK_ITEMS: INavLinkProps[] = [
         label: "Guestbook",
         icon: IconAddressBook,
         link: "/guestbook",
-        disabled: true,
     },
 ];
 
-export const Links = () => {
+export const AppNavigation = () => {
     return (
         <div className="flex w-full flex-col items-start gap-1">
-            {LINK_ITEMS.map((item) => (
-                <NavLink key={item.link} {...item} />
+            {APP_NAVIGATION_LINKS.map((item) => (
+                <NavigationLink key={item.link} {...item} />
             ))}
         </div>
     );

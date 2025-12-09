@@ -16,17 +16,16 @@ import {
 } from "@repo/design-system/components";
 import { IconArrowRight, IconSearch } from "@tabler/icons-react";
 
-import { LINK_ITEMS } from "./links";
-import { SOCIAL_LINKS } from "./social-links";
+import { APP_NAVIGATION_LINKS, SOCIAL_NAVIGATION_LINKS } from "./navigation";
 
 const COMMAND_GROUPS = [
     {
         heading: "Pages",
-        items: LINK_ITEMS,
+        items: APP_NAVIGATION_LINKS,
     },
     {
         heading: "Socials",
-        items: SOCIAL_LINKS,
+        items: SOCIAL_NAVIGATION_LINKS,
     },
 ];
 
@@ -78,7 +77,7 @@ export const Search = () => {
                         <Fragment key={heading}>
                             <CommandGroup
                                 heading={heading}
-                                className="[&_[cmdk-group-heading]]:text-text-300 mt-4 [&_[cmdk-group-heading]]:px-5 [&_[cmdk-group-heading]]:font-mono [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:font-bold"
+                                className="**:[[cmdk-group-heading]]:text-text-300 mt-4 **:[[cmdk-group-heading]]:px-5 **:[[cmdk-group-heading]]:font-mono **:[[cmdk-group-heading]]:text-xs **:[[cmdk-group-heading]]:font-bold"
                             >
                                 {items.map(({ label, link, disabled = false, internalLink = true }) => (
                                     <CommandItem key={link} asChild>

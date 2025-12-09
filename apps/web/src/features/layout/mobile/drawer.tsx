@@ -2,7 +2,7 @@ import { IconButton } from "@/shared/components/ui";
 import { Sheet, SheetClose, SheetContent, SheetTrigger } from "@repo/design-system/components";
 import { IconMenu, IconX } from "@tabler/icons-react";
 
-import { CtaCard, Divider, Links, Profile, Search, SocialLinks, Theme } from "../shared";
+import { AppNavigation, CtaCard, Divider, Profile, Search, SocialNavigation, Theme } from "../shared";
 
 export const Drawer = () => {
     return (
@@ -21,9 +21,9 @@ export const Drawer = () => {
                 </div>
 
                 <Search />
-                <Links />
+                <AppNavigation />
                 <Divider />
-                <SocialLinks />
+                <SocialNavigation />
                 <Divider />
                 <Theme />
                 <CtaCard />
