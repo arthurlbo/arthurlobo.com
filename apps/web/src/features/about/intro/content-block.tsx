@@ -1,46 +1,53 @@
-import Image, { StaticImageData } from "next/image";
-
 import { cn } from "@/shared/utils";
+import { TablerIcon } from "@tabler/icons-react";
 
 export interface IContentBlockProps {
-    src: StaticImageData;
-    alt: string;
     title: string;
     description: string;
+    number: string;
+    icon: TablerIcon;
     side: "right" | "left";
 }
 
-export const ContentBlock = ({ alt, description, side, src, title }: IContentBlockProps) => {
-    const sideStyle =
-        side === "right"
-            ? {
-                  container: "xl:flex-row",
-                  image: "rotate-[-8deg] group-hover:rotate-[-6deg]",
-              }
-            : {
-                  container: "xl:flex-row-reverse",
-                  image: "rotate-[8deg] group-hover:rotate-[6deg]",
-              };
-
+export const ContentBlock = ({ description, number, side, title, icon: Icon }: IContentBlockProps) => {
     return (
-        <article className={cn("group flex w-full items-center justify-between", sideStyle.container)}>
-            <div className="bg-surface-300 border-border-400 relative flex h-[260px] w-[260px] shrink-0 items-center justify-center rounded-2xl border p-3">
-                <Image
-                    src={src}
-                    alt={alt}
-                    quality={100}
-                    placeholder="blur"
-                    className={cn(
-                        "absolute top-1/2 left-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 rounded-xl object-cover object-center",
-                        "transition-all duration-500 ease-in-out",
-                        sideStyle.image,
-                    )}
-                />
+        <article
+            className={cn(
+                "group relative flex w-full items-start justify-start gap-4",
+                side === "right" ? "xl:flex-row" : "xl:flex-row-reverse",
+            )}
+        >
+            <div
+                className={cn(
+                    "text-surface-700/30 absolute -top-8 -z-1 text-9xl font-bold opacity-0",
+                    "transition-all duration-300 ease-in-out group-hover:opacity-100",
+                    side === "right" ? "-left-4" : "-right-4",
+                )}
+            >
+                {number}
             </div>
 
-            <div className="flex w-full max-w-2xl flex-col items-start justify-center gap-6">
-                <h1 className="text-text-100 text-3xl font-semibold">{title}</h1>
-                <p className="text-text-200 text-base leading-8 font-normal">{description}</p>
+            <div
+                className={cn(
+                    "bg-surface-700/70 text-primary-100 flex h-10 w-10 items-center justify-center rounded-lg border border-transparent",
+                    "group-hover:bg-surface-700 group-hover:border-accent-500 transition-all duration-300 ease-in-out group-hover:-translate-y-1",
+                )}
+            >
+                <Icon className="h-5 w-5" />
+            </div>
+
+            <div
+                className={cn(
+                    "flex w-full max-w-2|xl flex-col justify-center gap-4",
+                    side === "right" ? "items-start text-start" : "items-end text-end",
+                )}
+            >
+                <div className={cn("flex items-center gap-3", side === "right" ? "flex-row" : "flex-row-reverse")}>
+                    <span className="text-primary-300 font-mono text-sm font-bold">{number}</span>
+                    <h1 className="text-primary-100 text-3xl font-semibold">{title}</h1>
+                </div>
+
+                <p className="text-primary-200 text-base leading-8 font-normal">{description}</p>
             </div>
         </article>
     );

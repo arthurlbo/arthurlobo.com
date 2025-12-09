@@ -1,45 +1,47 @@
-import Mock from "@/assets/home/at-sunset.webp";
+import { getExperienceYears } from "@/shared/utils";
+import { IconBolt, IconCalendar, IconCode, IconTarget } from "@tabler/icons-react";
 
 import { ContentBlock, IContentBlockProps } from "./content-block";
+
+const yearsOfExperience = getExperienceYears();
 
 const CONTENT_BLOCKS: IContentBlockProps[] = [
     {
         side: "right",
-        src: Mock,
-        alt: "Mock",
+        icon: IconCode,
+        number: "01",
         title: "My Coding Journey",
-        description:
-            "When Apple unveiled the first iPad with its beautiful 1024x768 display, I knew I had to create for it. I taught myself mobile development while freelancing, and soon I was shipping iOS and Android apps. One of my games even climbed above Angry Birds in the charts for a while—which still makes me smile when I think about it.",
+        description: `My journey started ${yearsOfExperience} years ago with a curiosity about how things work. I learned the fundamentals with C, then moved to web development using Node.js and React. Since then, I have mastered new technologies and sharpened my skills in architecture, scalability, and system design, becoming a proficient Software Engineer.`,
     },
     {
         side: "left",
-        src: Mock,
-        alt: "Mock",
+        icon: IconBolt,
+        number: "02",
         title: "Passion for Problem-Solving",
         description:
-            "Despite my love for mobile development, the web kept calling my name. With my eye for design, frontend felt like the perfect playground. I dove into HTML, CSS, and JavaScript—with React in 2016 becoming my game-changer. A few months later and I had landed my first full-time web dev role and never looked back.",
+            "I love solving hard problems. From handling huge data to improving slow systems and migrating legacy code, I’ve always enjoyed the challenge. I like understanding how things work under the hood, fixing what’s broken, and making it smarter. Solving problems is where I learn the most and have the most fun.",
     },
     {
         side: "right",
-        src: Mock,
-        alt: "Mock",
+        icon: IconTarget,
+        number: "03",
         title: "Life Beyond Code",
         description:
-            "Despite my love for mobile development, the web kept calling my name. With my eye for design, frontend felt like the perfect playground. I dove into HTML, CSS, and JavaScript—with React in 2016 becoming my game-changer. A few months later and I had landed my first full-time web dev role and never looked back.",
+            "When I’m not coding, I’m probably watching Formula 1 or NBA, enjoying a good coffee, at the gym, playing games, or spending time with my wife. I love learning new things, visiting new places, exploring nature, and meeting people who share that same energy.",
     },
     {
         side: "left",
-        src: Mock,
-        alt: "Mock",
+        icon: IconCalendar,
+        number: "04",
         title: "These Days",
         description:
-            "When Apple unveiled the first iPad with its beautiful 1024x768 display, I knew I had to create for it. I taught myself mobile development while freelancing, and soon I was shipping iOS and Android apps. One of my games even climbed above Angry Birds in the charts for a while—which still makes me smile when I think about it.",
+            "These days, I’m working as a Software Engineer at Sooro Renner, the largest whey company in Latin America, building internal tools that automate workflows and improve operational efficiency across all departments. I’m focused on growing day by day, improving both my technical skills and my ability to collaborate, communicate, and deliver meaningful impact.",
     },
 ];
 
 export const AboutIntro = () => {
     return (
-        <section className="mt-8 flex h-full w-full flex-col items-start justify-start gap-10 px-5 pb-8">
+        <section className="mt-4 flex h-full w-full flex-col items-start justify-start gap-8">
             {CONTENT_BLOCKS.map((block, index) => (
                 <ContentBlock key={index} {...block} />
             ))}
