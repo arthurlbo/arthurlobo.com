@@ -1,7 +1,7 @@
 import { cn } from "@/shared/utils";
 import { TablerIcon } from "@tabler/icons-react";
 
-export interface IContentBlockProps {
+export interface IIntroContentBlockProps {
     title: string;
     description: string;
     number: string;
@@ -9,17 +9,17 @@ export interface IContentBlockProps {
     side: "right" | "left";
 }
 
-export const ContentBlock = ({ description, number, side, title, icon: Icon }: IContentBlockProps) => {
+export const IntroContentBlock = ({ description, number, side, title, icon: Icon }: IIntroContentBlockProps) => {
     return (
         <article
             className={cn(
-                "group relative flex w-full items-start justify-start gap-4",
-                side === "right" ? "xl:flex-row" : "xl:flex-row-reverse",
+                "group relative flex w-full flex-col justify-start gap-4",
+                side === "right" ? "items-start xl:flex-row" : "items-end xl:flex-row-reverse xl:items-start",
             )}
         >
             <div
                 className={cn(
-                    "text-surface-700/30 absolute -top-8 -z-1 text-9xl font-bold opacity-0",
+                    "text-surface-700/50 absolute -top-8 -z-1 text-9xl font-bold opacity-0",
                     "transition-all duration-300 ease-in-out group-hover:opacity-100",
                     side === "right" ? "-left-4" : "-right-4",
                 )}
@@ -38,7 +38,7 @@ export const ContentBlock = ({ description, number, side, title, icon: Icon }: I
 
             <div
                 className={cn(
-                    "flex w-full max-w-2|xl flex-col justify-center gap-4",
+                    "flex w-full max-w-2xl flex-col justify-center gap-4",
                     side === "right" ? "items-start text-start" : "items-end text-end",
                 )}
             >
