@@ -58,7 +58,7 @@ export const MilestoneCard = ({
                         alt={name}
                         placeholder="blur"
                         quality={100}
-                        className="h-full w-full rounded-sm"
+                        className="h-full w-full rounded-sm object-contain"
                     />
                 </div>
 
