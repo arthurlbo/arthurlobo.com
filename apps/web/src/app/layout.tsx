@@ -5,7 +5,7 @@ import { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Space_Grotesk, Space_Mono } from "next/font/google";
 
-import { Desktop, Mobile } from "@/shared/components/navigation";
+import { Desktop, Mobile } from "@/features/layout";
 import { SEO_CONFIG } from "@/shared/constants";
 
 import { Providers } from "./_providers";

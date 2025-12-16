@@ -13,7 +13,7 @@ export const ImageCard = ({ alt, className, src }: IImageCardProps) => {
         <div
             className={cn(
                 "group relative h-[200px] w-[200px] shrink-0 cursor-pointer overflow-hidden rounded-xl border border-transparent",
-                "hover:border-text-300 hover:z-50 hover:scale-[115%] hover:rotate-0",
+                "hover:border-primary-300 hover:z-50 hover:scale-[115%] hover:rotate-0",
                 "transition-all duration-500 ease-out",
                 className,
             )}
@@ -22,6 +22,7 @@ export const ImageCard = ({ alt, className, src }: IImageCardProps) => {
                 src={src}
                 alt={alt}
                 priority
+                quality={100}
                 placeholder="blur"
                 className={cn(
                     "h-full w-full object-cover object-center",
@@ -30,7 +31,7 @@ export const ImageCard = ({ alt, className, src }: IImageCardProps) => {
                 )}
             />
 
-            <span className="text-text-100 absolute bottom-3 left-3 max-w-[180px] text-sm font-bold opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100">
+            <span className="text-primary-100 absolute bottom-3 left-3 max-w-[180px] text-sm font-bold opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100">
                 {alt}
             </span>
         </div>

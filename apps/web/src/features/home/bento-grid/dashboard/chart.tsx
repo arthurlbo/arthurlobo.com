@@ -28,7 +28,7 @@ const hoverChartData = [
 const chartConfig: TChartConfig = {
     value: {
         label: "Mock",
-        color: "var(--chart-6)",
+        color: "var(--chart-7)",
     },
 };
 

@@ -29,7 +29,7 @@ export const Projects = () => {
             <Heading
                 title="Projects"
                 description="Dive into my latest projects and creations."
-                className="max-w-[240px]"
+                className="max-w-60"
             />
 
             <div className="relative flex h-full w-full items-end justify-end">

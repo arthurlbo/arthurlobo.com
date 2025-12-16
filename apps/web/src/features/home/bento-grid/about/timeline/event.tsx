@@ -11,15 +11,15 @@ export const Event = ({ className, date, side, title }: IEventProps) => {
     return (
         <div
             className={cn(
-                "border-border-400 absolute z-20 flex flex-col items-start justify-start gap-0.5 rounded-lg border bg-transparent px-3 py-1.5 text-xs",
-                "group-hover:border-primary-400 transition-all duration-500 group-hover:-translate-y-5",
-                "after:bg-border-400 group-hover:after:bg-primary-400 transition-all duration-500 after:absolute after:top-1/2 after:z-30 after:h-px after:w-4 after:translate-y-1/2 after:content-['']",
+                "border-surface-500 absolute z-20 flex flex-col items-start justify-start gap-0.5 rounded-lg border bg-transparent px-3 py-1.5 text-xs",
+                "group-hover:border-accent-500 transition-all duration-500 group-hover:-translate-y-5",
+                "after:bg-surface-500 group-hover:after:bg-accent-500 transition-all duration-500 after:absolute after:top-1/2 after:z-30 after:h-px after:w-4 after:translate-y-1/2 after:content-['']",
                 side === "left" ? "right-1/2 mr-5 after:-right-4" : "left-1/2 ml-5 after:-left-4",
                 className,
             )}
         >
-            <span className="text-text-200 font-bold">{title}</span>
-            <span className="text-text-100 line-clamp-1 w-[100px] font-normal lg:w-20 xl:w-[100px]">{date}</span>
+            <span className="text-primary-200 font-bold">{title}</span>
+            <span className="text-primary-100 line-clamp-1 w-[100px] font-normal lg:w-20 xl:w-[100px]">{date}</span>
         </div>
     );
 };

@@ -14,8 +14,8 @@ export const Heading = ({ className, description, title }: IProps) => {
                 className,
             )}
         >
-            <span className="text-text-300 font-mono text-sm">{title}</span>
-            <p className="text-text-100 text-base font-semibold">{description}</p>
+            <span className="text-primary-300 font-mono text-sm">{title}</span>
+            <p className="text-primary-100 text-base font-semibold">{description}</p>
         </div>
     );
 };
