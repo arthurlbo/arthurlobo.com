@@ -21,14 +21,15 @@ export const Indicator = () => {
         <Image
             src={IndicatorIcon}
             alt="Indicator"
-            width={40}
             priority
-            onClick={handleClick}
+            quality={100}
+            width={40}
             className={cn(
                 "absolute top-0.5 right-28 h-auto cursor-pointer xl:-right-1.5",
                 "focus:ring-0 focus:ring-offset-0 focus:outline-none",
                 isAnimating ? "animate-move" : "",
             )}
+            onClick={handleClick}
         />
     );
 };

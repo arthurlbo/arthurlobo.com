@@ -21,6 +21,7 @@ export const ImageCard = ({ alt, className, src }: IImageCardProps) => {
                 src={src}
                 alt={alt}
                 priority
+                quality={100}
                 placeholder="blur"
                 className="h-full w-full rounded-tl-lg object-cover object-top"
             />

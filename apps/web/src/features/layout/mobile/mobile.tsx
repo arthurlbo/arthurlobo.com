@@ -11,6 +11,7 @@ export const Mobile = () => (
                 src={Me}
                 alt="Profile"
                 priority
+                quality={100}
                 placeholder="blur"
                 className="h-full w-full object-cover object-top"
             />

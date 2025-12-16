@@ -18,6 +18,7 @@ export const CtaCard = () => {
                 src={SphereLeft}
                 alt="Sphere Left"
                 priority
+                quality={100}
                 width={188}
                 className="infinite absolute -top-20 -left-20 z-0 h-auto rotate-180 transition-all duration-1000 group-hover:rotate-540"
             />
@@ -26,6 +27,7 @@ export const CtaCard = () => {
                 src={SphereRight}
                 alt="Sphere Right"
                 priority
+                quality={100}
                 width={188}
                 className="infinite absolute -right-[90px] -bottom-[90px] z-0 h-auto rotate-180 duration-1000 group-hover:rotate-540"
             />

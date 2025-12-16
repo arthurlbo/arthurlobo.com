@@ -20,6 +20,7 @@ export const APP_NAVIGATION_LINKS: INavigationLinkProps[] = [
         label: "About",
         icon: IconUser,
         link: "/about",
+        hasNestedRoutes: true,
     },
     {
         label: "Projects",

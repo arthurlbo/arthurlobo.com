@@ -23,6 +23,7 @@ export const Contact = () => {
                         src={Me}
                         alt="Profile"
                         priority
+                        quality={100}
                         placeholder="blur"
                         className="h-full w-full rounded-full object-cover object-top"
                     />

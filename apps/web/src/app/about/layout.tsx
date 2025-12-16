@@ -2,8 +2,9 @@ import { ReactNode } from "react";
 
 import type { Metadata } from "next";
 
-import { ABOUT_NAVIGATION_LINKS } from "@/features/about";
 import { Heading, NavigationTabs } from "@/shared/components/ui";
+
+import { ABOUT_NAVIGATION_LINKS } from "@/features/about";
 
 interface IProps {
     children: ReactNode;

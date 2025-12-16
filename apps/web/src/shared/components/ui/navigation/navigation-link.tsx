@@ -2,33 +2,9 @@
 
 import Link from "next/link";
 
-
-
 import { useIsActiveRoute } from "@/shared/hooks";
 import { TablerIcon } from "@tabler/icons-react";
 import { VariantProps, cva } from "class-variance-authority";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 type TNavigationLinkVariantsProps = VariantProps<typeof navigationLinkVariants>;
 
@@ -39,6 +15,7 @@ export interface INavigationLinkProps extends TNavigationLinkVariantsProps {
     disabled?: boolean;
     splitPosition?: number;
     internalLink?: boolean;
+    hasNestedRoutes?: boolean;
 }
 
 const navigationLinkVariants = cva(
@@ -55,7 +32,7 @@ const navigationLinkVariants = cva(
         hover:text-primary-100
         data-[state=active]:font-semibold
         data-[state=active]:bg-accent-500
-        data-[state=active]:text-primary-100
+        data-[state=active]:text-accent-text
     `,
     {
         variants: {
@@ -88,10 +65,11 @@ export const NavigationLink = ({
     variant,
     icon: Icon,
     splitPosition,
+    hasNestedRoutes,
     disabled = false,
     internalLink = true,
 }: INavigationLinkProps) => {
-    const isActiveRoute = useIsActiveRoute(link, splitPosition);
+    const isActiveRoute = useIsActiveRoute({ route: link, splitPosition, hasNestedRoutes });
 
     return (
         <Link
