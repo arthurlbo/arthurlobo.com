@@ -22,7 +22,7 @@ export const Card = ({ title, technologies, icon: Icon }: ICardProps) => {
             className="group flex w-full flex-col items-start justify-start gap-4 border-none bg-transparent p-0"
         >
             <AccordionTrigger className="border-surface-500 hover:border-accent-400 flex w-full cursor-pointer items-center justify-start gap-4 rounded-none border-b px-0 pt-0 pb-4 transition-all duration-300 ease-in-out">
-                <div className="bg-surface-700/30 border-surface-500 flex h-11 w-11 items-center justify-center rounded-lg border transition-all duration-300 ease-in-out group-hover:-rotate-6">
+                <div className="bg-surface-700/30 border-surface-500 group-hover:border-accent-400/80 flex h-11 w-11 items-center justify-center rounded-lg border transition-all duration-300 ease-in-out group-hover:-rotate-6">
                     <Icon className="text-accent-300 h-5 w-5" />
                 </div>
 
