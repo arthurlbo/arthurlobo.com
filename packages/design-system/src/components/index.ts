@@ -1,5 +1,5 @@
+export { Meteors } from "./meteors";
 export { Skeleton } from "./skeleton";
-export { Particles } from "./particles";
 export { Button, buttonVariants } from "./button";
 export { TypingAnimation } from "./typing-animation";
 export { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./accordion";

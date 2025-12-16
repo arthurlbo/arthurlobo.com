@@ -1,17 +1,11 @@
-import { Particles } from "@repo/design-system/components";
+import { Meteors } from "@repo/design-system/components";
 
 export const dynamic = "force-static";
 
 export default function NotFound() {
     return (
-        <div className="text-primary-100 relative flex h-[calc(100vh-72px-32px)] w-full flex-col items-center justify-center gap-6 xl:h-[calc(100vh-32px)]">
-            <Particles
-                refresh
-                ease={80}
-                quantity={100}
-                color="#C4C7D0"
-                className="absolute inset-0 z-0 h-full w-full"
-            />
+        <div className="text-primary-100 relative flex h-[calc(100vh-72px-32px)] w-full flex-col items-center justify-center gap-6 overflow-hidden xl:h-[calc(100vh-32px)]">
+            <Meteors className="bg-primary-400" />
 
             <span className="text-3xl">🧑‍💻</span>
 
