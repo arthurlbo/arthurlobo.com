@@ -21,6 +21,8 @@
         "^react$",
         "^next(/.*)?$",
         "<THIRD_PARTY_MODULES>",
+        "^@/tabler-icons(/.*)?$",
+        "^@/constants(/.*)?$",
         "^@/enums(/.*)?$",
         "^@/interfaces(/.*)?$",
         "^@/types(/.*)?$",
@@ -33,6 +35,7 @@
         "^@/hooks(/.*)?$",
         "^@/contexts(/.*)?$",
         "^@/services(/.*)?$",
+        "^@/features(/.*)?$",
         "^@/components(/.*)?$",
         "^@/app(/.*)?$",
         "^[./]"
