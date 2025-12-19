@@ -67,7 +67,7 @@ export const Search = () => {
             >
                 <CommandInput
                     placeholder="Type a command or search..."
-                    containerClassName="border-b border-surface-500 h-14 [&_svg]:size-4 [&_svg]:text-text-300"
+                    containerClassName="border-b border-surface-500 h-14 [&_svg]:size-4 [&_svg]:text-primary-300"
                 />
 
                 <CommandList className="h-full max-h-none px-2 pb-4">
