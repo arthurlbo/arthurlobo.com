@@ -1,5 +1,5 @@
 import Delta from "@/assets/home/delta.webp";
-import TimeCapsule from "@/assets/home/timecapsule.webp";
+import TimeCapsule from "@/assets/home/time-capsule.webp";
 import Yazi from "@/assets/home/yazi.webp";
 
 import { Card, Heading } from "../shared";
@@ -26,11 +26,7 @@ const CARDS: IImageCardProps[] = [
 export const Projects = () => {
     return (
         <Card link="/projects">
-            <Heading
-                title="Projects"
-                description="Dive into my latest projects and creations."
-                className="max-w-60"
-            />
+            <Heading title="Projects" description="Dive into my latest projects and creations." className="max-w-60" />
 
             <div className="relative flex h-full w-full items-end justify-end">
                 {CARDS.map((card, index) => (

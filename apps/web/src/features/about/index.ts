@@ -1,5 +1,5 @@
 export { ABOUT_NAVIGATION_LINKS } from "./navigation-links";
 
-export { AboutStack } from "./stack";
+export { StackCard, type IStackCardProps } from "./stack-card";
 export { Milestones, type IMilestoneCardProps } from "./shared";
-export { IntroContentBlock, type IIntroContentBlockProps } from "./intro-content-block";
+export { AboutContentBlock, type IAboutContentBlockProps } from "./content-block";

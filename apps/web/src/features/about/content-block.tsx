@@ -1,7 +1,7 @@
 import { cn } from "@/shared/utils";
 import { TablerIcon } from "@tabler/icons-react";
 
-export interface IIntroContentBlockProps {
+export interface IAboutContentBlockProps {
     title: string;
     description: string;
     number: string;
@@ -9,7 +9,7 @@ export interface IIntroContentBlockProps {
     side: "right" | "left";
 }
 
-export const IntroContentBlock = ({ description, number, side, title, icon: Icon }: IIntroContentBlockProps) => {
+export const AboutContentBlock = ({ description, number, side, title, icon: Icon }: IAboutContentBlockProps) => {
     return (
         <article
             className={cn(

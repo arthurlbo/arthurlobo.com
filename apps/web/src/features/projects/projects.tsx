@@ -1,0 +1,45 @@
+"use client";
+
+import { useState } from "react";
+
+import { AnimatePresence, motion } from "motion/react";
+
+import { Card } from "./card";
+import { PROJECTS } from "./constants";
+
+export const ProjectsGrid = () => {
+    const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
+    return (
+        <section className="grid h-full w-full grid-cols-1 md:grid-cols-2 xl:mt-4 xl:grid-cols-3">
+            {PROJECTS.map((project, index) => (
+                <div
+                    key={project.title}
+                    onMouseEnter={() => setHoveredIndex(index)}
+                    onMouseLeave={() => setHoveredIndex(null)}
+                    className="group relative flex h-full w-full items-center justify-center lg:p-2"
+                >
+                    {hoveredIndex === index && (
+                        <AnimatePresence>
+                            <motion.span
+                                layoutId="hoverBackground"
+                                initial={{ opacity: 0 }}
+                                animate={{
+                                    opacity: 1,
+                                    transition: { duration: 0.2 },
+                                }}
+                                exit={{
+                                    opacity: 0,
+                                    transition: { duration: 0.2, delay: 0.2 },
+                                }}
+                                className="bg-surface-700 absolute inset-0 block h-full w-full rounded-2xl"
+                            />
+                        </AnimatePresence>
+                    )}
+
+                    <Card {...project} />
+                </div>
+            ))}
+        </section>
+    );
+};
