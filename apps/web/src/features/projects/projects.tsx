@@ -17,6 +17,8 @@ export const ProjectsGrid = () => {
                     key={project.title}
                     onMouseEnter={() => setHoveredIndex(index)}
                     onMouseLeave={() => setHoveredIndex(null)}
+                    onFocus={() => setHoveredIndex(index)}
+                    onBlur={() => setHoveredIndex(null)}
                     className="group relative flex h-full w-full items-center justify-center lg:p-2"
                 >
                     {hoveredIndex === index && (
