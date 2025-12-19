@@ -267,7 +267,7 @@ const STACKS: IStackCardProps[] = [
                 icon: Terraform,
             },
             {
-                label: "NGIX",
+                label: "NGINX",
                 icon: IconBolt,
             },
             {

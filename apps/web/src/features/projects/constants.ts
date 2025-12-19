@@ -85,14 +85,14 @@ export const PROJECTS: TProject[] = [
     },
     {
         title: "Exp Marketing",
-        description: "A instagram's bio page developed for the multinational marketing agency @expmarketing.br",
+        description: "A bio page developed for the multinational marketing agency @expmarketing.br",
         image: Exp,
         link: "https://github.com/arthurlbo/exp-bio",
         technologies: ["TypeScript", "React", "Next.js", "Tailwind CSS"],
     },
     {
         title: "Feedget",
-        description: "A feedback widget for collecting reports, ideias, problems from the users and sending via email.",
+        description: "A feedback widget for collecting reports, ideas, problems from the users and sending via email.",
         image: Feedget,
         link: "https://github.com/arthurlbo/feedget",
         technologies: [
@@ -113,7 +113,7 @@ export const PROJECTS: TProject[] = [
     {
         title: "User API",
         description:
-            "An simple API for user management and authentication, built with NestJS, Docker, Prisma, and PostgreSQL .",
+            "A simple API for user management and authentication, built with NestJS, Docker, Prisma, and PostgreSQL .",
         image: UserApi,
         link: "https://github.com/arthurlbo/user-management-api",
         technologies: ["NodeJS", "TypeScript", "NestJS", "TypeORM", "Prisma", "MySQL", "Jest", "SuperTest", "Docker"],
