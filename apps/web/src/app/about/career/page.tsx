@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-import AdamRoboLogo from "@/assets/about/career/adamrobo.webp";
+import AdamRoboLogo from "@/assets/about/career/adam-robo.webp";
 import AnaliticaLogo from "@/assets/about/career/analitica.webp";
 import SooroLogo from "@/assets/about/career/sooro.webp";
 

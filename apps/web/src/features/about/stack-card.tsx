@@ -9,13 +9,13 @@ interface ITechnology {
     icon: ElementType<DeveloperIconProps> | TablerIcon;
 }
 
-export interface ICardProps {
+export interface IStackCardProps {
     title: string;
     icon: TablerIcon;
     technologies: ITechnology[];
 }
 
-export const Card = ({ title, technologies, icon: Icon }: ICardProps) => {
+export const StackCard = ({ title, technologies, icon: Icon }: IStackCardProps) => {
     return (
         <AccordionItem
             value={title}

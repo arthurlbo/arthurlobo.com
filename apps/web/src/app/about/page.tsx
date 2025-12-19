@@ -1,13 +1,20 @@
+import { Metadata } from "next";
+
 import { getExperienceYears } from "@/shared/utils";
 import { IconBolt, IconCalendar, IconCode, IconTarget } from "@tabler/icons-react";
 
-import { IIntroContentBlockProps, IntroContentBlock } from "@/features/about";
+import { AboutContentBlock, IAboutContentBlockProps } from "@/features/about";
 
 export const dynamic = "force-static";
+export const revalidate = 2592000; // 30 days in seconds (30 * 24 * 60 * 60)
+
+export const metadata: Metadata = {
+    title: "About",
+};
 
 const yearsOfExperience = getExperienceYears();
 
-const CONTENT_BLOCKS: IIntroContentBlockProps[] = [
+const CONTENT_BLOCKS: IAboutContentBlockProps[] = [
     {
         side: "right",
         icon: IconCode,
@@ -45,7 +52,7 @@ export default function About() {
     return (
         <section className="mt-4 flex h-full w-full flex-col items-start justify-start gap-8 pb-2">
             {CONTENT_BLOCKS.map((block, index) => (
-                <IntroContentBlock key={index} {...block} />
+                <AboutContentBlock key={index} {...block} />
             ))}
         </section>
     );
