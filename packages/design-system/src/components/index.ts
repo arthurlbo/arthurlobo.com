@@ -3,6 +3,7 @@ export { Label } from "./label";
 export { Skeleton } from "./skeleton";
 export { Textarea } from "./textarea";
 export { Separator } from "./separator";
+export { Toaster, toast } from "./sonner";
 export { Button, buttonVariants } from "./button";
 export { TypingAnimation } from "./typing-animation";
 export { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./accordion";
