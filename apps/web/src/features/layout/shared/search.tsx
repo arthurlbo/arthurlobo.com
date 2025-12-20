@@ -4,6 +4,7 @@ import { Fragment, useEffect, useState } from "react";
 
 import Link from "next/link";
 
+import { APP_NAVIGATION_LINKS, SOCIAL_NAVIGATION_LINKS } from "@/shared/constants";
 import { cn } from "@/shared/utils";
 import {
     CommandDialog,
@@ -15,8 +16,6 @@ import {
     CommandSeparator,
 } from "@repo/design-system/components";
 import { IconArrowRight, IconSearch } from "@tabler/icons-react";
-
-import { APP_NAVIGATION_LINKS, SOCIAL_NAVIGATION_LINKS } from "@/shared/constants";
 
 const COMMAND_GROUPS = [
     {
@@ -51,7 +50,7 @@ export const Search = () => {
                 onClick={() => setOpen(true)}
                 className="border-surface-500 hover:border-accent-500 flex h-10 w-full shrink-0 cursor-pointer items-center justify-between gap-2 rounded-lg border px-3 transition-all duration-300 ease-in-out"
             >
-                <IconSearch className="text-primary-300 h-4 w-4 shrink-0" />
+                <IconSearch className="text-primary-300 size-4 shrink-0" />
 
                 <span className="text-primary-200 flex-1 text-xs font-normal">Search something...</span>
 
@@ -92,7 +91,7 @@ export const Search = () => {
                                                 "transition-all duration-300 ease-in-out",
                                             )}
                                         >
-                                            <IconArrowRight className="text-primary-300 ease-in- h-4 w-4 shrink-0 transition-all duration-300 group-hover:translate-x-0.5" />
+                                            <IconArrowRight className="text-primary-300 size-4 shrink-0 transition-all duration-300 ease-in-out group-hover:translate-x-0.5" />
                                             <span>{label}</span>
                                         </Link>
                                     </CommandItem>

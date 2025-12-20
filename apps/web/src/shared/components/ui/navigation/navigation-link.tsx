@@ -82,7 +82,7 @@ export const NavigationLink = ({
             data-state={isActiveRoute && internalLink ? "active" : "inactive"}
             className={navigationLinkVariants({ variant, disabled })}
         >
-            <Icon className="h-5 w-5" />
+            <Icon className="size-5" />
             {variant !== "icon" && <span>{label}</span>}
         </Link>
     );

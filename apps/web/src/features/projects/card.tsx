@@ -35,7 +35,7 @@ export const Card = ({ description, image, title, link, technologies }: IProps) 
 
             <div className="text-primary-100 relative z-10 flex items-center gap-1">
                 <span className="text-sm font-semibold">Learn more</span>
-                <IconArrowRight className="h-4 w-4 transition-all duration-500 ease-in-out group-hover:translate-x-0.5" />
+                <IconArrowRight className="size-4 transition-all duration-500 ease-in-out group-hover:translate-x-0.5" />
             </div>
         </Link>
     );
