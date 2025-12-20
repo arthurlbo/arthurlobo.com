@@ -11,7 +11,7 @@ export const ProjectsGrid = () => {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
     return (
-        <section className="grid h-full w-full grid-cols-1 md:grid-cols-2 xl:mt-4 xl:grid-cols-3">
+        <section className="grid h-full w-full grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
             {PROJECTS.map((project, index) => (
                 <div
                     key={project.title}

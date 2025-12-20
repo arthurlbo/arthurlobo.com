@@ -11,7 +11,7 @@ export const Card = ({ description, image, title, link, technologies }: IProps) 
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-background group-hover:border-accent-400 z-10 flex h-full w-full flex-col items-start justify-start gap-6 overflow-hidden rounded-xl border border-transparent p-4 transition-all duration-500 ease-in-out"
+            className="bg-background group-hover:border-accent-500 z-10 flex h-full w-full flex-col items-start justify-start gap-6 overflow-hidden rounded-xl border border-transparent p-4 transition-all duration-500 ease-in-out"
         >
             <div className="border-surface-500 bg-surface-700 relative z-10 flex h-11 w-11 shrink-0 items-center justify-center rounded-full border">
                 <Image src={image} alt={title} quality={100} placeholder="blur" width={20} height={20} />

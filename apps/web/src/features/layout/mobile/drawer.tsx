@@ -1,14 +1,15 @@
-import { IconButton } from "@/shared/components/ui";
-import { Sheet, SheetClose, SheetContent, SheetTrigger } from "@repo/design-system/components";
+import { Button, Separator, Sheet, SheetClose, SheetContent, SheetTrigger } from "@repo/design-system/components";
 import { IconMenu, IconX } from "@tabler/icons-react";
 
-import { AppNavigation, CtaCard, Divider, Profile, Search, SocialNavigation, Theme } from "../shared";
+import { AppNavigation, CtaCard, Profile, Search, SocialNavigation, Theme } from "../shared";
 
 export const Drawer = () => {
     return (
         <Sheet>
             <SheetTrigger asChild>
-                <IconButton icon={IconMenu} />
+                <Button variant="icon" className="rounded-full">
+                    <IconMenu />
+                </Button>
             </SheetTrigger>
 
             <SheetContent side="right" showDefaultCloseButton={false}>
@@ -16,15 +17,17 @@ export const Drawer = () => {
                     <Profile />
 
                     <SheetClose asChild>
-                        <IconButton icon={IconX} />
+                        <Button variant="icon" className="rounded-full">
+                            <IconX />
+                        </Button>
                     </SheetClose>
                 </div>
 
                 <Search />
                 <AppNavigation />
-                <Divider />
+                <Separator />
                 <SocialNavigation />
-                <Divider />
+                <Separator />
                 <Theme />
                 <CtaCard />
             </SheetContent>
