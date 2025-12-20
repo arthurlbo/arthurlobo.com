@@ -1,6 +1,12 @@
+import { Metadata } from "next";
+
 import { InfoState } from "@/shared/components/info-state";
 
 export const dynamic = "force-static";
+
+export const metadata: Metadata = {
+    title: "Not Found",
+};
 
 export default function NotFound() {
     return (

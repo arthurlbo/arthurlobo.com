@@ -20,7 +20,7 @@ export const InfoState = ({ title, description, descriptionClassName, emoji }: I
 
             <span
                 className={cn(
-                    "text-primary-200 max-w-md text-center text-base leading-relaxed font-normal",
+                    "text-primary-200 text-center text-base leading-relaxed font-normal",
                     descriptionClassName,
                 )}
             >

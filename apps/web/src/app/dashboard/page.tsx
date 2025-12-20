@@ -13,7 +13,8 @@ export default function Dashboard() {
         <InfoState
             emoji="📊"
             title="Almost There..."
-            description="Building a dashboard featuring WakaTime coding stats and GitHub activity. Check back soon for live metrics!"
+            description="Working on a dashboard to share coding stats and metrics. Check back soon to see what I've been working on!"
+            descriptionClassName="max-w-[480px]"
         />
     );
 }
