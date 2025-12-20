@@ -48,9 +48,7 @@ export const Theme = () => {
                                 variant="icon"
                                 className={cn(
                                     "h-auto w-auto rounded-full p-[3px]",
-                                    isActive
-                                        ? "hover:border-surface-500"
-                                        : "text-primary-300 border-transparent",
+                                    isActive ? "hover:border-surface-500" : "text-primary-300 border-transparent",
                                 )}
                                 onClick={() => setTheme(value)}
                             >
