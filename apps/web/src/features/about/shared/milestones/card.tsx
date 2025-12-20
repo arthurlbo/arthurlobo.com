@@ -23,7 +23,7 @@ export interface IMilestoneCardProps {
     impacts?: string[];
 }
 
-const Separator = ({ className }: { className?: string }) => <span className={className}>•</span>;
+const Bullet = ({ className }: { className?: string }) => <span className={className}>•</span>;
 
 export const MilestoneCard = ({
     title,
@@ -75,12 +75,12 @@ export const MilestoneCard = ({
                             {name}
                         </Link>
 
-                        <Separator />
+                        <Bullet />
 
                         {tags.map((tag) => (
                             <Fragment key={tag}>
                                 <span>{tag}</span>
-                                <Separator className="last:hidden" />
+                                <Bullet className="last:hidden" />
                             </Fragment>
                         ))}
                     </div>
@@ -88,12 +88,12 @@ export const MilestoneCard = ({
                     <div className="flex flex-wrap items-start justify-start gap-2 md:flex-row md:items-center">
                         <span>{period}</span>
 
-                        <Separator />
+                        <Bullet />
 
                         {totalTime && (
                             <>
                                 <span>{totalTime}</span>
-                                <Separator />
+                                <Bullet />
                             </>
                         )}
 
@@ -108,7 +108,7 @@ export const MilestoneCard = ({
 
                     {impacts.map((impact, index) => (
                         <div key={index} className="flex items-start gap-2">
-                            <Separator />
+                            <Bullet />
                             <span className="text-primary-200 text-sm font-normal">{impact}</span>
                         </div>
                     ))}
