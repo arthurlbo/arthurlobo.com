@@ -81,8 +81,8 @@ export const Orbital = () => {
                         return (
                             <foreignObject
                                 key={`icon-${circleIndex}-${iconIndex}`}
-                                x={x}
-                                y={y}
+                                x={Math.round(x * 100) / 100}
+                                y={Math.round(y * 100) / 100}
                                 width={iconSize}
                                 height={iconSize}
                                 className="overflow-visible"

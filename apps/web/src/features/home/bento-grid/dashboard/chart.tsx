@@ -50,7 +50,7 @@ export function Chart() {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
-            <ChartContainer config={chartConfig}>
+            <ChartContainer id="dashboard-chart" config={chartConfig}>
                 <AreaChart
                     tabIndex={-1}
                     accessibilityLayer
