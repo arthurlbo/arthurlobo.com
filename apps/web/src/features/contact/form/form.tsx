@@ -1,15 +1,23 @@
 "use client";
 
+import { startTransition, useActionState, useEffect } from "react";
+
 import { Input, NavigationLink } from "@/shared/components/ui";
 import { SOCIAL_NAVIGATION_LINKS } from "@/shared/constants";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Button, FieldGroup } from "@repo/design-system/components";
+import { Button, FieldGroup, toast } from "@repo/design-system/components";
 import { IconAt, IconMessageCircle, IconSend, IconUser } from "@tabler/icons-react";
 import { useForm } from "react-hook-form";
 
+import { contactFormAction } from "@/features/contact/form/action";
 import { TContactFormData, contactFormSchema } from "@/features/contact/form/schema";
 
 export const ContactForm = () => {
+    const [state, formAction, isPending] = useActionState<IPrevState, TContactFormData>(contactFormAction, {
+        error: null,
+        success: false,
+    });
+
     const { control, handleSubmit } = useForm<TContactFormData>({
         resolver: zodResolver(contactFormSchema),
         defaultValues: {
@@ -20,8 +28,15 @@ export const ContactForm = () => {
     });
 
     const onHandleSubmit = (data: TContactFormData) => {
-        console.log(data);
+        startTransition(() => {
+            formAction(data);
+        });
     };
+
+    useEffect(() => {
+        if (state?.error) toast.error(state?.error);
+        if (state?.success) toast.success("Thanks for contacting! I'll get back to you soon.");
+    }, [state]);
 
     return (
         <section className="bg-surface-700/30 flex w-full flex-col items-start justify-start gap-6 rounded-2xl p-6">
@@ -57,7 +72,7 @@ export const ContactForm = () => {
             </form>
 
             <div className="flex w-full flex-col items-center justify-between gap-4 md:flex-row">
-                <Button type="submit" form="contactForm" className="h-10 px-3 md:w-auto" isLoading={false}>
+                <Button type="submit" form="contactForm" className="h-10 px-3 md:w-auto" isLoading={isPending}>
                     <IconSend className="size-5" />
                     <span>Send Message</span>
                 </Button>

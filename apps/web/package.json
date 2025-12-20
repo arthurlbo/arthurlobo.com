@@ -21,6 +21,7 @@
     },
     "dependencies": {
         "@hookform/resolvers": "^5.2.2",
+        "@react-email/components": "^1.0.2",
         "@repo/design-system": "workspace:*",
         "@tabler/icons-react": "^3.35.0",
         "class-variance-authority": "^0.7.1",
@@ -33,12 +34,14 @@
         "react-dom": "^19.2.0",
         "react-hook-form": "^7.68.0",
         "recharts": "2.15.4",
+        "resend": "^6.6.0",
         "sharp": "^0.34.5",
         "tailwind-merge": "^3.4.0",
         "zod": "^4.1.12"
     },
     "devDependencies": {
         "@playwright/test": "^1.56.1",
+        "@repo/env": "workspace:*",
         "@repo/eslint": "workspace:*",
         "@repo/jest": "workspace:*",
         "@repo/playwright": "workspace:*",
