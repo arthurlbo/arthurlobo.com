@@ -13,8 +13,8 @@ export const NavigationTabs = ({ className, links }: INavigationTabsProps) => {
     return (
         <section
             className={cn(
-                "flex w-full max-w-full shrink-0 items-center justify-start gap-3",
-                "scrollbar-thin overflow-x-auto overflow-y-hidden",
+                "flex w-full max-w-full shrink-0 items-center justify-start gap-3 py-1",
+                "scrollbar-thin overflow-x-auto",
                 className,
             )}
         >

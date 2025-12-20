@@ -47,6 +47,7 @@ export const Search = () => {
     return (
         <>
             <div
+                tabIndex={1}
                 onClick={() => setOpen(true)}
                 className="border-surface-500 hover:border-accent-500 flex h-10 w-full shrink-0 cursor-pointer items-center justify-between gap-2 rounded-lg border px-3 transition-all duration-300 ease-in-out"
             >

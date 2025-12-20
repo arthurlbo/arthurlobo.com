@@ -50,7 +50,7 @@ export const MilestoneCard = ({
         >
             <AccordionTrigger
                 showIcon={hasImpacts}
-                className="flex w-full cursor-pointer flex-col items-start justify-start gap-4 p-0 md:flex-row"
+                className="flex w-full cursor-pointer flex-col items-start justify-start gap-4 rounded-lg p-0 md:flex-row"
             >
                 <div className="bg-primary-100 flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-lg p-1">
                     <Image
@@ -70,7 +70,7 @@ export const MilestoneCard = ({
                             href={link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="hover:text-accent-300 transition-all duration-300 ease-in-out group-hover:underline"
+                            className="hover:text-accent-300 rounded-xs transition-all duration-300 ease-in-out group-hover:underline"
                         >
                             {name}
                         </Link>

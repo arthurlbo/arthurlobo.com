@@ -16,7 +16,7 @@ export default function AboutLayout({ children }: IProps) {
                 description="Discover who I am and dive into my journey, where passions, skills, and values come together to shape my technical path."
             />
 
-            <NavigationTabs className="mt-2 xl:mt-0" links={ABOUT_NAVIGATION_LINKS} />
+            <NavigationTabs className="mt-1 xl:mt-0" links={ABOUT_NAVIGATION_LINKS} />
 
             {children}
         </>
