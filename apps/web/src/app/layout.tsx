@@ -5,8 +5,9 @@ import { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Space_Grotesk, Space_Mono } from "next/font/google";
 
-import { Desktop, Mobile } from "@/features/layout";
 import { SEO_CONFIG } from "@/shared/constants";
+
+import { Desktop, Mobile } from "@/features/layout";
 
 import { Providers } from "./_providers";
 
@@ -73,9 +74,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                         <Desktop />
                         <Mobile />
 
-                        <section className="mt-[72px] flex h-full w-full flex-col gap-4 p-4 xl:mt-0">
-                            {children}
-                        </section>
+                        <div className="mt-[72px] flex h-full w-full flex-col gap-4 p-4 xl:mt-0">{children}</div>
                     </main>
                 </Providers>
             </body>
