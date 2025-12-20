@@ -16,7 +16,7 @@ import {
 } from "@repo/design-system/components";
 import { IconArrowRight, IconSearch } from "@tabler/icons-react";
 
-import { APP_NAVIGATION_LINKS, SOCIAL_NAVIGATION_LINKS } from "./navigation";
+import { APP_NAVIGATION_LINKS, SOCIAL_NAVIGATION_LINKS } from "@/shared/constants";
 
 const COMMAND_GROUPS = [
     {
