@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "Projects",
 };
 
-export default function ProjectsPage() {
+export default function Projects() {
     return (
         <>
             <Heading

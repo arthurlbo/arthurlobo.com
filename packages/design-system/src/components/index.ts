@@ -1,6 +1,5 @@
 export { Input } from "./input";
 export { Label } from "./label";
-export { Meteors } from "./meteors";
 export { Skeleton } from "./skeleton";
 export { Textarea } from "./textarea";
 export { Separator } from "./separator";

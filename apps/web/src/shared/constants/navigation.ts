@@ -7,7 +7,7 @@ import {
     IconBrandInstagram,
     IconBrandLinkedin,
     IconChartLine,
-    IconHome2,
+    IconHome,
     IconMessageCircle,
     IconPalette,
     IconUser,
@@ -16,7 +16,7 @@ import {
 export const APP_NAVIGATION_LINKS: INavigationLinkProps[] = [
     {
         label: "Home",
-        icon: IconHome2,
+        icon: IconHome,
         link: "/",
     },
     {
