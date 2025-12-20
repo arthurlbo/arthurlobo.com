@@ -15,7 +15,7 @@ export default function Contact() {
         <>
             <Heading
                 title="Contact"
-                description="Let’s connect to discuss tech, leadership, or potential collaboration, I’m always up for a great conversation!"
+                description="Interested in working together? Let's connect to discuss opportunities, exchange ideas, or just have a great conversation about tech."
             />
 
             <ContactForm />

@@ -13,7 +13,7 @@ export default function AboutLayout({ children }: IProps) {
         <>
             <Heading
                 title="About"
-                description="Discover who I am and dive into my journey, where passions, skills, and values come together to shape my technical path."
+                description="Get to know the person behind the code. Discover my journey, the skills I've developed, and the values that drive my work."
             />
 
             <NavigationTabs className="mt-1 xl:mt-0" links={ABOUT_NAVIGATION_LINKS} />

@@ -21,7 +21,7 @@ export const HomeHeading = () => {
                 <span>• Working remotely</span>
             </div>
 
-            <p className="text-primary-200 text-sm leading-8 font-light xl:max-w-[950px]">{SEO_CONFIG.description}</p>
+            <p className="text-primary-200 text-sm leading-8 font-light xl:max-w-[880px]">{SEO_CONFIG.description}</p>
         </section>
     );
 };

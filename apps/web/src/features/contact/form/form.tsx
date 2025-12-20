@@ -32,7 +32,7 @@ export const ContactForm = () => {
                             name="name"
                             control={control}
                             label="Name"
-                            placeholder="tell me your name"
+                            placeholder="What's your name?"
                             rightIcon={IconUser}
                         />
 
@@ -49,7 +49,7 @@ export const ContactForm = () => {
                         name="message"
                         control={control}
                         label="Message"
-                        placeholder="type your message"
+                        placeholder="Tell me about your project, idea, or just say hi..."
                         rightIcon={IconMessageCircle}
                         isTextArea
                     />
@@ -59,11 +59,11 @@ export const ContactForm = () => {
             <div className="flex w-full flex-col items-center justify-between gap-4 md:flex-row">
                 <Button type="submit" form="contactForm" className="h-10 px-3 md:w-auto" isLoading={false}>
                     <IconSend className="size-5" />
-                    <span>Send message</span>
+                    <span>Send Message</span>
                 </Button>
 
                 <div className="flex flex-col items-center gap-4 md:flex-row">
-                    <span className="text-primary-300 shrink-0 text-xs font-semibold">Or find me on social media:</span>
+                    <span className="text-primary-300 shrink-0 text-xs font-semibold">You can also find me here:</span>
 
                     <div className="flex w-full items-center justify-center gap-4">
                         {SOCIAL_NAVIGATION_LINKS.map((item) => (

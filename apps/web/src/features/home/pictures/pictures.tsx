@@ -4,6 +4,7 @@ import LakeSunset from "@/assets/home/lake-sunset.webp";
 import OnTheBeach from "@/assets/home/on-the-beach.webp";
 import Sunset from "@/assets/home/sunset.webp";
 import Wife from "@/assets/home/wife.webp";
+
 import { IImageCardProps, ImageCard } from "@/features/home/pictures/image-card";
 
 const imageCards: IImageCardProps[] = [
