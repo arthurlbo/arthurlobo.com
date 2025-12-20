@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Activity, Fragment } from "react";
 
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
@@ -90,19 +90,17 @@ export const MilestoneCard = ({
 
                         <Bullet />
 
-                        {totalTime && (
-                            <>
-                                <span>{totalTime}</span>
-                                <Bullet />
-                            </>
-                        )}
+                        <Activity mode={totalTime ? "visible" : "hidden"}>
+                            <span>{totalTime}</span>
+                            <Bullet />
+                        </Activity>
 
                         <span>{location}</span>
                     </div>
                 </div>
             </AccordionTrigger>
 
-            {hasImpacts && (
+            <Activity mode={hasImpacts ? "visible" : "hidden"}>
                 <AccordionContent className="flex h-full w-full flex-col gap-4">
                     <div className="bg-surface-500 h-px w-full shrink-0" />
 
@@ -113,7 +111,7 @@ export const MilestoneCard = ({
                         </div>
                     ))}
                 </AccordionContent>
-            )}
+            </Activity>
         </AccordionItem>
     );
 };

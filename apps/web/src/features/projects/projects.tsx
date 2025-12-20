@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { Activity, useState } from "react";
 
 import { AnimatePresence, motion } from "motion/react";
 
@@ -21,7 +21,7 @@ export const ProjectsGrid = () => {
                     onBlur={() => setHoveredIndex(null)}
                     className="group relative flex h-full w-full items-center justify-center lg:p-2"
                 >
-                    {hoveredIndex === index && (
+                    <Activity mode={hoveredIndex === index ? "visible" : "hidden"}>
                         <AnimatePresence>
                             <motion.span
                                 layoutId="hoverBackground"
@@ -37,7 +37,7 @@ export const ProjectsGrid = () => {
                                 className="bg-surface-700 absolute inset-0 block h-full w-full rounded-2xl"
                             />
                         </AnimatePresence>
-                    )}
+                    </Activity>
 
                     <Card {...project} />
                 </div>

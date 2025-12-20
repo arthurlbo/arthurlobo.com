@@ -1,5 +1,7 @@
 "use client";
 
+import { Activity } from "react";
+
 import Link from "next/link";
 
 import { useIsActiveRoute } from "@/shared/hooks";
@@ -83,7 +85,10 @@ export const NavigationLink = ({
             className={navigationLinkVariants({ variant, disabled })}
         >
             <Icon className="size-5" />
-            {variant !== "icon" && <span>{label}</span>}
+
+            <Activity mode={variant !== "icon" ? "visible" : "hidden"}>
+                <span>{label}</span>
+            </Activity>
         </Link>
     );
 };

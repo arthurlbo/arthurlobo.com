@@ -1,5 +1,7 @@
 "use client";
 
+import { Activity } from "react";
+
 import { cn } from "@/shared/utils";
 import {
     Field,
@@ -42,11 +44,11 @@ export const Input = <T extends FieldValues>({
             control={control}
             render={({ field, fieldState }) => (
                 <Field data-invalid={fieldState.invalid}>
-                    {label && (
+                    <Activity mode={label ? "visible" : "hidden"}>
                         <FieldLabel htmlFor={field.name} className="text-primary-100">
                             {label}
                         </FieldLabel>
-                    )}
+                    </Activity>
 
                     <InputGroup
                         className={cn(
@@ -91,7 +93,9 @@ export const Input = <T extends FieldValues>({
                         )}
                     </InputGroup>
 
-                    {fieldState.invalid && <FieldError errors={[fieldState.error]} />}
+                    <Activity mode={fieldState.invalid ? "visible" : "hidden"}>
+                        <FieldError errors={[fieldState.error]} />
+                    </Activity>
                 </Field>
             )}
         />
