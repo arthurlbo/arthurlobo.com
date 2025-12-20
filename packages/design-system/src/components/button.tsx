@@ -25,7 +25,7 @@ const buttonVariants = cva(
         transition-all
         duration-300
         ease-in-out
-        disabled:opacity-50
+        disabled:opacity-80
         disabled:cursor-not-allowed
         [&_svg]:pointer-events-none
         [&_svg]:shrink-0
@@ -51,11 +51,16 @@ const buttonVariants = cva(
     },
 );
 
-const Button = ({ className, variant, children, asChild = false, isLoading = false, ...props }: IProps) => {
+const Button = ({ className, variant, children, asChild = false, disabled, isLoading = false, ...props }: IProps) => {
     const Comp = asChild ? Slot : "button";
 
     return (
-        <Comp data-slot="button" className={cn(buttonVariants({ variant, className }))} {...props}>
+        <Comp
+            data-slot="button"
+            className={cn(buttonVariants({ variant, className }))}
+            {...props}
+            disabled={disabled || isLoading}
+        >
             {isLoading ? <Spinner /> : children}
         </Comp>
     );
