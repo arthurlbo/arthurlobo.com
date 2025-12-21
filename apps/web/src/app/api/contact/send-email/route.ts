@@ -1,39 +1,9 @@
 import { NextRequest } from "next/server";
 
-
-
 import { webEnv } from "@repo/env";
 import { Resend } from "resend";
 
-
-
 import { ContactEmail, contactFormSchema } from "@/features/contact";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 const resend = new Resend(webEnv.RESEND_API_KEY);
 
@@ -51,10 +21,14 @@ export async function POST(request: NextRequest) {
             react: ContactEmail(validatedData),
         });
 
-        if (error) return Response.json({ error }, { status: 500 });
+        if (error) {
+            console.error("Error sending contact email:", error);
+            return Response.json({ error: "Failed to send email" }, { status: 500 });
+        }
 
         return Response.json(data);
-    } catch (error) {
-        return Response.json({ error }, { status: 500 });
+    } catch (err) {
+        console.error("Unexpected error while handling contact email request:", err);
+        return Response.json({ error: "Internal server error" }, { status: 500 });
     }
 }
