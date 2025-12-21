@@ -37,7 +37,7 @@ export const ImageCard = ({ alt, className, src }: IImageCardProps) => {
                 )}
             />
 
-            <span className="text-primary-100 absolute bottom-3 left-3 max-w-[180px] text-sm font-bold opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100">
+            <span className="text-accent-text absolute bottom-3 left-3 max-w-[180px] text-sm font-bold opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100">
                 {alt}
             </span>
         </div>
