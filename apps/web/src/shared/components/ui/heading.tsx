@@ -5,6 +5,11 @@ interface IHeadingProps {
     description: string;
 }
 
+/**
+ * Generic heading component to be used across different pages.
+ * @param title - Main title of the page.
+ * @param description - Description/subtitle of the page.
+ */
 export const Heading = ({ description, title }: IHeadingProps) => {
     return (
         <>

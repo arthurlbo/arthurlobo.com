@@ -28,6 +28,9 @@ const COMMAND_GROUPS = [
     },
 ];
 
+/**
+ * Command dialog to search and navigate through the application.
+ */
 export const Search = () => {
     const [open, setOpen] = useState(false);
 

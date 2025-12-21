@@ -8,6 +8,13 @@ export interface IImageCardProps {
     className: string;
 }
 
+/**
+ * Project image card.
+ *
+ * @param alt - Alt text for the image.
+ * @param src - Image source.
+ * @param className - Additional Tailwind CSS classes.
+ */
 export const ImageCard = ({ alt, className, src }: IImageCardProps) => {
     return (
         <div

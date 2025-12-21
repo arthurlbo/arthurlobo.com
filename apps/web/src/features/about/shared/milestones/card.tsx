@@ -23,8 +23,25 @@ export interface IMilestoneCardProps {
     impacts?: string[];
 }
 
+/**
+ * Visual separator rendered as a bullet point (•).
+ *
+ * @param className - Optional Tailwind classes for conditional visibility or styling.
+ */
 const Bullet = ({ className }: { className?: string }) => <span className={className}>•</span>;
 
+/**
+ * MilestoneCard component to display individual milestones such as work experience or education.
+ *
+ * @param value - Unique identifier for accordion state management.
+ * @param title - Job title, role or milestone name.
+ * @param organization - Organization details (name, logo, link).
+ * @param tags - Array of descriptive tags (degree type, role type, etc.).
+ * @param period - Date range (e.g., "Jan 2021 - Dec 2022").
+ * @param totalTime - Duration in human-readable format (e.g., "1 year 6 months").
+ * @param location - Geographic location or work arrangement.
+ * @param impacts - List of key achievements.
+ */
 export const MilestoneCard = ({
     title,
     value,

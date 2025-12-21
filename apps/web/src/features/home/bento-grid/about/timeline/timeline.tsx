@@ -33,6 +33,9 @@ const events: IEventProps[] = [
     },
 ];
 
+/*
+ * Component to display a vertical timeline with event milestones.
+ */
 export const Timeline = () => {
     return (
         <div className="absolute top-0 right-4 h-full w-0 sm:w-[300px] lg:w-[180px] xl:w-[300px]">

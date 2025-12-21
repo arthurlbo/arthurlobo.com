@@ -32,6 +32,9 @@ const chartConfig: TChartConfig = {
     },
 };
 
+/**
+ * Interactive area chart component for the dashboard card.
+ */
 export function Chart() {
     const [chartData, setChartData] = useState(defaultChartData);
     const highlightData = defaultChartData[3];

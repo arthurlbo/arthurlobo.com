@@ -11,6 +11,11 @@ interface IProps {
     themeConfig: ComponentProps<typeof NextThemesProvider>;
 }
 
+/**
+ * Providers component to wrap the application with necessary providers.
+ * @param children - Wrapped application.
+ * @param themeConfig - Theme configuration for NextThemesProvider.
+ */
 export function Providers({ children, themeConfig }: IProps) {
     return (
         <NextThemesProvider {...themeConfig}>

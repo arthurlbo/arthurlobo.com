@@ -13,6 +13,12 @@ import {
 
 import { TContactFormData as IProps } from "./form";
 
+/**
+ * Contact email template.
+ * @param name - Visitor's name that are contacting.
+ * @param email - Visitor's email address.
+ * @param message - Visitor's message.
+ */
 export const ContactEmail = ({ email, name, message }: IProps) => {
     return (
         <Html>

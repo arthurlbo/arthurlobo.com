@@ -3,6 +3,9 @@
 import { NavigationLink } from "@/shared/components/ui";
 import { SOCIAL_NAVIGATION_LINKS } from "@/shared/constants";
 
+/**
+ * Social navigation component.
+ */
 export const SocialNavigation = () => {
     return (
         <>

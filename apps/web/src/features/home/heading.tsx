@@ -3,6 +3,9 @@ import { TypingAnimation } from "@repo/design-system/components";
 
 const greetings = ["Hello!", "Olá!", "Hola!", "Ciao!", "Hallo!", "Привет!", "Hej!", "Bonjour!", "こんにちは!", "你好!"];
 
+/**
+ * Home page heading component.
+ */
 export const HomeHeading = () => {
     return (
         <section className="flex w-full flex-col items-start gap-4">

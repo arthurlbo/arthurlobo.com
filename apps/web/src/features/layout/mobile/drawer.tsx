@@ -3,6 +3,9 @@ import { IconMenu, IconX } from "@tabler/icons-react";
 
 import { AppNavigation, CtaCard, Profile, Search, SocialNavigation, Theme } from "../shared";
 
+/**
+ * Mobile drawer component.
+ */
 export const Drawer = () => {
     return (
         <Sheet>

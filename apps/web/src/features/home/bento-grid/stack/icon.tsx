@@ -8,6 +8,12 @@ export interface IIconProps {
     className?: string;
 }
 
+/**
+ * Icon component that displays a developer icon within a styled circular container.
+ *
+ * @param Icon - The developer icon component to be rendered.
+ * @param className - Additional Tailwind CSS classes for customization.
+ */
 export const Icon = ({ className, icon: Icon }: IIconProps) => {
     return (
         <div

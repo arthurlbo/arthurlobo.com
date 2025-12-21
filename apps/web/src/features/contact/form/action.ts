@@ -4,6 +4,11 @@ import { webEnv } from "@repo/env";
 
 import { TContactFormData } from "./schema";
 
+/**
+ * Contact form action to send the email.
+ * @param _ - Previous state (not used).
+ * @param formData - Contact form data.
+ */
 export const contactFormAction = async (_: IPrevState, formData: TContactFormData): Promise<IPrevState> => {
     const { name, email, message } = formData;
 

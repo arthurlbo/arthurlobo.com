@@ -8,6 +8,12 @@ interface IProps {
     placement: TPlacement;
 }
 
+/**
+ * Displays an icon within a styled circular container, positioned based on the specified placement.
+ *
+ * @param placement - Determines whether the icon is placed at the "top" or "bottom".
+ * @param Icon - The TablerIcon component to be rendered inside the container.
+ */
 export const Icon = ({ placement, icon: Icon }: IProps) => {
     return (
         <div

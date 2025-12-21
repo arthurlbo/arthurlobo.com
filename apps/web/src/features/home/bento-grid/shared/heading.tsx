@@ -6,6 +6,13 @@ interface IProps {
     className?: string;
 }
 
+/**
+ * Heading component to be used inside cards in the bento grid.
+ *
+ * @param title - Main title for the card.
+ * @param description - Description text for the card.
+ * @param className - Additional Tailwind CSS classes for custom styling.
+ */
 export const Heading = ({ className, description, title }: IProps) => {
     return (
         <div

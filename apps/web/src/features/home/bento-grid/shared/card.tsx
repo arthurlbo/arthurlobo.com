@@ -11,6 +11,13 @@ interface IProps {
     className?: string;
 }
 
+/**
+ * Base card component for the Bento Grid feature on the home page.
+ *
+ * @param children - Content to be rendered inside the card.
+ * @param link - URL to navigate to when the card is clicked.
+ * @param className - Additional Tailwind CSS classes for custom styling.
+ */
 export const Card = ({ children, link, className }: IProps) => {
     return (
         <Link

@@ -18,6 +18,9 @@ const THEME_BUTTONS = [
     },
 ];
 
+/**
+ * Theme selection component.
+ */
 export const Theme = () => {
     const [mounted, setMounted] = useState(false);
 

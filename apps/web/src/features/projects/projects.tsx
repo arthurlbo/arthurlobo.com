@@ -7,6 +7,9 @@ import { AnimatePresence, motion } from "motion/react";
 import { Card } from "./card";
 import { PROJECTS } from "./constants";
 
+/**
+ * Container component for display project cards.
+ */
 export const ProjectsGrid = () => {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 

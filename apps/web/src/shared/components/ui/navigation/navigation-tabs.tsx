@@ -9,6 +9,11 @@ interface INavigationTabsProps {
     className?: string;
 }
 
+/**
+ * Container component for navigation tabs.
+ * @param links - Array of navigation link properties.
+ * @param className -  Additional Tailwind CSS classes.
+ */
 export const NavigationTabs = ({ className, links }: INavigationTabsProps) => {
     return (
         <section

@@ -10,6 +10,13 @@ interface IProps {
     descriptionClassName?: string;
 }
 
+/**
+ * Informational state component to display messages for some not available page or not-found.
+ * @param emoji - Emoji to represent the info state.
+ * @param title - Main title shown.
+ * @param description - Description explaining the info state.
+ * @param descriptionClassName - Additional Tailwind CSS classes for the description.
+ */
 export const InfoState = ({ title, description, descriptionClassName, emoji }: IProps) => {
     return (
         <section className="flex h-[calc(100vh-72px-32px)] w-full flex-col items-center justify-center gap-6 overflow-hidden xl:h-[calc(100vh-32px)]">

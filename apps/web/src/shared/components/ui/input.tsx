@@ -27,6 +27,18 @@ interface IProps<T extends FieldValues> {
     inputGroupClassName?: string;
 }
 
+/**
+ * Reusable input component integrated with react-hook-form.
+ * @param name - Field name.
+ * @param control - react-hook-form control object.
+ * @param label - Field label.
+ * @param placeholder - Input placeholder.
+ * @param inputClassName - Additional Tailwind CSS classes for customization.
+ * @param rightIconClassName - Additional Tailwind CSS classes for the right icon.
+ * @param inputGroupClassName - Additional Tailwind CSS classes for the input group.
+ * @param isTextArea - Flag to render a textarea instead of an input.
+ * @param RightIcon - Icon component to display on the right side of the input.
+ */
 export const Input = <T extends FieldValues>({
     name,
     control,

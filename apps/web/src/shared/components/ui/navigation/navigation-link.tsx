@@ -62,6 +62,17 @@ const navigationLinkVariants = cva(
     },
 );
 
+/**
+ * Link component for navigation inside the application or external links.
+ * @param link - URL to navigate to.
+ * @param label - Label for the link.
+ * @param variant - Style variant.
+ * @param Icon - Icon component to display.
+ * @param splitPosition - Position to split the route for active state checking.
+ * @param hasNestedRoutes - Whether the route has nested routes.
+ * @param disabled - Whether the link is disabled.
+ * @param internalLink - Whether the link is internal or external.
+ */
 export const NavigationLink = ({
     link,
     label,

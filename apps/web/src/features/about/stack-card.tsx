@@ -15,6 +15,13 @@ export interface IStackCardProps {
     technologies: ITechnology[];
 }
 
+/**
+ * Displays a single technology stack category in an expandable accordion format.
+ *
+ * @param title - Category name (e.g., "Languages", "Frameworks", "Database").
+ * @param icon - TablerIcon representing the technology category.
+ * @param technologies - Array of technologies within this category, each with label and icon.
+ */
 export const StackCard = ({ title, technologies, icon: Icon }: IStackCardProps) => {
     return (
         <AccordionItem

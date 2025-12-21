@@ -5,6 +5,14 @@ import { IconArrowRight } from "@tabler/icons-react";
 
 import { TProject as IProps } from "./constants";
 
+/**
+ * Card to display my projects.
+ * @param title - Project title.
+ * @param link - Project link.
+ * @param image - Project image.
+ * @param description - Project description.
+ * @param technologies - Technologies used in the project.
+ */
 export const Card = ({ description, image, title, link, technologies }: IProps) => {
     return (
         <Link

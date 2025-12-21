@@ -23,6 +23,9 @@ const CARDS: IImageCardProps[] = [
     },
 ];
 
+/**
+ * Projects card used in the home page bento grid.
+ */
 export const Projects = () => {
     return (
         <Card link="/projects">

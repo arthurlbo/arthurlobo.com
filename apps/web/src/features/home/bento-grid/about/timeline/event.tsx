@@ -7,6 +7,14 @@ export interface IEventProps {
     className: string;
 }
 
+/**
+ * Component to display an event milestone on a vertical timeline.
+ *
+ * @property title - Display text for the event milestone.
+ * @property date - Temporal information (date range, year, or specific date).
+ * @property side - Determines horizontal positioning relative to the vertical timeline.
+ * @property className - Optional Tailwind classes for fine-tuning position or appearance.
+ */
 export const Event = ({ className, date, side, title }: IEventProps) => {
     return (
         <div

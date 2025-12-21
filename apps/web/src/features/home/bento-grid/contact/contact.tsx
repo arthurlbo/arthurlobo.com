@@ -6,6 +6,9 @@ import { IconAt, IconBrandInstagram, IconBrandLinkedin, IconCalendarWeek } from 
 import { Card, Heading } from "../shared";
 import { Line } from "./line";
 
+/*
+ * Contact card used in the home page bento grid.
+ */
 export const Contact = () => {
     return (
         <Card link="/contact" className="flex-col items-center justify-between gap-4 p-4 lg:w-[260px]">

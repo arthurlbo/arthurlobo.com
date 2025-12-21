@@ -10,6 +10,13 @@ interface IProps {
     placement: TPlacement;
 }
 
+/**
+ * Displays a decorative curved line with icons on either end.
+ *
+ * @param leftIcon - Icon to display on the left end of the line.
+ * @param rightIcon - Icon to display on the right end of the line.
+ * @param placement - Placement of the line relative to content ("top" or "bottom").
+ */
 export const Line = ({ leftIcon, rightIcon, placement }: IProps) => {
     return (
         <div

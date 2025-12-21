@@ -6,6 +6,11 @@ interface IMilestonesProps {
     items: IMilestoneCardProps[];
 }
 
+/**
+ * Container component that renders a collection of milestone cards in a responsive grid.
+ *
+ * @param items - Array of milestone data to be rendered as individual MilestoneCard components.
+ */
 export const Milestones = ({ items }: IMilestonesProps) => {
     return (
         <Accordion type="single" collapsible asChild>

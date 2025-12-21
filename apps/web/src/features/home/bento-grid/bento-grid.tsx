@@ -6,6 +6,9 @@ import { Dashboard } from "./dashboard";
 import { Projects } from "./projects";
 import { Stack } from "./stack";
 
+/**
+ * Home page bento grid layout component.
+ */
 export const HomeBentoGrid = () => {
     return (
         <div className="bg-surface-700/30 mt-6 flex h-auto w-full shrink-0 flex-col gap-4 overflow-hidden rounded-3xl p-4 lg:h-[440px] lg:gap-2">

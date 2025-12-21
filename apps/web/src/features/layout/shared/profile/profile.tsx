@@ -4,6 +4,9 @@ import Me from "@/assets/navigation/me.webp";
 
 import { Indicator } from "./indicator";
 
+/**
+ * Profile component displaying user information and an indicator.
+ */
 export const Profile = () => {
     return (
         <div className="group relative flex w-full items-center gap-3 xl:py-1">

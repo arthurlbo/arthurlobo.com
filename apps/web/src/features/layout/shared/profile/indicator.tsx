@@ -6,6 +6,9 @@ import Image from "next/image";
 import IndicatorIcon from "@/assets/navigation/indicator.svg";
 import { cn } from "@/shared/utils";
 
+/**
+ * Indicator component that animates on click.
+ */
 export const Indicator = () => {
     const [isAnimating, setIsAnimating] = useState(false);
 

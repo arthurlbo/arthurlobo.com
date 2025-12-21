@@ -9,6 +9,15 @@ export interface IAboutContentBlockProps {
     side: "right" | "left";
 }
 
+/**
+ * Component to display an informational content block about me.
+ *
+ * @param title - The main heading of the content block.
+ * @param description - Detailed text content for the block.
+ * @param number - Numeric identifier displayed as both visible label and background decoration.
+ * @param icon - TablerIcon component to render inside the card.
+ * @param side - Controls horizontal alignment and flex direction ("right" or "left").
+ */
 export const AboutContentBlock = ({ description, number, side, title, icon: Icon }: IAboutContentBlockProps) => {
     return (
         <article

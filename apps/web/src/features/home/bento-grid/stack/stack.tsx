@@ -1,6 +1,9 @@
 import { Card, Heading } from "../shared";
 import { Orbital } from "./orbital";
 
+/*
+ * Stack card used in the home page bento grid.
+ */
 export const Stack = () => {
     return (
         <Card link="/about/stack" className="lg:w-[260px]">

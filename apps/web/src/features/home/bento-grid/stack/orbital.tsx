@@ -50,6 +50,9 @@ const circles: TCircle[] = [
     },
 ];
 
+/**
+ * Displays an orbital arrangement of technology icons around a central point.
+ */
 export const Orbital = () => {
     const centerX = 120;
     const centerY = 180;
