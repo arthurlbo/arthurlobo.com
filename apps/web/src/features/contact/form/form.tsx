@@ -9,8 +9,8 @@ import { Button, FieldGroup, toast } from "@repo/design-system/components";
 import { IconAt, IconMessageCircle, IconSend, IconUser } from "@tabler/icons-react";
 import { useForm } from "react-hook-form";
 
-import { contactFormAction } from "@/features/contact/form/action";
-import { TContactFormData, contactFormSchema } from "@/features/contact/form/schema";
+import { contactFormAction } from "./action";
+import { TContactFormData, contactFormSchema } from "./schema";
 
 export const ContactForm = () => {
     const [state, formAction, isPending] = useActionState<IPrevState, TContactFormData>(contactFormAction, {
@@ -18,7 +18,7 @@ export const ContactForm = () => {
         success: false,
     });
 
-    const { control, handleSubmit } = useForm<TContactFormData>({
+    const { control, reset, handleSubmit } = useForm<TContactFormData>({
         resolver: zodResolver(contactFormSchema),
         defaultValues: {
             name: "",
@@ -34,6 +34,8 @@ export const ContactForm = () => {
     };
 
     useEffect(() => {
+        reset();
+
         if (state?.error) toast.error(state?.error);
         if (state?.success) toast.success("Thanks for contacting! I'll get back to you soon.");
     }, [state]);
