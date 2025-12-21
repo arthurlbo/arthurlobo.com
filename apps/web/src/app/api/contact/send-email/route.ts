@@ -47,7 +47,7 @@ export async function POST(request: NextRequest) {
         const { data, error } = await resend.emails.send({
             from: `Contact <${webEnv.CONTACT_FROM_EMAIL}>`,
             to: [webEnv.CONTACT_TO_EMAIL as string],
-            subject: "New contact message",
+            subject: "New contact message!",
             react: ContactEmail(validatedData),
         });
 
