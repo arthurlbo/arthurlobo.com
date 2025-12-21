@@ -9,13 +9,13 @@
     /* --- Base Variables (Light Mode) --- */
     --background: oklch(0.97 0.005 265); /* #F5F6F8 */
 
-    --surface-700: oklch(1 0 0); /* #FFFFFF */
-    --surface-600: oklch(0.96 0.005 265); /* #F0F1F5 */
-    --surface-500: oklch(0.92 0.01 265); /* #E3E5EB */
-    --surface-400: oklch(0.87 0.015 265); /* #D4D7E0 */
-    --surface-300: oklch(0.8 0.02 265); /* #C0C4D1 */
-    --surface-200: oklch(0.7 0.025 265); /* #A3A8B8 */
-    --surface-100: oklch(0.6 0.03 265); /* #868D9F */
+    --surface-700: oklch(0.88 0.01 265); /* #DBDEE6 */
+    --surface-600: oklch(0.82 0.015 265); /* #C8CCDA */
+    --surface-500: oklch(0.77 0.02 265); /* #B7BBCC */
+    --surface-400: oklch(0.72 0.025 265); /* #A5AABE */
+    --surface-300: oklch(0.66 0.03 265); /* #9298AD */
+    --surface-200: oklch(0.6 0.035 265); /* #7F869C */
+    --surface-100: oklch(0.55 0.04 265); /* #6D748B */
 
     --primary-100: oklch(0.14 0.04 265); /* #131725 */
     --primary-200: oklch(0.25 0.03 265); /* #33384A */
@@ -28,10 +28,10 @@
     --accent-100: oklch(0.92 0.04 275); /* #EBEDFC */
     --accent-200: oklch(0.82 0.08 275); /* #C8C9F5 */
     --accent-300: oklch(0.72 0.12 275); /* #A4A6EF */
-    --accent-400: oklch(0.64 0.15 275); /* #8586EB */
-    --accent-500: oklch(0.55 0.18 275); /* #5E5CE6 */
-    --accent-600: oklch(0.45 0.16 275); /* #4644B8 */
-    --accent-700: oklch(0.35 0.14 275); /* #302E8A */
+    --accent-400: oklch(0.62 0.14 275); /* #7A7BE8 */
+    --accent-500: oklch(0.52 0.16 275); /* #4F4DD9 */
+    --accent-600: oklch(0.45 0.16 275); /* #3E3CB8 */
+    --accent-700: oklch(0.35 0.14 275); /* #2D2B8A */
     --accent-text: oklch(0.98 0.002 265); /* #FBFCFD */
 
     /* --- ShadCN Mappings (Light Mode) --- */
@@ -104,10 +104,10 @@
     --accent-100: oklch(0.92 0.04 275); /* #EBEDFC */
     --accent-200: oklch(0.82 0.08 275); /* #C8C9F5 */
     --accent-300: oklch(0.72 0.12 275); /* #A4A6EF */
-    --accent-400: oklch(0.64 0.15 275); /* #8586EB */
-    --accent-500: oklch(0.55 0.18 275); /* #5E5CE6 */
-    --accent-600: oklch(0.45 0.16 275); /* #4644B8 */
-    --accent-700: oklch(0.35 0.14 275); /* #302E8A */
+    --accent-400: oklch(0.62 0.14 275); /* #7A7BE8 */
+    --accent-500: oklch(0.52 0.16 275); /* #4F4DD9 */
+    --accent-600: oklch(0.45 0.16 275); /* #3E3CB8 */
+    --accent-700: oklch(0.35 0.14 275); /* #2D2B8A */
     --accent-text: var(--primary-100);
 
     /* --- ShadCN Mappings (Dark Mode) --- */
