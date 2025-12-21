@@ -15,7 +15,7 @@ export function Providers({ children, themeConfig }: IProps) {
     return (
         <NextThemesProvider {...themeConfig}>
             {children}
-            <Toaster richColors position="top-center" duration={TIME.fiveSeconds} />
+            <Toaster position="top-center" duration={TIME.fiveSeconds} />
         </NextThemesProvider>
     );
 }
