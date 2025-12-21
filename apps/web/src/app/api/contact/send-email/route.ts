@@ -12,7 +12,6 @@ export async function POST(request: NextRequest) {
         const body = await request.json();
 
         const validatedData = contactFormSchema.parse(body);
-        if (!validatedData) return Response.json({ error: "Invalid form data" }, { status: 400 });
 
         const { data, error } = await resend.emails.send({
             from: `Contact <${webEnv.CONTACT_FROM_EMAIL}>`,
