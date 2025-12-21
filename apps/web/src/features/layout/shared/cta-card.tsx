@@ -12,7 +12,7 @@ export const CtaCard = () => {
         <Link
             href="/contact"
             target="_blank"
-            className="border-surface-500 hover:border-accent-500 group relative max-h-[200px] w-full flex-1 cursor-pointer overflow-hidden rounded-2xl border transition-all duration-300 xl:min-h-44"
+            className="border-surface-500 hover:border-accent-500 group relative max-h-[200px] min-h-44 w-full flex-1 cursor-pointer overflow-hidden rounded-2xl border transition-all duration-300"
         >
             <Image
                 src={SphereLeft}
