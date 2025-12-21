@@ -1,5 +1,6 @@
 export { Input } from "./input";
 export { Label } from "./label";
+export { Spinner } from "./spinner";
 export { Skeleton } from "./skeleton";
 export { Textarea } from "./textarea";
 export { Separator } from "./separator";

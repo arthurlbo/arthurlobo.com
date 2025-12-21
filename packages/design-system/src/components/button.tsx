@@ -4,7 +4,7 @@ import { cn } from "@/shared/utils/cn";
 import { Slot } from "@radix-ui/react-slot";
 import { type VariantProps, cva } from "class-variance-authority";
 
-import { Spinner } from "@/components/spiner";
+import { Spinner } from "@/components/spinner";
 
 interface IProps extends React.ComponentProps<"button">, VariantProps<typeof buttonVariants> {
     asChild?: boolean;
