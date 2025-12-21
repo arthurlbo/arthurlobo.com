@@ -1,5 +1,7 @@
 "use client";
 
+import { Activity } from "react";
+
 import Link from "next/link";
 
 import { useIsActiveRoute } from "@/shared/hooks";
@@ -25,11 +27,9 @@ const navigationLinkVariants = cva(
         gap-2
         text-sm
         font-medium
-        text-primary-300
         transition-all
         duration-300
         ease-in-out
-        hover:text-primary-100
         data-[state=active]:font-semibold
         data-[state=active]:bg-accent-500
         data-[state=active]:text-accent-text
@@ -44,8 +44,11 @@ const navigationLinkVariants = cva(
                     py-2
                     rounded-lg
                     bg-transparent
+                    text-primary-300
+                    hover:text-primary-100
                 `,
-                tab: "h-auto w-auto px-4 py-2 rounded-full",
+                tab: "h-auto w-auto px-4 py-2 rounded-full text-primary-300 hover:text-primary-100",
+                icon: "text-primary-100 hover:border-accent-500 h-10 w-10 border border-surface-500 rounded-lg justify-center",
             },
             disabled: {
                 true: "cursor-not-allowed opacity-80 hover:bg-transparent hover:text-primary-300",
@@ -81,8 +84,11 @@ export const NavigationLink = ({
             data-state={isActiveRoute && internalLink ? "active" : "inactive"}
             className={navigationLinkVariants({ variant, disabled })}
         >
-            <Icon className="h-5 w-5" />
-            <span>{label}</span>
+            <Icon className="size-5" />
+
+            <Activity mode={variant !== "icon" ? "visible" : "hidden"}>
+                <span>{label}</span>
+            </Activity>
         </Link>
     );
 };

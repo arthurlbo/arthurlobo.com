@@ -2,6 +2,8 @@
 
 import { ComponentProps, ReactNode } from "react";
 
+import { TIME } from "@/shared/constants";
+import { Toaster } from "@repo/design-system/components";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 
 interface IProps {
@@ -10,5 +12,10 @@ interface IProps {
 }
 
 export function Providers({ children, themeConfig }: IProps) {
-    return <NextThemesProvider {...themeConfig}>{children}</NextThemesProvider>;
+    return (
+        <NextThemesProvider {...themeConfig}>
+            {children}
+            <Toaster position="top-center" duration={TIME.fiveSeconds} />
+        </NextThemesProvider>
+    );
 }

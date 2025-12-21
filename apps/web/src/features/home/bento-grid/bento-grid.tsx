@@ -1,3 +1,5 @@
+"use client";
+
 import { About } from "./about";
 import { Contact } from "./contact";
 import { Dashboard } from "./dashboard";

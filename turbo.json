@@ -4,6 +4,11 @@
     "globalEnv": [
         "NODE_ENV",
         "WEB_PORT",
+        "RESEND_API_KEY",
+        "CONTACT_FROM_EMAIL",
+        "CONTACT_TO_EMAIL",
+        "NEXT_PUBLIC_BASE_URL",
+        "NEXT_PUBLIC_API_URL",
         "API_PORT",
         "DB_HOST",
         "DB_PORT",

@@ -4,6 +4,7 @@ import { Fragment, useEffect, useState } from "react";
 
 import Link from "next/link";
 
+import { APP_NAVIGATION_LINKS, SOCIAL_NAVIGATION_LINKS } from "@/shared/constants";
 import { cn } from "@/shared/utils";
 import {
     CommandDialog,
@@ -15,8 +16,6 @@ import {
     CommandSeparator,
 } from "@repo/design-system/components";
 import { IconArrowRight, IconSearch } from "@tabler/icons-react";
-
-import { APP_NAVIGATION_LINKS, SOCIAL_NAVIGATION_LINKS } from "./navigation";
 
 const COMMAND_GROUPS = [
     {
@@ -48,12 +47,13 @@ export const Search = () => {
     return (
         <>
             <div
+                tabIndex={1}
                 onClick={() => setOpen(true)}
                 className="border-surface-500 hover:border-accent-500 flex h-10 w-full shrink-0 cursor-pointer items-center justify-between gap-2 rounded-lg border px-3 transition-all duration-300 ease-in-out"
             >
-                <IconSearch className="text-primary-300 h-4 w-4 shrink-0" />
+                <IconSearch className="text-primary-300 size-4 shrink-0" />
 
-                <span className="text-primary-200 flex-1 text-xs font-normal">Search something...</span>
+                <span className="text-primary-200 flex-1 text-xs font-normal">Quick search...</span>
 
                 <kbd className="bg-surface-500 text-primary-300 pointer-events-none inline-flex items-center rounded px-1 py-px font-mono text-[10px] font-semibold">
                     <span>CTRL+K</span>
@@ -66,7 +66,7 @@ export const Search = () => {
                 className="border-surface-500 bg-background h-[400px] max-w-lg rounded-2xl"
             >
                 <CommandInput
-                    placeholder="Type a command or search..."
+                    placeholder="Search or jump to..."
                     containerClassName="border-b border-surface-500 h-14 [&_svg]:size-4 [&_svg]:text-primary-300"
                 />
 
@@ -88,11 +88,11 @@ export const Search = () => {
                                             tabIndex={disabled ? -1 : 0}
                                             className={cn(
                                                 "group flex w-full items-center gap-2 rounded-lg px-3 py-2 first:mt-2",
-                                                "text-primary-100 hover:bg-surface-700 hover:border-surface-600 border border-transparent bg-transparent font-sans text-sm font-semibold",
+                                                "text-primary-100 hover:border-accent-500 border border-transparent bg-transparent font-sans text-sm font-semibold",
                                                 "transition-all duration-300 ease-in-out",
                                             )}
                                         >
-                                            <IconArrowRight className="text-primary-300 ease-in- h-4 w-4 shrink-0 transition-all duration-300 group-hover:translate-x-0.5" />
+                                            <IconArrowRight className="text-primary-300 size-4 shrink-0 transition-all duration-300 ease-in-out group-hover:translate-x-0.5" />
                                             <span>{label}</span>
                                         </Link>
                                     </CommandItem>

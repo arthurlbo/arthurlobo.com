@@ -10,12 +10,12 @@ export const metadata: Metadata = {
     title: "Projects",
 };
 
-export default function ProjectsPage() {
+export default function Projects() {
     return (
         <>
             <Heading
                 title="Projects"
-                description="A collection of projects that reflect my journey as a developer, showcasing the technologies I work with and the problems I solve."
+                description="See what I've built in action. Explore projects that showcase my technical skills, problem-solving approach, and the technologies I work with."
             />
 
             <ProjectsGrid />

@@ -1,3 +1,5 @@
+import { Separator } from "@repo/design-system/components";
+
 interface IHeadingProps {
     title: string;
     description: string;
@@ -12,7 +14,7 @@ export const Heading = ({ description, title }: IHeadingProps) => {
                 <p className="text-primary-200 text-base leading-8 font-light xl:max-w-2xl">{description}</p>
             </section>
 
-            <div className="bg-surface-500 my-4 hidden h-px w-full shrink-0 xl:flex" />
+            <Separator className="my-4 hidden shrink-0 xl:flex" />
         </>
     );
 };

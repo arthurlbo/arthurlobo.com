@@ -23,7 +23,7 @@ export const Card = ({ children, link, className }: IProps) => {
             {children}
 
             <div className="border-surface-500 bg-background/50 text-primary-100 absolute right-4 bottom-4 z-50 flex h-10 w-10 items-center justify-center rounded-full border opacity-0 backdrop-blur-sm transition-all duration-300 ease-in-out group-hover:opacity-100">
-                <IconArrowUpRight className="h-5 w-5 rotate-90 transition-all duration-500 ease-in-out group-hover:rotate-0" />
+                <IconArrowUpRight className="size-5 rotate-90 transition-all duration-500 ease-in-out group-hover:rotate-0" />
             </div>
         </Link>
     );

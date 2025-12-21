@@ -33,7 +33,7 @@ export const AboutContentBlock = ({ description, number, side, title, icon: Icon
                     "group-hover:bg-surface-700 group-hover:border-accent-500 transition-all duration-300 ease-in-out group-hover:-translate-y-1",
                 )}
             >
-                <Icon className="h-5 w-5" />
+                <Icon className="size-5" />
             </div>
 
             <div

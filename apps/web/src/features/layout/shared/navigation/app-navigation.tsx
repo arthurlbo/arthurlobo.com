@@ -1,48 +1,7 @@
 "use client";
 
-import { INavigationLinkProps, NavigationLink } from "@/shared/components/ui";
-import {
-    IconAddressBook,
-    IconChartLine,
-    IconHome2,
-    IconMessageCircle,
-    IconPalette,
-    IconUser,
-} from "@tabler/icons-react";
-
-export const APP_NAVIGATION_LINKS: INavigationLinkProps[] = [
-    {
-        label: "Home",
-        icon: IconHome2,
-        link: "/",
-    },
-    {
-        label: "About",
-        icon: IconUser,
-        link: "/about",
-        hasNestedRoutes: true,
-    },
-    {
-        label: "Projects",
-        icon: IconPalette,
-        link: "/projects",
-    },
-    {
-        label: "Dashboard",
-        icon: IconChartLine,
-        link: "/dashboard",
-    },
-    {
-        label: "Contact",
-        icon: IconMessageCircle,
-        link: "/contact",
-    },
-    {
-        label: "Guestbook",
-        icon: IconAddressBook,
-        link: "/guestbook",
-    },
-];
+import { NavigationLink } from "@/shared/components/ui";
+import { APP_NAVIGATION_LINKS } from "@/shared/constants";
 
 export const AppNavigation = () => {
     return (

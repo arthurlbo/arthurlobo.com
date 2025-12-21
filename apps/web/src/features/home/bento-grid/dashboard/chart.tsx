@@ -50,8 +50,14 @@ export function Chart() {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
-            <ChartContainer config={chartConfig}>
-                <AreaChart accessibilityLayer data={chartData} margin={{ left: -4 }} style={{ cursor: "pointer" }}>
+            <ChartContainer id="dashboard-chart" config={chartConfig}>
+                <AreaChart
+                    tabIndex={-1}
+                    accessibilityLayer
+                    data={chartData}
+                    margin={{ left: -4 }}
+                    style={{ cursor: "pointer" }}
+                >
                     <defs>
                         <linearGradient id="fillValue" x1="0" y1="0" x2="0" y2="1">
                             <stop offset="5%" stopColor="var(--color-value)" stopOpacity={0.8} />

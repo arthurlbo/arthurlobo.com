@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Activity, Fragment } from "react";
 
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
@@ -23,7 +23,7 @@ export interface IMilestoneCardProps {
     impacts?: string[];
 }
 
-const Separator = ({ className }: { className?: string }) => <span className={className}>•</span>;
+const Bullet = ({ className }: { className?: string }) => <span className={className}>•</span>;
 
 export const MilestoneCard = ({
     title,
@@ -50,7 +50,7 @@ export const MilestoneCard = ({
         >
             <AccordionTrigger
                 showIcon={hasImpacts}
-                className="flex w-full cursor-pointer flex-col items-start justify-start gap-4 p-0 md:flex-row"
+                className="flex w-full cursor-pointer flex-col items-start justify-start gap-4 rounded-lg p-0 md:flex-row"
             >
                 <div className="bg-primary-100 flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-lg p-1">
                     <Image
@@ -70,17 +70,17 @@ export const MilestoneCard = ({
                             href={link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="hover:text-accent-300 transition-all duration-300 ease-in-out group-hover:underline"
+                            className="hover:text-accent-300 rounded-xs transition-all duration-300 ease-in-out group-hover:underline"
                         >
                             {name}
                         </Link>
 
-                        <Separator />
+                        <Bullet />
 
                         {tags.map((tag) => (
                             <Fragment key={tag}>
                                 <span>{tag}</span>
-                                <Separator className="last:hidden" />
+                                <Bullet className="last:hidden" />
                             </Fragment>
                         ))}
                     </div>
@@ -88,32 +88,30 @@ export const MilestoneCard = ({
                     <div className="flex flex-wrap items-start justify-start gap-2 md:flex-row md:items-center">
                         <span>{period}</span>
 
-                        <Separator />
+                        <Bullet />
 
-                        {totalTime && (
-                            <>
-                                <span>{totalTime}</span>
-                                <Separator />
-                            </>
-                        )}
+                        <Activity mode={totalTime ? "visible" : "hidden"}>
+                            <span>{totalTime}</span>
+                            <Bullet />
+                        </Activity>
 
                         <span>{location}</span>
                     </div>
                 </div>
             </AccordionTrigger>
 
-            {hasImpacts && (
+            <Activity mode={hasImpacts ? "visible" : "hidden"}>
                 <AccordionContent className="flex h-full w-full flex-col gap-4">
                     <div className="bg-surface-500 h-px w-full shrink-0" />
 
                     {impacts.map((impact, index) => (
                         <div key={index} className="flex items-start gap-2">
-                            <Separator />
+                            <Bullet />
                             <span className="text-primary-200 text-sm font-normal">{impact}</span>
                         </div>
                     ))}
                 </AccordionContent>
-            )}
+            </Activity>
         </AccordionItem>
     );
 };

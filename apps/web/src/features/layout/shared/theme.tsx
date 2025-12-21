@@ -45,15 +45,14 @@ export const Theme = () => {
                         return (
                             <Button
                                 key={value}
+                                variant="icon"
                                 className={cn(
-                                    "h-auto w-auto cursor-pointer rounded-full border bg-transparent p-[3px] transition-colors hover:bg-transparent",
-                                    isActive
-                                        ? "border-surface-500 text-primary-100"
-                                        : "text-primary-300 hover:text-primary-100 border-transparent",
+                                    "h-auto w-auto rounded-full p-[3px]",
+                                    isActive ? "hover:border-surface-500" : "text-primary-300 border-transparent",
                                 )}
                                 onClick={() => setTheme(value)}
                             >
-                                <Icon className="h-4 w-4" />
+                                <Icon />
                             </Button>
                         );
                     })}

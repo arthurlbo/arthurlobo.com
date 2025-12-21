@@ -21,9 +21,9 @@ export const StackCard = ({ title, technologies, icon: Icon }: IStackCardProps) 
             value={title}
             className="group flex w-full flex-col items-start justify-start gap-4 border-none bg-transparent p-0"
         >
-            <AccordionTrigger className="border-surface-500 hover:border-accent-400 flex w-full cursor-pointer items-center justify-start gap-4 rounded-none border-b px-0 pt-0 pb-4 transition-all duration-300 ease-in-out">
-                <div className="bg-surface-700/30 border-surface-500 group-hover:border-accent-400 flex h-11 w-11 items-center justify-center rounded-lg border transition-all duration-300 ease-in-out group-hover:-rotate-6">
-                    <Icon className="text-accent-300 h-5 w-5" />
+            <AccordionTrigger className="border-surface-500 hover:border-accent-500 flex w-full cursor-pointer items-center justify-start gap-4 rounded-none border-b px-0 pt-0 pb-4 transition-all duration-300 ease-in-out">
+                <div className="bg-surface-700/30 border-surface-500 flex h-11 w-11 items-center justify-center rounded-lg border transition-all duration-300 ease-in-out group-hover:-rotate-8">
+                    <Icon className="text-accent-300 size-5" />
                 </div>
 
                 <span className="text-primary-100 flex-1 text-xl font-bold">{title}</span>
@@ -36,7 +36,7 @@ export const StackCard = ({ title, technologies, icon: Icon }: IStackCardProps) 
                             key={label}
                             className="border-surface-500 text-primary-100 bg-surface-700/30 flex items-center justify-center gap-2 rounded-full border px-4 py-2"
                         >
-                            <Icon className="h-4 w-4" />
+                            <Icon className="size-4" />
                             <span className="text-xs font-medium">{label}</span>
                         </div>
                     ))}
