@@ -9,7 +9,7 @@ import { SEO_CONFIG } from "@/shared/constants";
 
 import { Desktop, Mobile } from "@/features/layout";
 
-import { Providers } from "./_providers";
+import { Providers } from "./providers";
 
 const spaceGrotesk = Space_Grotesk({
     subsets: ["latin"],

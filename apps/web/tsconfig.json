@@ -9,7 +9,8 @@
         ],
         "paths": {
             "@/*": ["./src/*"]
-        }
+        },
+        "types": ["@testing-library/jest-dom"]
     },
     "include": ["**/*.ts", "**/*.css", "**/*.tsx", "next-env.d.ts", "next.config.js", ".next/types/**/*.ts"],
     "exclude": ["node_modules"]

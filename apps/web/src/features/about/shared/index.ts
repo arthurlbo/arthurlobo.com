@@ -1,1 +1,1 @@
-export { Milestones, type IMilestoneCardProps } from "./milestones";
+export * from "./milestones";

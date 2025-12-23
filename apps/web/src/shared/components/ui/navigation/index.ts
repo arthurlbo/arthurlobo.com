@@ -1,2 +1,2 @@
-export { NavigationTabs } from "./navigation-tabs";
-export { NavigationLink, type INavigationLinkProps } from "./navigation-link";
+export * from "./tabs";
+export * from "./link-button";

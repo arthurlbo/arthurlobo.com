@@ -1,0 +1,1 @@
+export { HomeBento } from "./bento";

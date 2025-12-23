@@ -1,1 +1,1 @@
-export { useIsActiveRoute } from "./use-is-active-route";
+export * from "./use-is-active-route";

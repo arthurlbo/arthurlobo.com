@@ -1,0 +1,37 @@
+import Image, { StaticImageData } from "next/image";
+
+import { cn } from "@/shared/utils";
+
+export interface ICardProps {
+    alt: string;
+    src: StaticImageData;
+    className: string;
+}
+
+/**
+ * Project image card.
+ *
+ * @param alt - Alt text for the image.
+ * @param src - Image source.
+ * @param className - Additional Tailwind CSS classes.
+ */
+export const Card = ({ alt, className, src }: ICardProps) => {
+    return (
+        <div
+            className={cn(
+                "border-surface-500 bg-background absolute w-40 overflow-hidden rounded-tl-2xl border pt-2 pl-2",
+                "group-hover:border-accent-500 transition-all duration-500 group-hover:scale-105",
+                className,
+            )}
+        >
+            <Image
+                src={src}
+                alt={alt}
+                priority
+                quality={100}
+                placeholder="blur"
+                className="h-full w-full rounded-tl-lg object-cover object-top"
+            />
+        </div>
+    );
+};

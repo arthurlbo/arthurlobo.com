@@ -3,7 +3,7 @@ import type { Config } from "jest";
 export const baseConfig = {
     coverageProvider: "v8",
     coverageDirectory: "coverage",
-    setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
+    setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
     moduleNameMapper: {
         "^@/(.*)$": "<rootDir>/src/$1",
     },

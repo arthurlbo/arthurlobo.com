@@ -5,9 +5,9 @@ import OnTheBeach from "@/assets/home/on-the-beach.webp";
 import Sunset from "@/assets/home/sunset.webp";
 import Wife from "@/assets/home/wife.webp";
 
-import { IImageCardProps, ImageCard } from "@/features/home/pictures/image-card";
+import { Card, ICardProps } from "./card";
 
-const imageCards: IImageCardProps[] = [
+const imageCards: ICardProps[] = [
     {
         src: AtSunset,
         alt: "Sunset on Balneário Camboriú - SC",
@@ -46,7 +46,7 @@ const imageCards: IImageCardProps[] = [
 export const HomePictures = () => (
     <section className="flex h-[280px] w-full shrink-0 items-center -space-x-3 overflow-x-auto overflow-y-hidden pl-4 lg:justify-center lg:-space-x-12 lg:pl-0 xl:-space-x-6 2xl:-space-x-3">
         {imageCards.map((card, index) => (
-            <ImageCard key={index} {...card} />
+            <Card key={index} {...card} />
         ))}
     </section>
 );

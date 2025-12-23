@@ -2,7 +2,7 @@
 
 import { startTransition, useActionState, useEffect } from "react";
 
-import { Input, NavigationLink } from "@/shared/components/ui";
+import { Input, LinkButton } from "@/shared/components/ui";
 import { SOCIAL_NAVIGATION_LINKS } from "@/shared/constants";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button, FieldGroup, toast } from "@repo/design-system/components";
@@ -84,7 +84,7 @@ export const ContactForm = () => {
 
                     <div className="flex w-full items-center justify-center gap-4">
                         {SOCIAL_NAVIGATION_LINKS.map((item) => (
-                            <NavigationLink key={item.link} {...item} variant="icon" />
+                            <LinkButton key={item.link} {...item} variant="icon" />
                         ))}
                     </div>
                 </div>
