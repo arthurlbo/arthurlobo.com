@@ -10,7 +10,7 @@ export const Drawer = () => {
     return (
         <Sheet>
             <SheetTrigger asChild>
-                <Button variant="icon" className="rounded-full">
+                <Button data-testid="mobile-menu-button" variant="icon" className="rounded-full">
                     <IconMenu />
                 </Button>
             </SheetTrigger>

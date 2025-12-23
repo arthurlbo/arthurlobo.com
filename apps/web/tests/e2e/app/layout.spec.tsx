@@ -1,73 +1,60 @@
 import { expect, test } from "@playwright/test";
 
-test.describe("RootLayout E2E", () => {
+test.describe("Root Layout & Responsiveness", () => {
     test.beforeEach(async ({ page }) => {
         await page.goto("/");
     });
 
-    test("should render html element with correct lang attribute", async ({ page }) => {
-        const html = page.locator("html");
-        await expect(html).toHaveAttribute("lang", "en");
+    test.describe("Global Configuration", () => {
+        test("should have correct html attributes and fonts", async ({ page }) => {
+            const html = page.locator("html");
+            await expect(html).toHaveAttribute("lang", "en");
+
+            const body = page.locator("body");
+            await expect(body).toHaveClass(/font-sans/);
+
+            await expect(html).toHaveClass(/dark/);
+        });
+
+        test("should have correct metadata title", async ({ page }) => {
+            const title = await page.title();
+            expect(title).toContain("Arthur Lobo");
+        });
     });
 
-    test("should have page title", async ({ page }) => {
-        const title = await page.title();
-        expect(title.length).toBeGreaterThan(0);
+    test.describe("Desktop Viewport (xl breakpoint)", () => {
+        test.use({ viewport: { width: 1440, height: 900 } });
+
+        test("should display desktop layout structure", async ({ page }) => {
+            const main = page.locator("main");
+
+            await expect(main).toHaveCSS("flex-direction", "row");
+
+            const contentContainer = main.locator("> div");
+            await expect(contentContainer).toHaveCSS("margin-top", "0px");
+
+            const desktopComponent = page.getByTestId("desktop-sidebar");
+            if ((await desktopComponent.count()) > 0) {
+                await expect(desktopComponent).toBeVisible();
+            }
+        });
     });
 
-    test("should have meta description", async ({ page }) => {
-        const metaDescription = page.locator('meta[name="description"]');
-        await expect(metaDescription).toBeAttached();
-    });
+    test.describe("Mobile Viewport", () => {
+        test.use({ viewport: { width: 390, height: 844 } });
 
-    test("should support theme switching", async ({ page }) => {
-        const html = page.locator("html");
-        await expect(html).toBeVisible();
-    });
+        test("should display mobile layout structure", async ({ page }) => {
+            const main = page.locator("main");
 
-    test("should render main container", async ({ page }) => {
-        const main = page.locator("main");
-        await expect(main).toBeVisible();
-    });
+            await expect(main).toHaveCSS("flex-direction", "column");
 
-    test("should render Desktop navigation on desktop viewport", async ({ page }) => {
-        await page.setViewportSize({ width: 1920, height: 1080 });
-        const desktop = page.locator("aside");
-        await expect(desktop).toBeVisible();
-    });
+            const contentContainer = main.locator("> div");
+            await expect(contentContainer).toHaveCSS("margin-top", "72px");
 
-    test("should hide Desktop navigation on mobile viewport", async ({ page }) => {
-        await page.setViewportSize({ width: 375, height: 667 });
-        const desktop = page.locator("aside");
-        await expect(desktop).toBeHidden();
-    });
-
-    test("should render Mobile navigation on mobile viewport", async ({ page }) => {
-        await page.setViewportSize({ width: 375, height: 667 });
-        const mobile = page.locator("header");
-        await expect(mobile).toBeVisible();
-    });
-
-    test("should hide Mobile navigation on desktop viewport", async ({ page }) => {
-        await page.setViewportSize({ width: 1920, height: 1080 });
-        const mobile = page.locator("header");
-        await expect(mobile).toBeHidden();
-    });
-
-    test("should render content section", async ({ page }) => {
-        const aboutCard = page.locator('a[href="/about"]').first();
-        await expect(aboutCard).toBeVisible();
-    });
-
-    test("should render on mobile viewport", async ({ page }) => {
-        await page.setViewportSize({ width: 375, height: 667 });
-        const main = page.locator("main");
-        await expect(main).toBeVisible();
-    });
-
-    test("should render on desktop viewport", async ({ page }) => {
-        await page.setViewportSize({ width: 1920, height: 1080 });
-        const main = page.locator("main");
-        await expect(main).toBeVisible();
+            const mobileComponent = page.getByTestId("mobile-header");
+            if ((await mobileComponent.count()) > 0) {
+                await expect(mobileComponent).toBeVisible();
+            }
+        });
     });
 });

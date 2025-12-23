@@ -48,6 +48,7 @@ export const Theme = () => {
                         return (
                             <Button
                                 key={value}
+                                data-testid={`theme-button-${value}`}
                                 variant="icon"
                                 className={cn(
                                     "h-auto w-auto rounded-full p-[3px]",
