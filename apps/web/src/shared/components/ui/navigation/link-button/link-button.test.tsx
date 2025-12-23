@@ -2,19 +2,7 @@ import { useIsActiveRoute } from "@/shared/hooks";
 import { IconHome } from "@tabler/icons-react";
 import { render, screen } from "@testing-library/react";
 
-
-
 import { LinkButton } from "./link-button";
-
-
-
-
-
-
-
-
-
-
 
 const mockUseIsActiveRoute = useIsActiveRoute as jest.MockedFunction<typeof useIsActiveRoute>;
 
