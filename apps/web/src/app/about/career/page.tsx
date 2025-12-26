@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 const CAREER_MILESTONES: IMilestoneCardProps[] = [
     {
         value: "1",
-        title: "Full Stack Software Engineer",
+        title: "Senior Software Engineer",
         organization: {
             name: "Sooro Renner",
             link: "https://sooro.com.br/",
@@ -28,25 +28,22 @@ const CAREER_MILESTONES: IMilestoneCardProps[] = [
             "Engineered and developed internal tools to automate workflows across departments, significantly improving operational efficiency and reducing manual effort for key business processes.",
             "Optimized core components and Frontend logic to improve system performance and render efficiency, resulting in a more fluid user experience and code consistency.",
             "Managed project backlogs, estimated task complexity, and prioritized feature development, ensuring timely and effective project delivery.",
+            "Implemented a distributed Rate Limiting solution using a Token Bucket algorithm backed by Redis, drastically enhancing system security and resilience against API abuse and burst traffic.",
         ],
     },
     {
         value: "2",
-        title: "Full Stack Software Engineer",
+        title: "Senior Software Engineer",
         organization: {
             name: "Analítica - Gerenciadora de Dados S/A",
             link: "https://www.linkedin.com/company/analitica-ag/posts/?feedView=all",
             logo: AnaliticaLogo,
         },
         tags: ["Full-time", "Remote"],
-        period: "Mar 2024 - Jul 2025",
-        totalTime: "1 yr 5 mos",
+        period: "Oct 2024 - Jul 2025",
+        totalTime: "10 mos",
         location: "Curitiba, Paraná, Brazil",
         impacts: [
-            "Directed the entire Frontend development, overseeing all architectural and strategic decisions to build a robust and highly scalable system.",
-            "Led the Frontend implementation of a multi-tenant system feature, which enabled the acquisition of two new clients and resulted in a substantial boost to company revenue.",
-            "Engineered a scalable and maintainable Frontend architecture, cutting bug reports by 85% and reducing delivery time by 70%.",
-            "Automated GraphQL hooks using Codegen, which streamlined the development workflow and enabled faster implementation of new features. This also minimized manual errors and ensured code consistency across the team.",
             "Implemented a Redis caching layer, reducing API response time from 60–120s to 300–500ms and accelerating the processing of complex calculations with large data volumes.",
             "Optimized complex database queries by implementing MongoDB Aggregation pipelines and strategic indexing, reducing query response time by 65% and significantly improving overall system performance.",
             "Engineered a scalable data processing pipeline for complex, full-harvest data. By implementing a monthly cron job and a dedicated MongoDB collection, this solution enabled millisecond-level data access for strategic analysis and reports.",
@@ -54,6 +51,25 @@ const CAREER_MILESTONES: IMilestoneCardProps[] = [
     },
     {
         value: "3",
+        title: "Senior Frontend Developer",
+        organization: {
+            name: "Analítica - Gerenciadora de Dados S/A",
+            link: "https://www.linkedin.com/company/analitica-ag/posts/?feedView=all",
+            logo: AnaliticaLogo,
+        },
+        tags: ["Full-time", "Remote"],
+        period: "Mar 2024 - Oct 2024",
+        totalTime: "8 mos",
+        location: "Curitiba, Paraná, Brazil",
+        impacts: [
+            "Directed the entire Frontend development, overseeing all architectural and strategic decisions to build a robust and highly scalable system.",
+            "Led the Frontend implementation of a multi-tenant system feature, which enabled the acquisition of two new clients and resulted in a substantial boost to company revenue.",
+            "Engineered a scalable and maintainable Frontend architecture, cutting bug reports by 85% and reducing delivery time by 70%.",
+            "Automated GraphQL hooks using Codegen, which streamlined the development workflow and enabled faster implementation of new features. This also minimized manual errors and ensured code consistency across the team.",
+        ],
+    },
+    {
+        value: "4",
         title: "Frontend Developer",
         organization: {
             name: "Analítica - Gerenciadora de Dados S/A",
@@ -71,7 +87,7 @@ const CAREER_MILESTONES: IMilestoneCardProps[] = [
         ],
     },
     {
-        value: "4",
+        value: "5",
         title: "Mid-level Frontend Developer",
         organization: {
             name: "Adam Robo",
@@ -91,7 +107,7 @@ const CAREER_MILESTONES: IMilestoneCardProps[] = [
         ],
     },
     {
-        value: "5",
+        value: "6",
         title: "Junior Frontend Developer",
         organization: {
             name: "Adam Robo",
