@@ -6,7 +6,7 @@ import { IconBolt, IconCalendar, IconCode, IconTarget } from "@tabler/icons-reac
 import { AboutContentBlock, IAboutContentBlockProps } from "@/features/about";
 
 export const dynamic = "force-static";
-export const revalidate = 2592000; // 30 days in seconds (30 * 24 * 60 * 60)
+export const revalidate = 86400; // 1 day (60 * 60 * 24)
 
 export const metadata: Metadata = {
     title: "About",
@@ -44,7 +44,7 @@ const CONTENT_BLOCKS: IAboutContentBlockProps[] = [
         number: "04",
         title: "These Days",
         description:
-            "These days, I’m working as a Software Engineer at Sooro Renner, the largest whey company in Latin America, building internal tools that automate workflows and improve operational efficiency across all departments. I’m focused on growing day by day, improving both my technical skills and my ability to collaborate, communicate, and deliver meaningful impact.",
+            "These days, I’m working as a Senior Software Engineer at Sooro Renner, the largest whey company in Latin America, building internal tools that automate workflows and improve operational efficiency across all departments. I’m focused on growing day by day, improving both my technical skills and my ability to collaborate, communicate, and deliver meaningful impact.",
     },
 ];
 
