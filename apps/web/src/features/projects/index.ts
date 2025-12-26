@@ -1,1 +1,2 @@
-export { ProjectsGrid } from "./projects";
+export * from "./showcase";
+export * from "./get-projects";

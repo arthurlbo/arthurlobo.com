@@ -3,8 +3,6 @@ import Link from "next/link";
 
 import { IconArrowRight } from "@tabler/icons-react";
 
-import { TProject as IProps } from "../constants";
-
 /**
  * Card to display my projects.
  * @param title - Project title.
@@ -13,7 +11,7 @@ import { TProject as IProps } from "../constants";
  * @param description - Project description.
  * @param technologies - Technologies used in the project.
  */
-export const Card = ({ description, image, title, link, technologies }: IProps) => {
+export const Card = ({ description, image, title, link, technologies }: TProject) => {
     return (
         <Link
             href={link}
@@ -22,7 +20,7 @@ export const Card = ({ description, image, title, link, technologies }: IProps) 
             className="bg-background group-hover:border-accent-500 z-10 flex h-full w-full flex-col items-start justify-start gap-6 overflow-hidden rounded-xl border border-transparent p-4 transition-all duration-500 ease-in-out"
         >
             <div className="border-surface-500 bg-surface-700 relative z-10 flex h-11 w-11 shrink-0 items-center justify-center rounded-full border">
-                <Image src={image} alt={title} quality={100} placeholder="blur" width={20} height={20} />
+                <Image src={image} alt={title} quality={100} width={20} height={20} />
             </div>
 
             <div className="relative z-10 flex w-full flex-col items-start gap-2">

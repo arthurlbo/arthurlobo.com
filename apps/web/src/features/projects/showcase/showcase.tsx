@@ -5,17 +5,20 @@ import { Activity, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 
 import { Card } from "./card";
-import { PROJECTS } from "./constants";
+
+interface IProps {
+    projects: TProject[];
+}
 
 /**
  * Container component for display project cards.
  */
-export const ProjectsGrid = () => {
+export const ProjectsShowcase = ({ projects }: IProps) => {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
     return (
         <section className="grid h-full w-full grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-            {PROJECTS.map((project, index) => (
+            {projects.map((project, index) => (
                 <div
                     key={project.title}
                     onMouseEnter={() => setHoveredIndex(index)}

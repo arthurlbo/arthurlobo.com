@@ -46,6 +46,11 @@ export const webSchema = z.object({
             error: "You forgot to set the WEB_PORT variable",
         })
         .describe("Port for the web application"),
+    GITHUB_TOKEN: z
+        .string({
+            error: "You forgot to set the GITHUB_TOKEN variable",
+        })
+        .describe("Personal access token for GitHub API"),
     RESEND_API_KEY: z
         .string({
             error: "You forgot to set the RESEND_API_KEY variable",
