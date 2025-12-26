@@ -3,12 +3,13 @@
 import { ComponentProps, ReactNode } from "react";
 
 import { TIME } from "@/shared/constants";
+import { AppProgressProvider } from "@bprogress/next";
 import { Toaster } from "@repo/design-system/components";
-import { ThemeProvider as NextThemesProvider } from "next-themes";
+import { ThemeProvider } from "next-themes";
 
 interface IProps {
     children: ReactNode;
-    themeConfig: ComponentProps<typeof NextThemesProvider>;
+    themeConfig: ComponentProps<typeof ThemeProvider>;
 }
 
 /**
@@ -18,9 +19,16 @@ interface IProps {
  */
 export function Providers({ children, themeConfig }: IProps) {
     return (
-        <NextThemesProvider {...themeConfig}>
-            {children}
-            <Toaster position="top-center" duration={TIME.fiveSeconds} />
-        </NextThemesProvider>
+        <ThemeProvider {...themeConfig}>
+            <AppProgressProvider
+                height="2px"
+                options={{ showSpinner: false }}
+                color="var(--primary-100)"
+                shallowRouting
+            >
+                {children}
+                <Toaster position="top-center" duration={TIME.fiveSeconds} />
+            </AppProgressProvider>
+        </ThemeProvider>
     );
 }

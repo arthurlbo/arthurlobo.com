@@ -20,6 +20,7 @@
         "test:all": "pnpm test:unit && pnpm test:e2e"
     },
     "dependencies": {
+        "@bprogress/next": "^3.2.12",
         "@hookform/resolvers": "^5.2.2",
         "@react-email/components": "^1.0.2",
         "@repo/design-system": "workspace:*",
