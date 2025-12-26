@@ -23,7 +23,7 @@ export const contactFormAction = async (_: IPrevState, formData: TContactFormDat
 
         if (!response.ok) {
             const errorData = await response.json();
-            throw new Error(errorData.error || "Failed to send message");
+            throw new Error(errorData.error || "Failed to send message, please try again later.");
         }
 
         return {
@@ -31,11 +31,16 @@ export const contactFormAction = async (_: IPrevState, formData: TContactFormDat
             error: null,
         };
     } catch (error: unknown) {
-        console.error(error);
+        if (error instanceof Error) {
+            return {
+                success: false,
+                error: error.message,
+            };
+        }
 
         return {
             success: false,
-            error: "Failed to send message. Please try again later.",
+            error: String(error),
         };
     }
 };

@@ -1,5 +1,6 @@
 import { NextRequest } from "next/server";
 
+import { rateLimiter } from "@/shared/utils";
 import { webEnv } from "@repo/env";
 import { Resend } from "resend";
 
@@ -9,6 +10,19 @@ const resend = new Resend(webEnv.RESEND_API_KEY);
 
 export async function POST(request: NextRequest) {
     try {
+        const ip = request.headers.get("x-forwarded-for") ?? "anonymous";
+
+        const rateLimit = rateLimiter({ ip, context: "contact" });
+
+        if (!rateLimit.success) {
+            return Response.json(
+                {
+                    error: "Too many requests. Please try again later.",
+                },
+                { status: 429 },
+            );
+        }
+
         const body = await request.json();
 
         const validatedData = contactFormSchema.parse(body);
@@ -20,14 +34,10 @@ export async function POST(request: NextRequest) {
             react: ContactEmail(validatedData),
         });
 
-        if (error) {
-            console.error("Error sending contact email:", error);
-            return Response.json({ error: "Failed to send email" }, { status: 500 });
-        }
+        if (error) return Response.json({ error: "Failed to send message, please try again later." }, { status: 500 });
 
         return Response.json(data);
-    } catch (err) {
-        console.error("Unexpected error while handling contact email request:", err);
+    } catch (_) {
         return Response.json({ error: "Internal server error" }, { status: 500 });
     }
 }
