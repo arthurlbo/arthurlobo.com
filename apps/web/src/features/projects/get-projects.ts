@@ -2,6 +2,9 @@
 
 import { webEnv } from "@repo/env";
 
+/**
+ * Fetches the list of projects from the API.
+ */
 export const getProjects = async () => {
     const response = await fetch(`${webEnv.NEXT_PUBLIC_BASE_URL}/api/projects`, {
         method: "GET",

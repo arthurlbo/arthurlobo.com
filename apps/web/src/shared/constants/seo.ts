@@ -1,4 +1,4 @@
-import { getExperienceYears } from "@/shared/utils";
+import { getExperienceYears } from "@/shared/utils/get-experience-years";
 
 const yearsOfExperience = getExperienceYears();
 
