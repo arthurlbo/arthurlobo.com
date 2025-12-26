@@ -3,7 +3,7 @@ import Link from "next/link";
 import { cn } from "@/shared/utils";
 import { IconHome } from "@tabler/icons-react";
 
-interface IProps {
+export interface IInfoStateProps {
     emoji: string;
     title: string;
     description: string;
@@ -17,7 +17,7 @@ interface IProps {
  * @param description - Description explaining the info state.
  * @param descriptionClassName - Additional Tailwind CSS classes for the description.
  */
-export const InfoState = ({ title, description, descriptionClassName, emoji }: IProps) => {
+export const InfoState = ({ title, description, descriptionClassName, emoji }: IInfoStateProps) => {
     return (
         <section className="flex h-[calc(100vh-72px-32px)] w-full flex-col items-center justify-center gap-6 overflow-hidden xl:h-[calc(100vh-32px)]">
             <div className="flex flex-col items-center gap-4 text-3xl">

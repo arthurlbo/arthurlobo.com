@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-import { InfoState } from "@/shared/components/info-state";
+import { InfoState } from "@/shared/components/ui";
 
 export const dynamic = "force-static";
 
