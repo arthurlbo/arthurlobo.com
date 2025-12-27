@@ -22,7 +22,7 @@ export interface IStackCardProps {
  * @param icon - TablerIcon representing the technology category.
  * @param technologies - Array of technologies within this category, each with label and icon.
  */
-export const Card = ({ title, technologies, icon: Icon }: IStackCardProps) => {
+export const StackCard = ({ title, technologies, icon: Icon }: IStackCardProps) => {
     return (
         <AccordionItem
             value={title}

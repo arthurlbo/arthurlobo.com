@@ -1,6 +1,6 @@
 "use client";
 
-import { INavigationLinkProps } from "@/shared/components/ui";
+import { ILinkButtonProps } from "@/shared/components/ui";
 import {
     IconAddressBook,
     IconBrandGithub,
@@ -13,7 +13,7 @@ import {
     IconUser,
 } from "@tabler/icons-react";
 
-export const APP_NAVIGATION_LINKS: INavigationLinkProps[] = [
+export const APP_NAVIGATION_LINKS: ILinkButtonProps[] = [
     {
         label: "Home",
         icon: IconHome,
@@ -47,7 +47,7 @@ export const APP_NAVIGATION_LINKS: INavigationLinkProps[] = [
     },
 ];
 
-export const SOCIAL_NAVIGATION_LINKS: INavigationLinkProps[] = [
+export const SOCIAL_NAVIGATION_LINKS: ILinkButtonProps[] = [
     {
         label: "LinkedIn",
         icon: IconBrandLinkedin,

@@ -2,7 +2,7 @@ import { Accordion } from "@repo/design-system/components";
 import { IconCode } from "@tabler/icons-react";
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 
-import { Card } from "./card";
+import { StackCard } from "./card";
 
 const MockIcon = () => <svg data-testid="mock-icon" />;
 
@@ -20,7 +20,7 @@ describe("Card", () => {
     it("renders title", () => {
         render(
             <Accordion type="single" collapsible>
-                <Card {...mockProps} />
+                <StackCard {...mockProps} />
             </Accordion>,
         );
 
@@ -30,7 +30,7 @@ describe("Card", () => {
     it("renders all technologies", async () => {
         render(
             <Accordion type="single" collapsible>
-                <Card {...mockProps} />
+                <StackCard {...mockProps} />
             </Accordion>,
         );
 
@@ -49,7 +49,7 @@ describe("Card", () => {
     it("renders technology icons", async () => {
         render(
             <Accordion type="single" collapsible>
-                <Card {...mockProps} />
+                <StackCard {...mockProps} />
             </Accordion>,
         );
 
@@ -66,7 +66,7 @@ describe("Card", () => {
     it("works with empty technologies array", () => {
         render(
             <Accordion type="single" collapsible>
-                <Card {...mockProps} technologies={[]} />
+                <StackCard {...mockProps} technologies={[]} />
             </Accordion>,
         );
 

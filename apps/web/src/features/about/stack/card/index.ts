@@ -1,1 +1,1 @@
-export { Card, type IStackCardProps } from "./card";
+export { StackCard, type IStackCardProps } from "./card";

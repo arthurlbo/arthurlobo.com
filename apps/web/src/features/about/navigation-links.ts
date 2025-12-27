@@ -1,10 +1,10 @@
 "use client";
 
-import { INavigationLinkProps } from "@/shared/components/ui";
+import { ILinkButtonProps } from "@/shared/components/ui";
 import { IconBook2, IconBriefcase2, IconClipboardText, IconSchool, IconStack2 } from "@tabler/icons-react";
 
 // Navigation links for the About section.
-export const ABOUT_NAVIGATION_LINKS: INavigationLinkProps[] = [
+export const ABOUT_NAVIGATION_LINKS: ILinkButtonProps[] = [
     {
         label: "Intro",
         icon: IconBook2,
