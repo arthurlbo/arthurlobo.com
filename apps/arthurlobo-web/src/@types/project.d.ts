@@ -1,4 +1,5 @@
 type TProjectsName =
+    | "arthurlobo.com"
     | "fullstack-monorepo-template"
     | "user-management-api"
     | "exp-bio"

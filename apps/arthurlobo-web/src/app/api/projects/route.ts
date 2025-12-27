@@ -22,6 +22,7 @@ interface IGithubResponse {
 }
 
 const PROJECTS_TO_SHOW: TProjectsName[] = [
+    "arthurlobo.com",
     "fullstack-monorepo-template",
     "user-management-api",
     "exp-bio",
