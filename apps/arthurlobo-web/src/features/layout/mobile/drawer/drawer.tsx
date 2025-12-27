@@ -1,3 +1,9 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+
+import { usePathname } from "next/navigation";
+
 import { Button, Separator, Sheet, SheetClose, SheetContent, SheetTrigger } from "@repo/design-system/components";
 import { IconMenu, IconX } from "@tabler/icons-react";
 
@@ -7,6 +13,13 @@ import { AppNavigation, Cta, Profile, Search, SocialNavigation, Theme } from "..
  * Mobile drawer component.
  */
 export const Drawer = () => {
+    const pathname = usePathname();
+    const closeButtonRef = useRef<HTMLButtonElement>(null);
+
+    useEffect(() => {
+        closeButtonRef.current?.click();
+    }, [pathname]);
+
     return (
         <Sheet>
             <SheetTrigger asChild>
@@ -20,7 +33,7 @@ export const Drawer = () => {
                     <Profile />
 
                     <SheetClose asChild>
-                        <Button variant="icon" className="rounded-full">
+                        <Button ref={closeButtonRef} variant="icon" className="rounded-full">
                             <IconX />
                         </Button>
                     </SheetClose>
