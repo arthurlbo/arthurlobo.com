@@ -4,8 +4,7 @@ import { Heading } from "@/shared/components/ui";
 
 import { ProjectsShowcase, getProjects } from "@/features/projects";
 
-// TODO - Change to force-static after first website build
-export const dynamic = "force-dynamic";
+export const dynamic = "force-static";
 export const revalidate = 86400; // 1 day (60 * 60 * 24)
 
 export const metadata: Metadata = {
