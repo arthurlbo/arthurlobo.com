@@ -26,6 +26,8 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
+    applicationName: SEO_CONFIG.name,
+    category: "Personal Website",
     title: {
         default: SEO_CONFIG.title,
         template: "%s | Arthur Lobo",
