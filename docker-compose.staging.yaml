@@ -16,11 +16,11 @@ services:
         networks:
             - staging-net
 
-    api:
-        container_name: api_staging
+    arthurlobo-api:
+        container_name: arthurlobo-api-staging
         build:
             context: .
-            dockerfile: apps/api/Dockerfile
+            dockerfile: apps/arthurlobo-api/Dockerfile
         restart: always
         ports:
             - "${API_PORT}:3001"
@@ -31,11 +31,11 @@ services:
         networks:
             - staging-net
 
-    web:
-        container_name: web_staging
+    arthurlobo-web:
+        container_name: arthurlobo-web-staging
         build:
             context: .
-            dockerfile: apps/web/Dockerfile
+            dockerfile: apps/arthurlobo-web/Dockerfile
         restart: always
         ports:
             - "${WEB_PORT}:3000"

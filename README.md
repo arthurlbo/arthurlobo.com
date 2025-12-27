@@ -1,22 +1,22 @@
-# Full-stack Monorepo Template
+# arthurlobo.com
 
-> A modern, production-ready monorepo template to kickstart your Full-stack development with Next.js, NestJS, and shared configuration packages.
+> A modern monorepo for my personal website and future projects.
 
 ## Overview
 
-This is a comprehensive monorepo template built with **pnpm workspaces** and **Turbo** for efficient builds and task orchestration. It provides a solid foundation for building scalable Full-stack applications with shared configuration, design systems, and utilities.
+This is a comprehensive monorepo built with pnpm workspaces and Turbo for efficient builds and task orchestration. It houses my personal website and provides a scalable foundation for future Full-stack projects with shared configuration, design systems, and utilities.
 
 ## What's inside?
 
 ### Apps
 
-- **`web`**: Next.js 15 + React 19 app with TypeScript, Tailwind CSS v4, Jest, and Playwright
-- **`api`**: NestJS 11 API with TypeScript, TypeORM, Jest, and Supertest
+- **`arthurlobo-web`**: My personal website built with Next.js 16 + React 19, TypeScript, Tailwind CSS v4, motion, Jest, and Playwright
+- **`arthurlobo-api`**: Backend API for the personal website using NestJS 11, TypeScript, TypeORM, Jest, and Supertest (Not started yet)
 
 ### Packages
 
-- **`@repo/design-system`**: Shared UI components and utilities (Tailwind CSS + shadcn/ui)
-- **`@repo/env`**: Centralized environment variable validation with Zod
+- **`@repo/design-system`**: Shared UI components and utilities (Tailwind CSS + shadcn/ui + motion)
+- **`@repo/env`**: Centralized environment variables with Zod validation
 - **`@repo/database-typeorm`**: TypeORM DataSource configuration and migrations
 - **`@repo/eslint`**: Shared ESLint configurations (base, Next.js, NestJS)
 - **`@repo/jest`**: Shared Jest configurations for testing
@@ -27,7 +27,7 @@ This is a comprehensive monorepo template built with **pnpm workspaces** and **T
 ## Tech Stack
 
 - **Monorepo**: pnpm workspaces + Turbo
-- **Frontend**: Next.js 15, React 19, TypeScript
+- **Frontend**: Next.js 16, React 19, TypeScript
 - **Backend**: NestJS, TypeScript
 - **Styling**: Tailwind CSS v4
 - **Database**: TypeORM + PostgreSQL
@@ -71,11 +71,11 @@ pnpm dev
 Or run individual apps:
 
 ```bash
-# Web app (Next.js)
-pnpm --filter web dev
+# Portfolio website
+pnpm --filter arthurlobo-web dev
 
-# API (NestJS)
-pnpm --filter api dev
+# Portfolio API
+pnpm --filter arthurlobo-api dev
 ```
 
 Open <http://localhost:3000> for the web app and <http://localhost:3001> for the API.
@@ -83,15 +83,15 @@ Open <http://localhost:3000> for the web app and <http://localhost:3001> for the
 ## Project Structure
 
 ```text
-fullstack-monorepo-template/
+arthurlobo.com/
 ├─ apps/
-│  ├─ web/              # Next.js 15 + React 19 app
-│  └─ api/              # NestJS 11 API
+│  ├─ arthurlobo-web/    # Personal website
+│  └─ arthurlobo-api/    # Portfolio API
 ├─ packages/
-│  ├─ design-system/    # UI components and utilities
-│  ├─ env/              # Environment validation
-│  ├─ database-typeorm/ # TypeORM configuration
-│  └─ config/           # Shared configurations
+│  ├─ design-system/     # UI components and utilities
+│  ├─ env/               # Environment variables management
+│  ├─ database-typeorm/  # TypeORM configuration
+│  └─ config/            # Shared configurations
 │     ├─ eslint/
 │     ├─ jest/
 │     ├─ playwright/

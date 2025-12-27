@@ -16,11 +16,11 @@ services:
         networks:
             - production-net
 
-    api:
-        container_name: api_production
+    arthurlobo-api:
+        container_name: arthurlobo-api-production
         build:
             context: .
-            dockerfile: apps/api/Dockerfile
+            dockerfile: apps/arthurlobo-api/Dockerfile
         restart: always
         ports:
             - "${API_PORT}:3001"
@@ -31,11 +31,11 @@ services:
         networks:
             - production-net
 
-    web:
-        container_name: web_production
+    arthurlobo-web:
+        container_name: arthurlobo-web-production
         build:
             context: .
-            dockerfile: apps/web/Dockerfile
+            dockerfile: apps/arthurlobo-web/Dockerfile
         restart: always
         ports:
             - "${WEB_PORT}:3000"

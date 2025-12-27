@@ -1,13 +1,13 @@
 {
-    "name": "fullstack-monorepo-template",
-    "description": "A modern Full-stack monorepo template to kickstart your web development.",
+    "name": "arthurlobo.com",
+    "description": "A modern monorepo for my personal website and future projects.",
     "author": "Arthur Lobo",
     "private": true,
     "version": "0.0.1",
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "https://github.com/arthurlbo/fullstack-monorepo-template.git"
+        "url": "https://github.com/arthurlbo/arthurlobo.com.git"
     },
     "scripts": {
         "commit": "cz",
