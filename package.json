@@ -3,7 +3,7 @@
     "description": "A modern monorepo for my personal website and future projects.",
     "author": "Arthur Lobo",
     "private": true,
-    "version": "0.0.1",
+    "version": "1.0.0",
     "license": "MIT",
     "repository": {
         "type": "git",
