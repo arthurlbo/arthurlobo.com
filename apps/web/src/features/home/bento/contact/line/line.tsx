@@ -1,5 +1,5 @@
 import { cn } from "@/shared/utils";
-import { TablerIcon } from "@tabler/icons-react";
+import { Icon as TablerIcon } from "@tabler/icons-react";
 
 import { Icon } from "./icon";
 import { TPlacement } from "./types";

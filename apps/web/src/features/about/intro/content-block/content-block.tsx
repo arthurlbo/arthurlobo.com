@@ -1,11 +1,11 @@
 import { cn } from "@/shared/utils";
-import { TablerIcon } from "@tabler/icons-react";
+import { Icon } from "@tabler/icons-react";
 
 export interface IAboutContentBlockProps {
     title: string;
     description: string;
     number: string;
-    icon: TablerIcon;
+    icon: Icon;
     side: "right" | "left";
 }
 

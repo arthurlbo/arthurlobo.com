@@ -1,17 +1,17 @@
 import { ElementType } from "react";
 
 import { AccordionContent, AccordionItem, AccordionTrigger } from "@repo/design-system/components";
-import { TablerIcon } from "@tabler/icons-react";
+import { Icon } from "@tabler/icons-react";
 import { DeveloperIconProps } from "developer-icons/dist/icon";
 
 interface ITechnology {
     label: string;
-    icon: ElementType<DeveloperIconProps> | TablerIcon;
+    icon: ElementType<DeveloperIconProps> | Icon;
 }
 
 export interface IStackCardProps {
     title: string;
-    icon: TablerIcon;
+    icon: Icon;
     technologies: ITechnology[];
 }
 

@@ -12,7 +12,7 @@ import {
     InputGroupInput,
     InputGroupTextarea,
 } from "@repo/design-system/components";
-import { TablerIcon } from "@tabler/icons-react";
+import { Icon } from "@tabler/icons-react";
 import { Control, Controller, FieldValues, Path } from "react-hook-form";
 
 interface IProps<T extends FieldValues> {
@@ -20,7 +20,7 @@ interface IProps<T extends FieldValues> {
     control: Control<T>;
     label?: string;
     placeholder?: string;
-    rightIcon?: TablerIcon;
+    rightIcon?: Icon;
     isTextArea?: boolean;
     inputClassName?: string;
     rightIconClassName?: string;

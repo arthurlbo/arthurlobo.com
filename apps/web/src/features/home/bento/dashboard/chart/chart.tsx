@@ -89,7 +89,6 @@ export function Chart() {
                         fill="var(--color-value)"
                         stroke="white"
                         strokeWidth={2}
-                        isFront
                     />
                 </AreaChart>
             </ChartContainer>

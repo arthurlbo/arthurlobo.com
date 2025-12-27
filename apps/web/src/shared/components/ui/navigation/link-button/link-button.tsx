@@ -5,14 +5,14 @@ import { Activity } from "react";
 import Link from "next/link";
 
 import { useIsActiveRoute } from "@/shared/hooks";
-import { TablerIcon } from "@tabler/icons-react";
+import { Icon } from "@tabler/icons-react";
 import { VariantProps, cva } from "class-variance-authority";
 
 type TLinkButtonVariantsProps = VariantProps<typeof linkButtonVariants>;
 
 export interface ILinkButtonProps extends TLinkButtonVariantsProps {
     label: string;
-    icon: TablerIcon;
+    icon: Icon;
     link: string;
     disabled?: boolean;
     splitPosition?: number;
