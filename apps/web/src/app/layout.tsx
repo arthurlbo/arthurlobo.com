@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk, Space_Mono } from "next/font/google";
 
 import { SEO_CONFIG } from "@/shared/constants";
+import { Analytics } from "@vercel/analytics/next";
 
 import { Desktop, Mobile } from "@/features/layout";
 
@@ -79,6 +80,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                         <div className="mt-[72px] flex h-full w-full flex-col gap-4 p-4 xl:mt-0">{children}</div>
                     </main>
                 </Providers>
+
+                <Analytics />
             </body>
         </html>
     );
