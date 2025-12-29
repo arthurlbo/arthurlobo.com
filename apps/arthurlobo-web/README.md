@@ -41,7 +41,8 @@ apps/web/
 │  ├─ e2e/                 # Playwright tests
 │  ├─ mocks/
 ├─ eslint.config.mjs
-├─ jest.config.js
+├─ jest.config.ts
+├─ jest.setup.ts
 ├─ playwright.config.ts
 └─ next.config.ts
 └─ Dockerfile
