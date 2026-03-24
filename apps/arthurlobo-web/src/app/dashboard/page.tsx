@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 
-import { InfoState } from "@/shared/components/ui";
+import { Heading } from "@/shared/components/ui";
+
+import { DashboardWeekly } from "@/features/dashboard";
 
 export const dynamic = "force-static";
 
@@ -10,11 +12,13 @@ export const metadata: Metadata = {
 
 export default function Dashboard() {
     return (
-        <InfoState
-            emoji="📊"
-            title="Almost There..."
-            description="Working on a dashboard to share coding stats and metrics. Check back soon to see what I've been working on!"
-            descriptionClassName="max-w-[480px]"
-        />
+        <>
+            <Heading
+                title="Dashboard"
+                description="Track my development activity through live data. View coding time, language preferences, and contributions that showcase my daily commitment to building."
+            />
+
+            <DashboardWeekly />
+        </>
     );
 }
