@@ -79,6 +79,7 @@ export function Chart() {
                         stroke="var(--color-value)"
                         strokeWidth={2}
                         dot={false}
+                        activeDot={false}
                         isAnimationActive
                     />
 
