@@ -51,6 +51,11 @@ export const webSchema = z.object({
             error: "You forgot to set the GITHUB_TOKEN variable",
         })
         .describe("Personal access token for GitHub API"),
+    WAKATIME_API_KEY: z
+        .string({
+            error: "You forgot to set the WAKATIME_API_KEY variable",
+        })
+        .describe("Personal access token for WakaTime API"),
     RESEND_API_KEY: z
         .string({
             error: "You forgot to set the RESEND_API_KEY variable",

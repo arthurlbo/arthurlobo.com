@@ -1,1 +1,0 @@
-export { DashboardWeekly } from "./weekly";

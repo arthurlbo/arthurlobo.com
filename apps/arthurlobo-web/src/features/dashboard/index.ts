@@ -1,2 +1,2 @@
-export * from "./weekly";
-export * from "./contributions";
+export * from "./time-stats";
+export * from "./contribution";
