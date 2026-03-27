@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { Button, Separator, Sheet, SheetClose, SheetContent, SheetTrigger } from "@repo/design-system/components";
 import { IconMenu, IconX } from "@tabler/icons-react";
 
-import { AppNavigation, Cta, Profile, Search, SocialNavigation, Theme } from "../../shared";
+import { AppNavigation, Cta, Profile, Search, SocialNavigation, Theme } from "../shared";
 
 /**
  * Mobile drawer component.
