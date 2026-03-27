@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 import { Heading } from "@/shared/components/ui";
 
-import { DashboardWeekly } from "@/features/dashboard";
+import { DashboardContributions, DashboardWeekly } from "@/features/dashboard";
 
 export const dynamic = "force-static";
 
@@ -19,6 +19,8 @@ export default function Dashboard() {
             />
 
             <DashboardWeekly />
+
+            <DashboardContributions />
         </>
     );
 }
