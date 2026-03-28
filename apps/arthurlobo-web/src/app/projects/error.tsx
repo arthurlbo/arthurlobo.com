@@ -7,9 +7,9 @@ interface IProps {
 }
 
 export default function Error({ error }: IProps) {
-    const isRateLimit = error.message === "RATE_LIMIT_REACHED";
+    const isRateLimitError = error.message === "RATE_LIMIT_REACHED";
 
-    const content: IInfoStateProps = isRateLimit
+    const content: IInfoStateProps = isRateLimitError
         ? {
               emoji: "⏳",
               title: "Hold on!",

@@ -16,8 +16,8 @@ const ACTIVITY_LEVEL_COLORS: Record<number, string> = {
 
 export const Graph = ({ months, weeks }: IProps) => {
     return (
-        <div className="border-surface-500 bg-surface-700/30 flex w-full flex-col gap-2 overflow-x-auto rounded-2xl border p-6">
-            <div className="text-primary-300 flex w-full items-start text-sm">
+        <div className="border-surface-500 bg-surface-700/30 flex w-full flex-col gap-2 rounded-2xl border p-6">
+            <div className="text-primary-300 flex w-full items-start justify-between gap-4 overflow-x-auto text-sm md:gap-0">
                 {months.map((month, index) => (
                     <span key={index} style={{ flex: month.totalWeeks }} className="text-center">
                         {month.name}
@@ -25,7 +25,7 @@ export const Graph = ({ months, weeks }: IProps) => {
                 ))}
             </div>
 
-            <div className="flex w-full justify-between">
+            <div className="flex w-full justify-between gap-2 overflow-x-auto lg:gap-0">
                 {weeks.map((week, weekIdx) => (
                     <div key={weekIdx} className="flex w-4 flex-col gap-1">
                         {week.map((day, dayIdx) => (
@@ -33,7 +33,7 @@ export const Graph = ({ months, weeks }: IProps) => {
                                 <TooltipTrigger asChild>
                                     <div
                                         className={cn(
-                                            "ring-offset-surface-700 h-3 w-3 cursor-pointer rounded-[4px] ring-offset-2 transition-all duration-300 ease-in-out hover:scale-105 hover:ring-2 hover:ring-[#39d353]",
+                                            "ring-offset-surface-700 h-4 w-4 cursor-pointer rounded-[5px] ring-offset-2 transition-all duration-300 ease-in-out hover:scale-105 hover:ring-2 hover:ring-[#39d353]",
                                             ACTIVITY_LEVEL_COLORS[day.level],
                                         )}
                                     />

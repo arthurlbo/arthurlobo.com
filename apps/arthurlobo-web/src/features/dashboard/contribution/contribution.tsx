@@ -6,14 +6,14 @@ export const DashboardContribution = async () => {
 
     return (
         <section className="my-4 flex w-full flex-col items-start justify-start gap-4">
-            <div className="flex w-full items-center justify-between">
+            <div className="flex w-full flex-col items-start justify-between gap-2 md:flex-row md:items-center">
                 <span className="text-primary-100 text-3xl font-semibold">Contributions</span>
                 <span className="text-primary-300 text-sm font-normal">
                     A year of commits, PRs, and debugging sessions
                 </span>
             </div>
 
-            <div className="mt-2 grid w-full grid-cols-4 gap-4">
+            <div className="mt-2 grid w-full grid-cols-2 gap-4 sm:grid-cols-4">
                 {insights.map((insight) => (
                     <div
                         key={insight.label}
