@@ -7,14 +7,16 @@ import { Skeleton } from "@repo/design-system/components";
 
 import { DashboardContribution, DashboardTimeStats } from "@/features/dashboard";
 
-export const dynamic = "force-static";
-export const revalidate = 86400; // 1 day (60 * 60 * 24)
+// TODO - Change for static after build
+export const dynamic = "force-dynamic";
+// export const dynamic = "force-static";
+// export const revalidate = 86400; // 1 day (60 * 60 * 24)
 
 export const metadata: Metadata = {
     title: "Dashboard",
 };
 
-export default function Dashboard() {
+export default async function Dashboard() {
     return (
         <>
             <Heading
