@@ -1,9 +1,8 @@
 import { Bullet } from "@/shared/components/ui";
 import { IconBolt, IconCalendarMonth, IconClock, IconClockHour3 } from "@tabler/icons-react";
 
-import { getTimeStats } from "@/features/dashboard";
-
 import { Card } from "./card";
+import { getTimeStats } from "./get-time-stats";
 
 export const DashboardTimeStats = async () => {
     const { allTime, totalTime, endDate, startDate, updatedAt, bestDay, dailyAverage } = await getTimeStats();
