@@ -20,7 +20,9 @@ export const DashboardContribution = async () => {
                         className="border-surface-500 bg-surface-700/30 relative flex w-full flex-col rounded-xl border p-4"
                     >
                         <div className="flex items-end gap-1">
-                            <span className="text-3xl font-extrabold text-[#39d353]">{insight.value.toFixed(0)}</span>
+                            <span className="text-3xl font-extrabold text-[#216e39] dark:text-[#39d353]">
+                                {insight.value.toFixed(0)}
+                            </span>
                             {insight.suffix && <span className="text-primary-300 pb-1 text-xs">{insight.suffix}</span>}
                         </div>
 

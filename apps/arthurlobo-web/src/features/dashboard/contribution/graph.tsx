@@ -7,11 +7,11 @@ interface IProps {
 }
 
 const ACTIVITY_LEVEL_COLORS: Record<number, string> = {
-    0: "bg-[#2d333b]",
-    1: "bg-[#0e4429]",
-    2: "bg-[#006d32]",
-    3: "bg-[#26a641]",
-    4: "bg-[#39d353]",
+    0: "bg-surface-600",
+    1: "bg-[#9be9a8] dark:bg-[#0e4429]",
+    2: "bg-[#40c463] dark:bg-[#006d32]",
+    3: "bg-[#30a14e] dark:bg-[#26a641]",
+    4: "bg-[#216e39] dark:bg-[#39d353]",
 };
 
 export const Graph = ({ months, weeks }: IProps) => {
