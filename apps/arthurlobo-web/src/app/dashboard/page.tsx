@@ -1,20 +1,36 @@
+import { Suspense } from "react";
+
 import { Metadata } from "next";
 
-import { InfoState } from "@/shared/components/ui";
+import { Heading } from "@/shared/components/ui";
+import { Skeleton } from "@repo/design-system/components";
 
-export const dynamic = "force-static";
+import { DashboardContribution, DashboardTimeStats } from "@/features/dashboard";
+
+// TODO - Change for static after build
+export const dynamic = "force-dynamic";
+// export const dynamic = "force-static";
+// export const revalidate = 86400; // 1 day (60 * 60 * 24)
 
 export const metadata: Metadata = {
     title: "Dashboard",
 };
 
-export default function Dashboard() {
+export default async function Dashboard() {
     return (
-        <InfoState
-            emoji="📊"
-            title="Almost There..."
-            description="Working on a dashboard to share coding stats and metrics. Check back soon to see what I've been working on!"
-            descriptionClassName="max-w-[480px]"
-        />
+        <>
+            <Heading
+                title="Dashboard"
+                description="Track my development activity through live data. View coding time, language preferences, and contributions that showcase my daily commitment to building."
+            />
+
+            <Suspense fallback={<Skeleton className="h-[341px] rounded-2xl" />}>
+                <DashboardTimeStats />
+            </Suspense>
+
+            <Suspense fallback={<Skeleton className="h-[412px] rounded-2xl" />}>
+                <DashboardContribution />
+            </Suspense>
+        </>
     );
 }

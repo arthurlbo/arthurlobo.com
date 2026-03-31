@@ -7,6 +7,7 @@ export { Separator } from "./separator";
 export { Toaster, toast } from "./sonner";
 export { Button, buttonVariants } from "./button";
 export { TypingAnimation } from "./typing-animation";
+export { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./tooltip";
 export { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./accordion";
 
 export {

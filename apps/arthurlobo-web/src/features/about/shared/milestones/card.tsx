@@ -3,6 +3,7 @@ import { Activity, Fragment } from "react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
+import { Bullet } from "@/shared/components/ui";
 import { cn } from "@/shared/utils";
 import { AccordionContent, AccordionItem, AccordionTrigger } from "@repo/design-system/components";
 
@@ -22,13 +23,6 @@ export interface IMilestoneCardProps {
     location: string;
     impacts?: string[];
 }
-
-/**
- * Visual separator rendered as a bullet point (•).
- *
- * @param className - Optional Tailwind classes for conditional visibility or styling.
- */
-const Bullet = ({ className }: { className?: string }) => <span className={className}>•</span>;
 
 /**
  * MilestoneCard component to display individual milestones such as work experience or education.

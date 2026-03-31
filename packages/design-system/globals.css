@@ -33,6 +33,7 @@
     --accent-600: oklch(0.45 0.16 275); /* #3E3CB8 */
     --accent-700: oklch(0.35 0.14 275); /* #2D2B8A */
     --accent-text: oklch(0.98 0.002 265); /* #FBFCFD */
+    --accent-text-secondary: oklch(0.9 0.005 265); /* #E2E4E9 */
 
     /* --- ShadCN Mappings (Light Mode) --- */
     --radius: 0.625rem;
@@ -109,6 +110,7 @@
     --accent-600: oklch(0.45 0.16 275); /* #3E3CB8 */
     --accent-700: oklch(0.35 0.14 275); /* #2D2B8A */
     --accent-text: var(--primary-100);
+    --accent-text-secondary: var(--primary-200);
 
     /* --- ShadCN Mappings (Dark Mode) --- */
     --foreground: var(--primary-100);
@@ -185,6 +187,7 @@
     --color-accent-600: var(--accent-600);
     --color-accent-700: var(--accent-700);
     --color-accent-text: var(--accent-text);
+    --color-accent-text-secondary: var(--accent-text);
 
     /* Shadcn Semantic Tokens */
     --color-foreground: var(--foreground);

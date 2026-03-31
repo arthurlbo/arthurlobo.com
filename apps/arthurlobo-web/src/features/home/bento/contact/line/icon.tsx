@@ -1,7 +1,7 @@
 import { cn } from "@/shared/utils";
 import { Icon as TablerIcon } from "@tabler/icons-react";
 
-import { TPlacement } from "../types";
+import { TPlacement } from "./types";
 
 interface IProps {
     icon: TablerIcon;

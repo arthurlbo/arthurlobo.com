@@ -18,8 +18,8 @@ export default function Error({ error }: IProps) {
           }
         : {
               emoji: "❌",
-              title: "Failed to Load Projects",
-              description: "The projects could not be loaded at this time. Please try again later.",
+              title: "Failed to Load Dashboard",
+              description: "The dashboard data could not be loaded at this time. Please try again later.",
               descriptionClassName: "max-w-xs",
           };
 

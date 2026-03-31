@@ -4,7 +4,7 @@ import { ComponentProps, ReactNode } from "react";
 
 import { TIME } from "@/shared/constants";
 import { AppProgressProvider } from "@bprogress/next";
-import { Toaster } from "@repo/design-system/components";
+import { Toaster, TooltipProvider } from "@repo/design-system/components";
 import { ThemeProvider } from "next-themes";
 
 interface IProps {
@@ -26,8 +26,10 @@ export function Providers({ children, themeConfig }: IProps) {
                 color="var(--primary-100)"
                 shallowRouting
             >
-                {children}
-                <Toaster position="top-center" duration={TIME.fiveSeconds} />
+                <TooltipProvider>
+                    {children}
+                    <Toaster position="top-center" duration={TIME.fiveSeconds} />
+                </TooltipProvider>
             </AppProgressProvider>
         </ThemeProvider>
     );
