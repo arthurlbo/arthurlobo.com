@@ -5,6 +5,7 @@
         "NODE_ENV",
         "WEB_PORT",
         "GITHUB_TOKEN",
+        "WAKATIME_API_KEY",
         "RESEND_API_KEY",
         "CONTACT_FROM_EMAIL",
         "CONTACT_TO_EMAIL",
