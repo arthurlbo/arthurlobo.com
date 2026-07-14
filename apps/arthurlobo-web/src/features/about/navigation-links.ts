@@ -31,7 +31,7 @@ export const ABOUT_NAVIGATION_LINKS: ILinkButtonProps[] = [
     {
         label: "Resume",
         icon: IconClipboardText,
-        link: "https://docs.google.com/document/d/1gdMNLA2DkTZf6NAV7RQcHhNT5uTDuEEQuHdKjag4SMs/edit?usp=sharing",
+        link: "https://docs.google.com/document/d/1z4QdWlw8dRl9qC4eQJwIUbrZsnJlLxqgp8D9FR4jI1E/edit?usp=sharing",
         internalLink: false,
     },
 ];
