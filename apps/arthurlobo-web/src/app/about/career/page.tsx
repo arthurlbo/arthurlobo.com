@@ -2,6 +2,7 @@ import { Metadata } from "next";
 
 import AdamRoboLogo from "@/assets/about/career/adam-robo.webp";
 import AnaliticaLogo from "@/assets/about/career/analitica.webp";
+import CobeLogo from "@/assets/about/career/cobe.webp";
 import SooroLogo from "@/assets/about/career/sooro.webp";
 
 import { IMilestoneCardProps, Milestones } from "@/features/about";
@@ -24,15 +25,41 @@ const CAREER_MILESTONES: IMilestoneCardProps[] = [
         tags: ["Full-time", "Remote"],
         period: "Jul 2025 - Present",
         location: "Marechal Cândido Rondon, Paraná, Brazil",
+        summary:
+            "Senior engineer on the internal multi-tenant platform that runs an entire whey processing operation across three business units, spanning fiscal, quality, lab, gatehouse, inventory and production planning. The system serves 1,000+ registered users, handles ~50k requests/day at 99% uptime, and replaced slow, manual spreadsheet-based workflows.",
         impacts: [
-            "Engineered and developed internal tools to automate workflows across departments, significantly improving operational efficiency and reducing manual effort for key business processes.",
-            "Optimized core components and Frontend logic to improve system performance and render efficiency, resulting in a more fluid user experience and code consistency.",
-            "Managed project backlogs, estimated task complexity, and prioritized feature development, ensuring timely and effective project delivery.",
-            "Implemented a distributed Rate Limiting solution using a Token Bucket algorithm backed by Redis, drastically enhancing system security and resilience against API abuse and burst traffic.",
+            "Designed and built a distributed rate-limiting layer with a custom Token Bucket algorithm backed by Redis, protecting the platform's APIs against abuse and burst traffic.",
+            "Co-designed and built a real-time integration between the portal and industrial hardware (three truck and pallet-weighing scales) using WebSockets with a room-based architecture, enabling live weight capture in the gatehouse module and removing manual data entry across ~800 weigh-ins per day.",
+            "Replaced hardcoded scale configuration with a dedicated management system, so new scales can be onboarded and configured through an interface instead of requiring code changes and redeploys.",
+            "Co-led the integration of a newly acquired butter company into the platform, delivering the full raw-material intake flow (gatehouse, lab, fiscal and reporting) in three months, plus automations the company's previous system lacked: SAP integration and automatic invoice retrieval via the Qive API.",
+            "Replaced a manual deploy process (VM access, local build, file transfer) with an automated CI/CD pipeline on GitHub Actions, cutting deploy time from 20 to 5 minutes across frontend and backend.",
+            "Drove frontend architecture and performance improvements across the portal, migrating from Context to Zustand, refactoring query-param handling, and cutting unnecessary re-renders through memoization and code splitting.",
         ],
     },
     {
         value: "2",
+        title: "Senior Software Engineer",
+        organization: {
+            name: "COBE Tecnologia",
+            link: "http://www.cobetecnologia.com.br/",
+            logo: CobeLogo,
+        },
+        tags: ["Freelance", "Remote"],
+        period: "Oct 2025 - Jun 2026",
+        totalTime: "9 mos",
+        location: "Curitiba, Paraná, Brazil",
+        summary:
+            "Battery-monitoring platform for industrial forklift fleets, tracking 250k+ battery cycles across 4,000+ pieces of equipment for enterprise clients including Volvo, Aurora and Condor. Brought in with one other engineer to modernize the product, leading frontend across web and mobile on a five-person team while also contributing to the backend.",
+        impacts: [
+            "Led the migration of the legacy multi-tenant web system to a modern React, Next.js, TypeScript and Tailwind stack, defining the architecture from scratch in two months and building the foundation the rest of the team developed modules on top of.",
+            "Built the company's new mobile app from scratch (React Native, Expo, TypeScript, NativeWind, React Query), covering authentication, QR code scanning, battery swaps, charge logging, damage reporting and operational forms.",
+            "Shipped an AI-powered insights section in the platform's monthly client operations report, sending operational data to the OpenAI API to surface optimization opportunities, strengths and risk areas, delivered as part of the client-facing PDF.",
+            "Extended web and mobile to support lithium batteries, previously limited to lead-acid only, implementing the distinct operational flows the new type required. This was the core goal of the engagement.",
+            "Consolidated three separate codebases (web, mobile and backend) into a pnpm-workspace monorepo, sharing design system, schemas and configs to remove duplication and enforce consistency, with Docker and automated testing across the stack.",
+        ],
+    },
+    {
+        value: "3",
         title: "Senior Software Engineer",
         organization: {
             name: "Analítica - Gerenciadora de Dados S/A",
@@ -43,14 +70,20 @@ const CAREER_MILESTONES: IMilestoneCardProps[] = [
         period: "Oct 2024 - Jul 2025",
         totalTime: "10 mos",
         location: "Curitiba, Paraná, Brazil",
+        summary:
+            "Agricultural monitoring platform processing 2M+ sensor records per day. Joined as a freelance frontend developer, grew into owning the platform's frontend, then expanded into backend development.",
         impacts: [
-            "Implemented a Redis caching layer, reducing API response time from 60–120s to 300–500ms and accelerating the processing of complex calculations with large data volumes.",
-            "Optimized complex database queries by implementing MongoDB Aggregation pipelines and strategic indexing, reducing query response time by 65% and significantly improving overall system performance.",
-            "Engineered a scalable data processing pipeline for complex, full-harvest data. By implementing a monthly cron job and a dedicated MongoDB collection, this solution enabled millisecond-level data access for strategic analysis and reports.",
+            "Expanded from frontend into backend work, taking on performance-critical problems across Node.js, MongoDB and Redis while remaining the reference for the platform's frontend.",
+            "Co-led the backend re-architecture to NestJS and GraphQL on an MQTT-based IoT pipeline, designing schemas, resolvers and service structure for a platform ingesting 2M+ sensor records per day.",
+            "Implemented a Redis caching layer that cut API response times from 60–120s to 300–500ms on the platform's heaviest calculations.",
+            "Optimized complex queries with MongoDB aggregation pipelines and strategic indexing, reducing query response time by ~65%.",
+            "Engineered a data processing pipeline for full-harvest data, using a monthly cron job and a dedicated MongoDB collection to bring millisecond-level access to reports that previously took minutes.",
+            "Handled deployments and environment setup on Azure.",
+            "Acted as one of the team's go-to references on business domain and technical questions, supporting backend engineers day to day.",
         ],
     },
     {
-        value: "3",
+        value: "4",
         title: "Senior Frontend Developer",
         organization: {
             name: "Analítica - Gerenciadora de Dados S/A",
@@ -62,14 +95,15 @@ const CAREER_MILESTONES: IMilestoneCardProps[] = [
         totalTime: "8 mos",
         location: "Curitiba, Paraná, Brazil",
         impacts: [
-            "Directed the entire Frontend development, overseeing all architectural and strategic decisions to build a robust and highly scalable system.",
-            "Led the Frontend implementation of a multi-tenant system feature, which enabled the acquisition of two new clients and resulted in a substantial boost to company revenue.",
-            "Engineered a scalable and maintainable Frontend architecture, cutting bug reports by 85% and reducing delivery time by 70%.",
-            "Automated GraphQL hooks using Codegen, which streamlined the development workflow and enabled faster implementation of new features. This also minimized manual errors and ensured code consistency across the team.",
+            "Owned the entire frontend of the platform as the sole frontend engineer on an 8-person engineering team, defining architecture and technical direction.",
+            "Led the frontend implementation of a multi-tenant feature that enabled the company to onboard two new clients, tripling its customer base.",
+            "Established a scalable frontend architecture that cut bug reports by ~85% and significantly reduced delivery time compared to the legacy system.",
+            "Automated GraphQL hook generation with Codegen, streamlining development and eliminating a class of manual errors.",
+            "Supported backend engineers picking up frontend tasks, acting as the team's reference for frontend decisions and code review.",
         ],
     },
     {
-        value: "4",
+        value: "5",
         title: "Frontend Developer",
         organization: {
             name: "Analítica - Gerenciadora de Dados S/A",
@@ -81,13 +115,13 @@ const CAREER_MILESTONES: IMilestoneCardProps[] = [
         totalTime: "4 mos",
         location: "Curitiba, Paraná, Brazil",
         impacts: [
-            "Engineered and deployed two real-time dashboards, which reduced data accessibility and visualization time by 95%. These solutions enabled clients to efficiently analyze critical business data, significantly improving decision-making speed and accuracy.",
-            "Developed and implemented real-time data solutions that delivered a highly efficient and immersive user experience, eliminating the need for manual page refreshes.",
-            "Translated Figma prototypes into code with precision, ensuring pixel-perfect design and exceptional usability.",
+            "Built the frontend of the company's new agricultural monitoring platform from scratch, replacing a legacy PHP system that was slow and produced unreliable data.",
+            "Delivered real-time dashboards that gave clients immediate visibility into field data, removing manual page refreshes and cutting the time to access and visualize critical data from minutes to seconds.",
+            "Translated Figma designs into pixel-perfect interfaces and, where designs didn't exist, designed screens from scratch based on the existing design system.",
         ],
     },
     {
-        value: "5",
+        value: "6",
         title: "Mid-level Frontend Developer",
         organization: {
             name: "Adam Robo",
@@ -98,16 +132,18 @@ const CAREER_MILESTONES: IMilestoneCardProps[] = [
         period: "Dec 2022 - Jan 2024",
         totalTime: "1 yr 2 mos",
         location: "Curitiba, Paraná, Brazil",
+        summary:
+            "Health-tech startup building vision-screening platforms. Established and led the frontend across every product, owning architecture, implementation and design, and later growing the frontend team.",
         impacts: [
-            "Led the development of an offline-first PWA, which became the company's main system, serving over 800 users and generating more than 100,000 visual acuity tests, boosting client satisfaction by 88% and increasing product sales.",
-            "Delivered two projects for major global clients in the manufacturing and education sectors, enabling the handling of more than 1,500 medical records monthly and driving a significant increase in company revenue.",
-            "Led the migration of two legacy applications (HTML, CSS, jQuery, JavaScript) to a modern, component-based architecture (TypeScript, React.js, ChakraUI, Vite), improving performance by 25% and reducing bug reports by 90%.",
-            "Implemented E2E and unit tests with Cypress, which optimized the CI/CD pipeline and enabled faster, more confident product deployments.",
-            "Mentored and trained junior developers in React and TypeScript, significantly improving team productivity and enforcing best practices across the engineering department.",
+            "Built the company's flagship multi-tenant vision-screening platform from scratch, serving 897 client companies and 2,400+ users, with 145k+ vision tests processed (~2k/month).",
+            "Delivered an enterprise vision-screening platform for Electrolux, processing 8,400+ tests.",
+            "Owned frontend delivery beyond code, shaping backlog, estimating effort and scoping requirements directly with stakeholders.",
+            "Implemented E2E and unit tests with Cypress, enabling faster and more confident deployments.",
+            "Onboarded and mentored the company's second frontend engineer, teaching React and TypeScript in depth and eventually co-leading projects with them.",
         ],
     },
     {
-        value: "6",
+        value: "7",
         title: "Junior Frontend Developer",
         organization: {
             name: "Adam Robo",
@@ -119,9 +155,9 @@ const CAREER_MILESTONES: IMilestoneCardProps[] = [
         totalTime: "9 mos",
         location: "Curitiba, Paraná, Brazil",
         impacts: [
-            "Established the UI/UX strategy for new projects, drastically improving usability and accessibility.",
-            "Contributed to the development and maintenance of web applications, ensuring high performance, scalability, and code quality.",
-            "Created and maintained clear technical documentation, reducing the gap between technical and non-technical teams.",
+            "Led the migration of the SESI-PR vision-screening platform from a legacy stack (HTML, CSS, jQuery) to a modern React, TypeScript, ChakraUI and Vite architecture, significantly improving performance and virtually eliminating bug reports.",
+            "Rebuilt the application offline-first with IndexedDB, so vision tests and patient anamnesis could run in remote areas with no connectivity and sync once back online.",
+            "Defined the frontend's architecture, component structure and UI design from scratch as the sole frontend engineer, with no designer on the team, setting the technical foundation (state management, testing, build tooling) for every product that followed.",
         ],
     },
 ];

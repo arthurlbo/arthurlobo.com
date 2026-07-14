@@ -21,6 +21,7 @@ export interface IMilestoneCardProps {
     period: string;
     totalTime?: string;
     location: string;
+    summary?: string;
     impacts?: string[];
 }
 
@@ -34,6 +35,7 @@ export interface IMilestoneCardProps {
  * @param period - Date range (e.g., "Jan 2021 - Dec 2022").
  * @param totalTime - Duration in human-readable format (e.g., "1 year 6 months").
  * @param location - Geographic location or work arrangement.
+ * @param summary - Short description of the role.
  * @param impacts - List of key achievements.
  */
 export const MilestoneCard = ({
@@ -44,6 +46,7 @@ export const MilestoneCard = ({
     period,
     organization,
     totalTime,
+    summary,
     impacts = [],
 }: IMilestoneCardProps) => {
     const { name, logo, link } = organization;
@@ -114,6 +117,8 @@ export const MilestoneCard = ({
             <Activity mode={hasImpacts ? "visible" : "hidden"}>
                 <AccordionContent className="flex h-full w-full flex-col gap-4">
                     <div className="bg-surface-500 h-px w-full shrink-0" />
+
+                    {summary && <span className="text-primary-200 text-sm font-normal">{summary}</span>}
 
                     {impacts.map((impact, index) => (
                         <div key={index} className="flex items-start gap-2">
