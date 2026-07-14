@@ -51,7 +51,7 @@ const CAREER_MILESTONES: IMilestoneCardProps[] = [
         summary:
             "Battery-monitoring platform for industrial forklift fleets, tracking 250k+ battery cycles across 4,000+ pieces of equipment for enterprise clients including Volvo, Aurora and Condor. Brought in with one other engineer to modernize the product, leading frontend across web and mobile on a five-person team while also contributing to the backend.",
         impacts: [
-            "Led the migration of the legacy multi-tenant web system to a modern React, Next.js, TypeScript and Tailwind stack, defining the architecture from scratch in two months and building the foundation the rest of the team developed modules on top of.",
+            "Led the migration of the legacy multi-tenant web system to a modern React, Next.js, TypeScript and Tailwind stack, completed in three months. Defined the architecture from scratch and built it hands-on together with the team.",
             "Built the company's new mobile app from scratch (React Native, Expo, TypeScript, NativeWind, React Query), covering authentication, QR code scanning, battery swaps, charge logging, damage reporting and operational forms.",
             "Shipped an AI-powered insights section in the platform's monthly client operations report, sending operational data to the OpenAI API to surface optimization opportunities, strengths and risk areas, delivered as part of the client-facing PDF.",
             "Extended web and mobile to support lithium batteries, previously limited to lead-acid only, implementing the distinct operational flows the new type required. This was the core goal of the engagement.",
@@ -98,7 +98,7 @@ const CAREER_MILESTONES: IMilestoneCardProps[] = [
             "Owned the entire frontend of the platform as the sole frontend engineer on an 8-person engineering team, defining architecture and technical direction.",
             "Led the frontend implementation of a multi-tenant feature that enabled the company to onboard two new clients, tripling its customer base.",
             "Established a scalable frontend architecture that cut bug reports by ~85% and significantly reduced delivery time compared to the legacy system.",
-            "Automated GraphQL hook generation with Codegen, streamlining development and eliminating a class of manual errors.",
+            "Automated GraphQL hook generation with Codegen, giving the team fully typed hooks that cut down on type, query and consistency errors across the codebase.",
             "Supported backend engineers picking up frontend tasks, acting as the team's reference for frontend decisions and code review.",
         ],
     },
@@ -138,7 +138,7 @@ const CAREER_MILESTONES: IMilestoneCardProps[] = [
             "Built the company's flagship multi-tenant vision-screening platform from scratch, serving 897 client companies and 2,400+ users, with 145k+ vision tests processed (~2k/month).",
             "Delivered an enterprise vision-screening platform for Electrolux, processing 8,400+ tests.",
             "Owned frontend delivery beyond code, shaping backlog, estimating effort and scoping requirements directly with stakeholders.",
-            "Implemented E2E and unit tests with Cypress, enabling faster and more confident deployments.",
+            "Implemented E2E and unit tests with Cypress, enabling more confident deployments.",
             "Onboarded and mentored the company's second frontend engineer, teaching React and TypeScript in depth and eventually co-leading projects with them.",
         ],
     },
